@@ -1,2 +1,3 @@
 # stoneageentrepreneur
-Stone Age Entrepreneur, is an online publishing website. We focus on technology, people in tech, startups. We also focus largely on health and health awareness, predictive future health patterns in Nepalese society amidst the horrors of COVID-19 crisis.
+<b>Stone Age Entrepreneur</b>, is an online publishing website from Nepal. <br>
+We focus on computer technology, people working in tech and entrepreneurship. We also focus largely on health and health awareness. With the use of available data we build predictive models to hypothesize future health patterns in Nepalese society.
