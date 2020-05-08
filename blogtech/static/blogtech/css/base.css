@@ -1,0 +1,391 @@
+@import url("product.css");
+
+
+*{
+    font-family: 'Baloo Paaji 2', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+body{
+    background: #f5f5f5;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+/*START NAV*/
+
+nav{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    z-index: 300;
+
+
+}
+
+/* START Left Menu : HAMBURGER MENU and SEARCH     */
+
+nav .leftmenu {
+    display: flex;
+    flex: 3;
+}
+
+nav .leftmenu .hamburger{
+    padding: 0 25px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+nav .leftmenu .hamburger:hover{
+    font-size: 25px;
+    color: #007dc3;
+}
+
+nav .leftmenu .search{
+    font-size: 23px;
+    cursor: pointer;
+}
+
+nav .leftmenu .search:hover{
+    font-size: 25px;
+    color: #007dc3;
+
+}
+
+nav .leftmenu .search span{
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+
+nav .search-box{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border: 0;
+    opacity: 0;
+
+}
+
+.search-box-display-on-click .search-box{
+    opacity: 1;
+    width: 300px;
+    font-size: 15px;
+    height: 35px;
+    /*border-radius: 8px;*/
+    border: 1px solid black;
+    text-align: center;
+    transition: all 0.2s ease;
+
+}
+
+.search-box-display-on-click .search{
+    margin-left: 5px;
+
+}
+
+
+.search-box-display-on-click .search-box::-webkit-search-cancel-button{
+    position:relative;
+    font-size: 20px;
+    margin-right: 5px;
+
+}
+/* END Left Menu : HAMBURGER MENU and SEARCH    */
+
+
+/* START MIDDLE LOGO MENU : LOGO    */
+
+
+nav .logo{
+    flex: 4;
+    font-size: 30px;
+    font-weight: 500;
+    /*color: #007dc3;*/
+    letter-spacing: 2px;
+    align-content: center;
+    margin-left: 7%;
+
+}
+
+/* END MIDDLE LOGO MENU : LOGO    */
+
+/* START RIGHT MENU : HEALTH, STORE AND LOGIN    */
+
+nav .rightmenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px;
+    flex: 2;
+
+}
+
+nav .rightmenu .health:hover{
+    font-size: 20px;
+    color: #007dc3;
+    cursor: pointer;
+
+}
+
+nav .rightmenu .store:hover{
+    font-size: 20px;
+    color: #007dc3;
+    cursor: pointer;
+
+}
+
+nav .rightmenu .accounts:hover{
+    font-size: 20px;
+    color: #007dc3;
+    cursor: pointer;
+
+}
+
+/* END RIGHT MENU : HEALTH, STORE AND LOGIN    */
+
+/*END NAV*/
+
+/*START SIDEBAR*/
+.side-bar{
+    position: fixed;
+    top: 80px;
+    padding: 0 25px;
+    width: 250px;
+    height: 100%;
+    border: 1px;
+    display: none;
+
+}
+
+.click_collapse .side-bar{
+    display: block;
+
+}
+
+.side-bar span{
+    font-size: 20px;
+    color: #007dc3;
+
+}
+
+.side-bar-0{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.side-bar-0 ul a{
+    display: block;
+    padding: 0 10px;
+    color: black;
+}
+
+.side-bar-0 ul a:hover{
+    color: #007dc3;
+    cursor: pointer;
+}
+
+.side-bar-1 ul a{
+    display: block;
+    padding: 0 10px;
+    color: black;
+}
+
+.side-bar-1 ul a:hover{
+    color: #007dc3;
+    cursor: pointer;
+}
+
+
+
+/*END SIDE BAR */
+
+
+/*START MAIN CONTENT*/
+.content_wrapper {
+    width: 90%;
+    margin: auto;
+
+}
+
+.click_collapse .content_wrapper{
+    margin-left: 250px;
+    width: calc(95% - 250px);
+    transition: all 0.3s ease;
+}
+
+
+/* START BANNER*/
+
+.banner{
+    margin-top:100px;
+    display: flex;
+
+
+}
+
+/*START LEFT BANNER*/
+
+.banner .left-banner{
+    width: 35vw;
+}
+
+.click_collapse .left-banner{
+    width: 30vw;
+}
+
+.click_collapse .banner .left-banner .img-wrap-lb img{
+    width: 30vw;
+
+}
+
+.click_collapse .banner .left-banner .title-wrap-lb{
+    width: 30vw;
+
+}
+
+.banner .left-banner .img-wrap-lb img{
+    height: 150px;
+    width: 35vw;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.banner .left-banner .title-wrap-lb{
+    margin-top: 5px;
+    width: 35vw;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.title-detail{
+    font-size: 16px;
+    color: rgba(0,0,0,.54);
+}
+
+.banner .left-banner .title-wrap-lb .tags{
+    text-align: center;
+    word-spacing: 5px;
+
+
+}
+
+.tags a p{
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+    padding: 2px;
+}
+
+.timeofpost{
+    color: rgba(0,0,0,.54);
+    font-size: 14px;
+}
+
+/*END FIRST BANNER*/
+
+/*START MIDDLE BANNER*/
+
+.middle-banner{
+    /*flex: 2;*/
+    margin-left: 20px;
+    width: 35vw;
+
+}
+
+.click_collapse .middle-banner{
+    margin-left: 20px;
+    width: 30vw;
+}
+
+.middle-banner .first-mb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-banner .first-mb .img-wrapper-mb img{
+    height: 150px;
+    width: 10vw;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.click_collapse .banner .img-wrapper-mb img{
+    width: 10vw;
+}
+
+.middle-banner .first-mb .content-wrapper-mb{
+    margin-left: 17px;
+}
+
+.middle-banner .first-mb .content-wrapper-mb h2{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/*END MIDDLE BANNER*/
+
+.right-banner{
+    width: 20vw;
+    margin-left: 25px;
+
+}
+
+.click_collapse .right-banner{
+    width: 15vw;
+    margin-left: 25px;
+}
+
+.right-banner .img-wrapper-rb img{
+    height: 23vh;
+    width: 20vw;
+    border-radius: 5px;
+}
+
+.click_collapse .banner .right-banner .img-wrapper-rb img{
+    width: 15vw;
+    height: 150px;
+}
+
+.right-banner .img-wrapper-rb h2, .right-banner .img-wrapper-rb p {
+    margin-top: 3px;
+    line-height: 20px;
+}
+
+.click_collapse .right-banner .img-wrapper-rb h2{
+    line-height: 20px;
+}
+
+
+/*END RIGHT BANNER*/
+/*END BANNER */
+
+/*START PRODUCT */
+
+
+/*END PRODUCT  */
+
+
+
+
+
