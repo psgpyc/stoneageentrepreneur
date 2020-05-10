@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 
-from blogtech.views import Home
+from blogtech.views import Home,Posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view(), name='home'),
+    path('post/', Posts.as_view(), name='post')
 
 ]
 

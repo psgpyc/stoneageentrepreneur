@@ -1,5 +1,6 @@
 @import url("product.css");
-
+@import url("extended.css");
+@import "post-content.css";
 
 *{
     font-family: 'Baloo Paaji 2', cursive;
@@ -10,7 +11,9 @@
     text-decoration: none;
 }
 
-
+a{
+    color: #000;
+}
 
 body{
     background: #f5f5f5;
@@ -260,6 +263,7 @@ nav .rightmenu .accounts:hover{
 .click_collapse .banner .left-banner .title-wrap-lb{
     width: 30vw;
 
+
 }
 
 .banner .left-banner .img-wrap-lb img{
@@ -275,6 +279,8 @@ nav .rightmenu .accounts:hover{
     text-align: center;
     line-height: 25px;
     font-size: 12px;
+
+
 }
 
 .title-detail{

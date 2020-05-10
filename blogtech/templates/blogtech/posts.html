@@ -1,0 +1,132 @@
+{% extends 'blogtech/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }} {{ block.super }}
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="post-wrapper">
+        <div class="post-header">
+            <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Bottle</li>
+                <li>Machine Learning</li>
+                <li>Data Science</li>
+            </ul>
+        </div>
+
+        <div class="post-content">
+            <div class="title-post-content">
+                <h1>Forget about Python. Learn COBOL and become a crisis hero</h1>
+                <p>Why a programming dinosaur is the most sought-after language right now</p>
+            </div>{#           #end of title of post#}
+            <div class="profile-links">
+                <div class="profile-details">
+                    <div class="profile-image">
+                        <img src="{% static 'blogtech/img/profileimg.png' %}" alt="User Profile Image">
+                    </div>
+                    <div class="profile-name">
+                        <p>Paritosh Sharma Ghimire</p>
+                        <p> 4th May - 5 min read</p>
+                    </div>
+                </div>
+
+                <div class="profile-link">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="far fa-bookmark"></i></a>
+                </div>
+            </div>   {#            end of profile links#}
+
+
+
+            <div class="post-image-wrapper">
+                <img src="{% static 'blogtech/img/dino.jpeg' %}" alt="">
+            </div>
+
+        </div>
+
+        <div class="post-content-text">
+            <p>What’s the oldest programming language that is still on the market? Python is in its thirties. C is almost fifty years old. Fortran is in its sixties. And still in use!
+                There’s another computer language dinosaur that’s used intensely. One that you’ve probably never heard of. Meet sixty-odd COBOL.
+
+                Used in 80 percent of all in-person transactions and 95 percent of all cash machines,</p>
+            <h2>COBOL is the programming language of money.</h2>
+               <p>
+                       More than 200 billion lines of COBOL are still in use today,
+                        and all that needs to be maintained.
+                    Now more than ever. As unemployment claims are going through the roof, the ancient — and COBOL-based —
+                social security systems are overloaded. So governors are willing to do anything to get their
+                hands on COBOL programmers.
+                So if you want to get a few big paychecks and do something to help those who
+                       are affected by this crisis, COBOL is the way to go.
+               </p>
+            <h2>Why nobody knows COBOL any more…</h2>
+            <p>
+                    First of all, because COBOL — COmmon Business Oriented Language — is a language for business people, not for programmers.
+                It’s designed such that a businessperson with no knowledge of code understands what’s going on.
+                Which means that the wellbeing of the programmer behind the code isn’t a priority.
+                COBOL has a bunch of syntactical oddities that make it palatable for business, but not for hardcore nerds.
+                Like the fact that it doesn’t have any functions or subroutines — instead, there are divisions,
+                sections, paragraphs, and statements. Very much to the disgust of systems programming pioneers in the 1970s.
+                “The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense.” — Edsger W.
+                    Dijkstra But by that time it was too late. The core codes of banks and bureaucracy had already been built.
+            </p>
+            <div class="highlight">
+                <p>
+                    “So many of our Departments of Labor across the country are still on the COBOL system. You know very, very old technology.
+                    Our Department of Labor had recognized that that was an issue and had initiated modernization, and, unfortunately,
+                    that’s something that takes time. This (virus) interfered and they had to cease the transition to a much more robust system.
+                    So they’re operating on really old stuff.” — Laura Kelly, governor of Kansas
+                </p>
+            </div>
+
+            <p>
+                    First of all, because COBOL — Common Business Oriented Language — is a language for business people, not for programmers.
+                It’s designed such that a businessperson with no knowledge of code understands what’s going on.
+                Which means that the wellbeing of the programmer behind the code isn’t a priority.
+                COBOL has a bunch of syntactical oddities that make it palatable for business, but not for hardcore nerds.
+                Like the fact that it doesn’t have any functions or subroutines — instead, there are divisions,
+                sections, paragraphs, and statements. Very much to the disgust of systems programming pioneers in the 1970s.
+                “The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense.” — Edsger W.
+                    Dijkstra But by that time it was too late. The core codes of banks and bureaucracy had already been built.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+{% endblock %}
