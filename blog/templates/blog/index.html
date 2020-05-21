@@ -1,0 +1,414 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }} {{ block.super }}
+
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="banner">
+                <div class="left-banner">
+                    <div class="img-wrap-lb">
+                        <a href="#"><img src="{{ featured_one.title_image.url }}" alt=""></a>
+                    </div>
+
+                    <div class="title-wrap-lb">
+                        <a href="{% url 'post-details' featured_one.slug_name %}"><h1>{{ featured_one.hard_title }}</h1></a>
+
+                        <p class="title-detail">
+                            {{ featured_one.soft_title }}
+                        </p>
+
+                        <div class="tags">
+                            {% for tag in featured_one.has_tags.all %}
+                                {% if forloop.counter <= 4 %}
+                                 <a href="#"><p>#{{ tag }}</p></a>
+                                {% endif %}
+
+
+                            {% endfor%}
+
+                        </div>
+                        <div class="timeofpost">
+                            a few hours ago | 4 mins read
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="details-wrap-lb">
+
+                    </div>
+
+                </div>
+                <div class="middle-banner">
+                    {% for featured in featured_two %}
+                        <div class="first-mb">
+
+                            <div class="img-wrapper-mb">
+                                <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
+
+                            </div>
+                            <div class="content-wrapper-mb">
+                                <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
+                                <div class="tags">
+                                    {% for tags in featured.has_tags.all%}
+                                        {% if forloop.counter <= 3 %}
+                                            <a href="#"><p>#{{ tags }}</p></a>
+                                        {% endif %}
+
+
+                                    {% endfor %}
+                                </div>
+                            <div class="timeofpost">
+                                a few hours ago | 4 mins read
+                            </div>
+
+                            </div>
+                        </div>
+
+                     {% endfor %}
+
+                </div>
+{#        #end middle  banner#}
+                <div class="right-banner">
+                    <div class="img-wrapper-rb">
+                        <a href="#"><img src="{% static 'blog/img/prog.jpeg' %}" alt="STONEAGEENTREPRENEUR"></a>
+
+                        <a href="#"><h2>Welcome to Python</h2></a>
+                        <p class="title-detail">Python is multi-purpose programming language....</p>
+                        <div class="tags">
+
+                            <a href="#"><p>#python</p></a>
+                            <a href="#"><p>#python</p></a>
+                            <a href="#"><p>#python</p></a>
+
+
+
+                        </div>
+                        <div class="timeofpost">
+                            a few hours ago | 4 mins read
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+{#            END BANNER                    #}
+
+
+{#            THE TECH MERCH SECTION           #}
+
+            <div class="tech-kit-wrapper">
+                <h1 class="sub-headings-post">TECHNOLOGY MERCH FOR PERFECTIONISTS </h1>
+
+                <div class="product-wrapper">
+                    <button type="button" class="arrow-button"><i class="fas fa-arrow-left"></i></button>
+
+                    <div class="product-first">
+                        <img src="{% static 'blog/img/techwaterbottle.webp' %}" alt="SAE MERCH">
+                        <button class="btn-shop" type="button">SHOP</button>
+                        <p>BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
+                        <a href="#"><i class="far fa-heart btn-fav"></i></a>
+
+
+                        <h4>Nrs. 1800</h4>
+
+                    </div>
+
+
+                    <div class="product-first">
+                        <img src="{% static 'blog/img/techwaterbottle.webp' %}" alt="SAE MERCH">
+                        <button class="btn-shop" type="button">SHOP</button>
+                        <p>BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
+                        <a href="#"><i class="far fa-heart btn-fav"></i></a>
+
+
+                        <h4>Nrs. 1800</h4>
+
+                    </div>
+
+
+                    <div class="product-first">
+                        <img src="{% static 'blog/img/techwaterbottle.webp' %}" alt="SAE MERCH">
+                        <button class="btn-shop" type="button">SHOP</button>
+                        <p>BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
+                        <a href="#"><i class="far fa-heart btn-fav"></i></a>
+
+
+                        <h4>Nrs. 1800</h4>
+
+                    </div>
+
+
+                    <div class="product-first">
+                        <img src="{% static 'blog/img/techwaterbottle.webp' %}" alt="SAE MERCH">
+                        <button class="btn-shop" type="button">SHOP</button>
+                        <p>BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
+                        <a href="#"><i class="far fa-heart btn-fav"></i></a>
+
+
+                        <h4>Nrs. 1800</h4>
+
+                    </div>
+
+                    <button type="button" class="arrow-button"><i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <button type="button" class="product-view-all-btn">VIEW ALL</button>
+            </div>
+{#            END TECH MERCH CONTENT#}
+
+{#            START POPULAR IN TECH#}
+            <div class="tech-kit-wrapper">
+                <h1 class="sub-headings-post">THE TECHY EXPERIENCE</h1>
+
+{#                START SECONDARY PICKS TECH      #}
+                <div class="secondary-picks-wrapper">
+                    {% for featuredfour in featured_four %}
+                        <div class="secondary-picks">
+                              <div class="img-wrap-secondary-picks">
+                                  <a href="{% url 'post-details' featuredfour.slug_name %}"><img src="{{ featuredfour.title_image.url }}" alt=""></a>
+                              </div>
+
+                            <div class="title-wrap-secondary-picks">
+                                <a href="{% url 'post-details' featuredfour.slug_name %}"><h1>{{ featuredfour.hard_title }}</h1></a>
+                                <p class="title-detail">
+                                    {{ featuredfour.soft_title }}
+                                </p>
+
+                                <div class="tags">
+                                    {% for tag in featuredfour.has_tags.all %}
+                                        {% if forloop.counter <= 4 %}
+                                            <a href="#"><p>#{{ tag }}</p></a>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                                <div class="timeofpost">
+                                    a few hours ago | 4 mins read
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+{#                      END SECONDARY PICKS TECH                    #}
+                <button type="button" class="product-view-all-btn">VIEW MORE</button>
+            </div>
+
+
+{#            END SAE PICKS IN TECH#}
+
+{#            START SAE PICKS IN E&S#}
+            <div class="tech-kit-wrapper">
+                <h1 class="sub-headings-post">ENTREPRENEURSHIP & STARTUPs </h1>
+
+
+{#                START SECONDARY PICKS E&S      #}
+                <div class="secondary-picks-wrapper">
+                    {% for featuredfour in featured_four %}
+                        <div class="secondary-picks">
+                              <div class="img-wrap-secondary-picks">
+                                  <a href="{% url 'post-details' featuredfour.slug_name %}"><img src="{{ featuredfour.title_image.url }}" alt=""></a>
+                              </div>
+
+                            <div class="title-wrap-secondary-picks">
+                                <a href="{% url 'post-details' featuredfour.slug_name %}"><h1>{{ featuredfour.hard_title }}</h1></a>
+                                <p class="title-detail">
+                                    {{ featuredfour.soft_title }}
+                                </p>
+
+                                <div class="tags">
+                                    {% for tag in featuredfour.has_tags.all %}
+                                        {% if forloop.counter <= 4 %}
+                                            <a href="#"><p>#{{ tag }}</p></a>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                                <div class="timeofpost">
+                                    a few hours ago | 4 mins read
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+{#                      END SECONDARY PICKS E&S                    #}
+                            <button type="button" class="product-view-all-btn">VIEW MORE</button>
+
+
+                    </div>
+
+
+
+{#            END SAE PICKS IN E&S#}
+
+
+
+
+{#    START GENIUSES OF SILICON VALLEY#}
+              <div class="tech-kit-wrapper">
+                <h1 class="sub-headings-post">GENIUSES OF SILICON VALLEY</h1>
+
+
+{#                START SECONDARY PICKS GENIUSES OF SILICON VALLEY      #}
+                <div class="secondary-picks-wrapper">
+                    {% for featuredfour in featured_four %}
+                        <div class="secondary-picks">
+                              <div class="img-wrap-secondary-picks">
+                                  <a href="{% url 'post-details' featuredfour.slug_name %}"><img src="{{ featuredfour.title_image.url }}" alt=""></a>
+                              </div>
+
+                            <div class="title-wrap-secondary-picks">
+                                <a href="{% url 'post-details' featuredfour.slug_name %}"><h1>{{ featuredfour.hard_title }}</h1></a>
+                                <p class="title-detail">
+                                    {{ featuredfour.soft_title }}
+                                </p>
+
+                                <div class="tags">
+                                    {% for tag in featuredfour.has_tags.all %}
+                                        {% if forloop.counter <= 4 %}
+                                            <a href="#"><p>#{{ tag }}</p></a>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                                <div class="timeofpost">
+                                    a few hours ago | 4 mins read
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+{#                      END SECONDARY PICKS GENIUSES OF SILICON VALLEY                    #}
+                            <button type="button" class="product-view-all-btn">VIEW MORE</button>
+
+
+                    </div>
+{#    END OF GENIUSES OF SILICON VALLEY#}
+
+
+
+        <div class="extended-contents">
+            <h2 class="sub-headings-post">BASED ON YOUR READING PREFERENCES</h2>
+            <div class="extended-contents-one">
+                <div class="extended-contents-one-wrapper">
+                    <a href="#"><h2>Production machine learning isn’t hard anymore</h2></a>
+                    <a href="#"><p>Deploying machine learning microservices has gotten easier</p></a>
+                    <div class="extended-contents-content">
+                        <p>Within machine learning, however, this standardization hasn’t existed. To build a pipeline that goes from model training to deployment, teams have had to architect their own solutions, largely from scratch.</p>
+                    </div>
+                    <div class="tags">
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+
+
+
+                            </div>
+                            <div class="timeofpost">
+                                a few hours ago | 4 mins read
+                            </div>
+                </div>
+                <div class="extended-contents-one-wrap-img">
+                    <a href="#"><img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt=""></a>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="extended-contents-one">
+                <div class="extended-contents-one-wrapper">
+                    <a href="#"><h2>Production machine learning isn’t hard anymore</h2></a>
+                    <a href="#"><p>Deploying machine learning microservices has gotten easier</p></a>
+                    <div class="extended-contents-content">
+                        <p>Within machine learning, however, this standardization hasn’t existed. To build a pipeline that goes from model training to deployment, teams have had to architect their own solutions, largely from scratch.</p>
+                    </div>
+                    <div class="tags">
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+
+
+
+                            </div>
+                            <div class="timeofpost">
+                                a few hours ago | 4 mins read
+                            </div>
+                </div>
+                <div class="extended-contents-one-wrap-img">
+                    <a href="#"><img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt=""></a>
+                </div>
+
+
+
+            </div>
+            <div class="extended-contents-one">
+                <div class="extended-contents-one-wrapper">
+                    <a href="#"><h2>Production machine learning isn’t hard anymore</h2></a>
+                    <a href="#"><p>Deploying machine learning microservices has gotten easier</p></a>
+                    <div class="extended-contents-content">
+                        <p>Within machine learning, however, this standardization hasn’t existed. To build a pipeline that goes from model training to deployment, teams have had to architect their own solutions, largely from scratch.</p>
+                    </div>
+                    <div class="tags">
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+                                <a href="#"><p>#python</p></a>
+
+
+
+                            </div>
+                            <div class="timeofpost">
+                                a few hours ago | 4 mins read
+                            </div>
+                </div>
+                <div class="extended-contents-one-wrap-img">
+                    <a href="#"><img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt=""></a>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+                                <button type="button" class="product-view-all-btn">VIEW MORE</button>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,168 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }} {{ block.super }}
+{% endblock %}
+
+
+{% block body %}
+
+{#    <div class="post-wrapper">#}
+{#        <div class="post-header">#}
+{#            <ul>#}
+{#                {% for tag in post.has_tags.all %}#}
+{#                    <li>{{ tag }}</li>#}
+{##}
+{#                {% endfor %}#}
+{##}
+{#            </ul>#}
+{#        </div>#}
+
+        <div class="post-content">
+            <div class="title-post-content">
+                <h1>{{ post.hard_title }}</h1>
+                <p>{{ post.soft_title }}</p>
+            </div>{#           #end of title of post#}
+            <div class="profile-links">
+                <div class="profile-details">
+                    <div class="profile-image">
+                        <img src="{% static 'blog/img/profileimg.png' %}" alt="User Profile Image">
+                    </div>
+                    <div class="profile-name">
+                        <p>Paritosh Sharma Ghimire</p>
+                        <p> 4th May - 5 min read</p>
+                    </div>
+                </div>
+
+                <div class="profile-link">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="far fa-bookmark"></i></a>
+                </div>
+            </div>   {#            end of profile links#}
+
+
+
+            <div class="post-image-wrapper">
+                <img src="{{ post.title_image.url }}" alt="">
+            </div>
+
+        </div>
+
+        <div class="post-content-text">
+            {% if post.post_body_first %}
+
+                <p>{{ post.post_body_first|linebreaksbr }}</p>
+            {% endif %}
+            {% if post.highlight_content != '' %}
+                <div class="highlight">
+                    <p>
+                        {{ post.highlight_content }}
+                    </p>
+                </div>
+            {% endif %}
+            {% if post.post_body_second %}
+                <p>{{ post.post_body_second|linebreaksbr }}</p>
+            {% endif %}
+
+{#        End if post title main #}
+            {% if post.subpostcontent_set.all %}
+                {% for related in post.subpostcontent_set.all %}
+
+                    <h2>{{ related.inter_post_heading }}</h2>
+                    {% if related.inter_post_content_one %}
+                       <p>
+                           {{ related.inter_post_content_one|linebreaks }}
+                       </p>
+                        {% if related.inter_post_content_one_url %}
+                            <p>
+                               <script src="{{ related.inter_post_content_one_url }}"></script>
+                            </p>
+
+                        {% endif %}
+
+                    {% endif %}
+                    <div class="list-elements">
+                    {% if related.subpostlistelements_set.all %}
+                        {% for subpostlistelement in related.subpostlistelements_set.all  %}
+                            <div class="list-title">
+                                <p>
+                                    {{ forloop.counter }}. {{subpostlistelement.title }}
+                                    <script src="{{ subpostlistelement.title_url }}"></script>
+                                </p></div>
+                            {% for listelement in subpostlistelement.listelements_set.all %}
+
+                               <div class="list-content">
+                                   <ul>
+                                       <li>{{ listelement.element }}</li>
+                                       {% if listelement.element_url %}
+                                           <div class="embed-code">
+                                               <script src="{{ listelement.element_url}}"></script>
+                                           </div>
+
+                                       {% endif %}
+                                   </ul>
+                               </div>
+                            {% endfor %}
+
+                        {% endfor %}
+
+
+                    {% endif %}
+                    </div>
+
+
+                   {% if related.inter_post_content_two %}
+                       <p>
+                           {{ related.inter_post_content_two|linebreaks }}
+                       </p>
+                        {% if related.inter_post_content_two_url %}
+                            <p>
+                               <script src="{{ related.inter_post_content_two_url }}"></script>
+                            </p>
+
+                        {% endif %}
+
+                    {% endif %}
+
+                    {% if related.inter_post_content_three %}
+                       <p>
+                           {{ related.inter_post_content_three|linebreaks }}
+                       </p>
+                        {% if related.inter_post_content_three_url %}
+                            <p>
+                               <script src="{{ related.inter_post_content_three_url }}"></script>
+                            </p>
+
+                        {% endif %}
+
+                    {% endif %}
+
+                    {% if related.highlight_content != '' %}
+                        <div class="highlight">
+                        <p>
+                            {{ related.highlight_content }}
+                        </p>
+                        </div>
+                    {% endif %}
+
+
+                    {% if related.post_image != '' %}
+                        <div class="post-image-wrapper ">
+                            <img src="{{ related.post_image.url }}" alt="">
+                        </div>
+
+                    {% endif %}
+
+
+
+                {% endfor %}
+            {% endif %}
+
+        </div>
+    </div>
+
+
+{% endblock %}

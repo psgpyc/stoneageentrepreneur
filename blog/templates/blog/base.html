@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+             | STONEAGEENTREPRENEUR
+        {% endblock %}
+    </title>
+    <script src="https://kit.fontawesome.com/81a2d4bcab.js" ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="leftmenu">
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <form method="post">
+                <label>
+                    <input class='search-box' id="searchbox" type="search">
+                </label>
+            </form>
+
+            <div class="search">
+
+                <i class="fas fa-search"><span>search</span></i>
+            </div>
+
+
+        </div>
+        <div class="logo">
+            <a  href="{% url 'home' %}">Stone<span>Age</span>Entrepreneur.</a>
+        </div>
+        <div class="rightmenu">
+            <div class="health">Cart</div>
+            <div class="store">Merchandise</div>
+            <div class="accounts">Login</div>
+        </div>
+    </nav>
+
+
+{#    END NAV#}
+    <main class="main">
+{#    SIDE BAR STARTS#}
+        <div class="side-bar">
+            <div class="side-bar-0">
+
+                    <ul class="left-nav">
+                        <div class="left-nav-one">
+                            {% for catgeory in categories %}
+                                {% if forloop.counter <= 3 %}
+                                    <div>
+
+                                        <li><a class="minicategory" href="{% url 'categories' catgeory.slug_name %}">{{ catgeory.name }}</a></li>
+
+                                        <ul>
+                                            {% for mini in catgeory.postcategory_set.all %}
+                                                <li><a href="{% url 'mini-categories' mini.slug_name %}">{{ mini.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+
+
+
+                                {% endif %}
+
+                            {% endfor %}
+                        </div>
+
+                         <div class="left-nav-one">
+                            {% for catgeory in categories %}
+                                {% if forloop.counter > 3 %}
+                                    <div>
+
+                                        <li><a class="minicategory" href="{% url 'categories' catgeory.slug_name %}">{{ catgeory.name }}</a></li>
+
+                                        <ul>
+                                            {% for mini in catgeory.postcategory_set.all %}
+                                                <li><a href="{% url 'mini-categories' mini.slug_name %}">{{ mini.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+
+
+
+                                {% endif %}
+
+                            {% endfor %}
+                        </div>
+
+                     </ul>
+
+
+            </div>
+            <div class="side-bar-footer">
+
+            </div>
+        </div>
+{#              SIDEBAR ENDS              #}
+{#        MAIN CONTENT STARTS #}
+        <div class="content_wrapper">
+            {% block secondary-nav %}
+                <div class="secondary-nav">
+                    <ul class="secondary-nav">
+
+                        {% for category in categories  %}
+                            <li><a href="{% url 'categories' category.slug_name %}">{{ category }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endblock %}
+         {% block body %}
+
+
+         {% endblock %}
+
+{#            #}
+
+            <footer>
+
+
+
+                <p>ALL RIGHT RESERVED @ 2020</p>
+
+
+
+
+
+            </footer>
+
+
+
+
+
+{# END CONTENT WRAPPER      #}
+
+        </div>
+
+{#        END OF MAIN CONTENT         #}
+
+    </main>
+    <script src="{% static 'blog/js/landing.js' %}"></script>
+</body>
+</html>

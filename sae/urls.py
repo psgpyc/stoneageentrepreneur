@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 
-from blogtech.views import Home,Posts
+from blog.views import HomePage,PostDetails, Categories, MiniCategories
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home.as_view(), name='home'),
-    path('post/', Posts.as_view(), name='post')
+    path('', HomePage.as_view(), name='home'),
+    path('posts/<slug:post_slug>/', PostDetails.as_view(), name='post-details'),
+    path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
+    path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
 
 ]
 

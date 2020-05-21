@@ -3,10 +3,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ')tjzpjk6b6eqs%5fhtun^d4kk(!m4bsb90sxrmf^hoyfu66$9r'
 
@@ -28,8 +24,7 @@ INSTALLED_APPS = [
 
     # Installed Apps
     'accounts.apps.AccountsConfig',
-    'bloghealth.apps.BloghealthConfig',
-    'blogtech.apps.BlogtechConfig',
+    'blog.apps.BlogConfig',
     'store.apps.StoreConfig',
 ]
 AUTH_USER_MODEL = 'accounts.User'
@@ -57,6 +52,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog.customcontext.get_categories'
             ],
         },
     },
@@ -118,6 +114,9 @@ USE_L10N = True
 USE_TZ = True
 
 
+DEFAULT_FEATURE_DAYS = 7
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -126,4 +125,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243.compute-1.amazonaws.com:13879'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
 
