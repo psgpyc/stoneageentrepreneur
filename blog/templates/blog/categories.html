@@ -40,11 +40,13 @@
                         {{ the_featured_one.soft_title }}
                     </p>
                     <p class="category-content">
-                        {{ the_featured_one.post_body_first }}
+                        {{ the_featured_one.post_body_first|truncatewords:23 }}
                     </p>
                     <div class="tags">
                         {% for tag in the_featured_one.has_tags.all %}
-                        <a href="#"><p>#{{ tag }}</p></a>
+                            {% if forloop.counter <= 3 %}
+                                 <a href="#"><p>#{{ tag }}</p></a>
+                            {% endif %}
                         {% endfor %}
 
                     </div>

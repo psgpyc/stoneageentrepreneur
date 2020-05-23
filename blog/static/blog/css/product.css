@@ -5,6 +5,8 @@
     margin-right: 3vw;
 }
 
+
+
 .tech-kit-wrapper h1{
     font-weight: 300;
     font-size: 25px;
@@ -81,7 +83,6 @@
 }
 
 
-
 .btn-shop{
     position: absolute;
     width: 8vw;
@@ -134,8 +135,8 @@
 
 .secondary-picks{
     margin: 30px 13px;
+    border: black;
 }
-
 
 .img-wrap-secondary-picks img{
     width: 25vw;

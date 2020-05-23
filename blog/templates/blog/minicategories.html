@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    {{ title }}{{ block.super }}
+    {{ whereiam }}{{ block.super }}
 {% endblock %}
 
 {% block secondary-nav %}
@@ -10,140 +10,40 @@
 {% endblock %}
 {% block body %}
 
-
-
-{#     <div class="secondary-nav">#}
-{#        <ul class="secondary-nav">#}
-{#            {% for navheading in blog_categories.postcategory_set.all  %}#}
-{#                <li><a href="{% url 'mini-category' navheading.slug_name %}">{{ navheading }}</a></li>#}
-{#            {% endfor %}#}
-{#        </ul>#}
-{#    </div>#}
-
-        {# END SECONDARY NAV #}
-
     <div class="category-distance">
             <div class="whereiam-wrapper-mini">
                 <a href="{% url 'home' %}"> HOME  </a> > <a href="{% url 'categories' whereiwas.slug_name %}">{{ whereiwas |upper }}</a> <span> ></span>   <a href="#">{{ whereiam |upper }}</a>
             </div>
-            <div class="category-pick-one">
-                <div class="category-img-wrapper">
-                    <img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt="CategoryPickOne">
-                </div>
-                <div class="category-content-wrapper">
-                    <a class="category-hard-title" href="#"><h1>Production Machine Learning is not hard anymore</h1></a>
-                    <p class="category-soft-title">
-                        Deploying machine learning microservices has gotten easier
-                    </p>
-                    <p class="category-content">
-                        Within machine learning, however, this standardization hasn’t existed.
-                        To build a pipeline that goes from model training to deployment, teams have
-                        had to architect their own solutions, largely from scratch.
-                    </p>
+        <div class="extended-wrapper">
+        {% for post in posts %}
+            <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
+            <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
+
+
+            <div class="extended-contents-one">
+                <div class="extended-contents-one-wrapper">
+                    <div class="extended-contents-content">
+                        <p>{{ post.post_body_first|truncatewords:20 }}</p>
+                    </div>
                     <div class="tags">
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                    </div>
-                    <div class="timeofpost">
+
+
+                            </div>
+                            <div class="timeofpost">
                                 a few hours ago | 4 mins read
-                    </div>
+                            </div>
                 </div>
-                {#            End Category Content Wrapper     #}
+                <div class="extended-contents-one-wrap-img">
+                    <a href="{% url 'post-details' post.slug_name %}"><img src="{{ post.title_image.url }}" alt=""></a>
+                </div>
+
+
+
             </div>
+        {% endfor %}
+        </div>
 
     </div>
 
-    <div class="category-distance">
-            <div class="category-pick-one">
-                <div class="category-img-wrapper">
-                    <img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt="CategoryPickOne">
-                </div>
-                <div class="category-content-wrapper">
-                    <a class="category-hard-title" href="#"><h1>Production Machine Learning is not hard anymore</h1></a>
-                    <p class="category-soft-title">
-                        Deploying machine learning microservices has gotten easier
-                    </p>
-                    <p class="category-content">
-                        Within machine learning, however, this standardization hasn’t existed.
-                        To build a pipeline that goes from model training to deployment, teams have
-                        had to architect their own solutions, largely from scratch.
-                    </p>
-                    <div class="tags">
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                    </div>
-                    <div class="timeofpost">
-                                a few hours ago | 4 mins read
-                    </div>
-                </div>
-                {#            End Category Content Wrapper     #}
-            </div>
-
-    </div>
-
-    <div class="category-distance">
-            <div class="category-pick-one">
-                <div class="category-img-wrapper">
-                    <img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt="CategoryPickOne">
-                </div>
-                <div class="category-content-wrapper">
-                    <a class="category-hard-title" href="#"><h1>Production Machine Learning is not hard anymore</h1></a>
-                    <p class="category-soft-title">
-                        Deploying machine learning microservices has gotten easier
-                    </p>
-                    <p class="category-content">
-                        Within machine learning, however, this standardization hasn’t existed.
-                        To build a pipeline that goes from model training to deployment, teams have
-                        had to architect their own solutions, largely from scratch.
-                    </p>
-                    <div class="tags">
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                    </div>
-                    <div class="timeofpost">
-                                a few hours ago | 4 mins read
-                    </div>
-                </div>
-                {#            End Category Content Wrapper     #}
-            </div>
-
-    </div>
-
-    <div class="category-distance">
-
-            <div class="category-pick-one">
-                <div class="category-img-wrapper">
-                    <img src="{% static 'blog/img/1_qeA1xnJIu_D32TUeZ_9-JQ.jpeg' %}" alt="CategoryPickOne">
-                </div>
-                <div class="category-content-wrapper">
-                    <a class="category-hard-title" href="#"><h1>Production Machine Learning is not hard anymore</h1></a>
-                    <p class="category-soft-title">
-                        Deploying machine learning microservices has gotten easier
-                    </p>
-                    <p class="category-content">
-                        Within machine learning, however, this standardization hasn’t existed.
-                        To build a pipeline that goes from model training to deployment, teams have
-                        had to architect their own solutions, largely from scratch.
-                    </p>
-                    <div class="tags">
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                        <a href="#"><p>#Python</p></a>
-                    </div>
-                    <div class="timeofpost">
-                                a few hours ago | 4 mins read
-                    </div>
-                </div>
-                {#            End Category Content Wrapper     #}
-            </div>
-
-    </div>
 
 {% endblock %}

@@ -1,6 +1,7 @@
 
 
 .secondary-nav{
+    display: block;
     width: 90%;
     margin: auto;
     position: fixed;
@@ -38,7 +39,6 @@
  /*Category pick one */
 .category-distance{
     margin-top: 140px;
-    margin-bottom: 60px;
 }
 
 .category-pick-one{
@@ -48,18 +48,21 @@
 
 }
 
-.click_collapse .category-pick-one{
-    width: 100%;
+.category-pick-one-wrapper{
+    margin-bottom: 30px;
+    height: 30%;
 }
+
 
 .category-img-wrapper{
     width: 30vw;
     margin: 0 2vw;
+    object-fit: cover;
 
 }
 
 .category-img-wrapper img{
-    width: 30vw;
+    width: 100%;
     height: 35vh;
     border-radius: 5px;
 }
@@ -67,6 +70,7 @@
 .category-content-wrapper{
     margin-top: 1vh;
     display: block;
+    width: 60vw;
 
     line-height: 28px;
     text-justify: inter-word;
@@ -129,3 +133,6 @@
 }
 
 
+.mini-category-soft-title{
+    color: rgba(0,0,0,0.70);
+}

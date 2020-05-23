@@ -32,7 +32,8 @@
 
 .post-content{
     margin-top: 120px;
-    width: auto
+    width: auto;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 .post-content .title-post-content{

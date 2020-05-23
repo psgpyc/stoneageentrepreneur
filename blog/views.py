@@ -68,13 +68,28 @@ class Categories(View):
         return render(request, template_name=self.template_name, context=ctx)
 
 
-class MiniCategories(TemplateView):
+class MiniCategories(View):
     template_name = 'blog/minicategories.html'
 
-    def get_context_data(self, **kwargs):
-        a=PostCategory.objects.filter(slug_name=self.kwargs['post_slug']).select_related('belongs_to')
-        context = super(MiniCategories, self).get_context_data(**kwargs)
-        context['title'] = self.kwargs['post_slug']
-        context['whereiam'] = get_where_i_am(self.kwargs['post_slug'])
-        context['whereiwas'] = a[0].belongs_to
-        return context
+    def get(self, request, *args, **kwargs):
+        qs = Post.objects.select_related(
+            'belongs_to__belongs_to').\
+            filter(
+            belongs_to__slug_name=self.kwargs['post_slug']).\
+            prefetch_related('has_tags')
+
+        ctx = {
+            'posts': qs,
+            'whereiam': get_where_i_am(self.kwargs['post_slug']),
+            'whereiwas': qs[0].belongs_to.belongs_to
+
+        }
+
+        return render(request, template_name=self.template_name, context=ctx)
+
+
+
+
+
+
+
