@@ -115,7 +115,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-DEFAULT_FEATURE_DAYS = 7
+DEFAULT_FEATURE_DAYS = 30
+# update before final deploy
 
 
 # Static files (CSS, JavaScript, Images)
