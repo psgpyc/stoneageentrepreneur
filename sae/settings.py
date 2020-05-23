@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -130,4 +131,6 @@ MEDIA_URL = '/media/'
 CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243.compute-1.amazonaws.com:13879'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+django_heroku.settings(locals())
 
