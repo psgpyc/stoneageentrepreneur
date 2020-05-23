@@ -10,7 +10,7 @@ SECRET_KEY = ')tjzpjk6b6eqs%5fhtun^d4kk(!m4bsb90sxrmf^hoyfu66$9r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG_VALUE')
 
-ALLOWED_HOSTS = ['stoneageentrepreneur.herokuapp.com']
+ALLOWED_HOSTS = ['www.stoneageentrepreneur.com','stoneageentrepreneur.com','stoneageentrepreneur.herokuapp.com']
 
 
 # Application definition
