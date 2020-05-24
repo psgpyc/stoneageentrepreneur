@@ -1143,7 +1143,7 @@ nav .rightmenu .accounts:hover{
 
     .post-content .title-post-content{
 
-        width: 90%;
+        width: 100%;
         margin: auto;
         line-height: 22px;
         text-align: center;
@@ -1247,7 +1247,7 @@ nav .rightmenu .accounts:hover{
 
     .gist{
         margin-left: -10px;
-        width: 110%;
+        width: 100%;
     }
 
     .post-wrapper{
