@@ -383,7 +383,7 @@ nav .rightmenu .accounts:hover{
 }
 
 .right-banner .img-wrapper-rb img{
-    height: 23vh;
+    height: 20vh;
     width: 20vw;
     border-radius: 5px;
 }
@@ -834,10 +834,30 @@ nav .rightmenu .accounts:hover{
 
 }
 
+/* Pure Mobile View  */
+
 @media screen and (max-width: 600px){
     body{
         overflow-x: hidden;
     }
+
+    nav .leftmenu .hamburger{
+        font-size: 17px;
+    }
+
+    nav .leftmenu .hamburger:hover{
+    font-size: 20px;
+    color: #007dc3;
+    }
+
+    nav .logo{
+        font-size: 20px;
+        margin-right: 16vw;
+    }
+
+
+
+
     .banner{
         display: flex;
         flex-direction: column;
