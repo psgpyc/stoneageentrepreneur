@@ -872,8 +872,13 @@ nav .rightmenu .accounts:hover{
     body{
         overflow-x: hidden;
     }
+
+    nav{
+        width: 90%;
+    }
     nav .leftmenu{
         flex: 1;
+
     }
     nav .logo{
         flex: 4;
@@ -882,13 +887,14 @@ nav .rightmenu .accounts:hover{
 
     nav .rightmenu-mobile{
          flex: 1;
+        margin-left: -20px;
     }
 
      nav .rightmenu-mobile i{
          font-size: 20px;
          margin-left: 5px;
          margin-top: 10px;
-         margin-right: 10px;
+         margin-right: 100px;
          cursor: pointer;
      }
     nav .rightmenu-mobile i:hover{
