@@ -888,6 +888,7 @@ nav .rightmenu .accounts:hover{
          font-size: 20px;
          margin-left: 5px;
          margin-top: 10px;
+         margin-right: 10px;
          cursor: pointer;
      }
     nav .rightmenu-mobile i:hover{
