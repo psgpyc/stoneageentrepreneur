@@ -1299,6 +1299,9 @@ nav .rightmenu .accounts:hover{
         overflow-x: hidden;
         overflow-y: scroll;
     }
+    nav{
+        width: 95%;
+    }
 
     nav .leftmenu{
         flex: 2;
