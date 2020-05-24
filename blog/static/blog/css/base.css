@@ -19,6 +19,7 @@ a{
 
 body{
     background: #f5f5f5;
+    height: 100%;
 
 }
 
@@ -206,6 +207,7 @@ nav .rightmenu .accounts:hover{
     margin-top: 5px;
     margin-bottom: 20px;
     text-align: center;
+    height: 100%;
 }
 
 .side-bar-0 ul a{
@@ -1274,6 +1276,7 @@ nav .rightmenu .accounts:hover{
 
     .left-nav-mobile{
         display: block;
+        height: 150%;
     }
 
      .left-nav-mobile ul{
@@ -1291,6 +1294,10 @@ nav .rightmenu .accounts:hover{
      .left-nav-mobile .mini-mini-category{
          margin: -2px 15px;
          font-size: 14px;
+     }
+
+     .search-box-mini{
+         width: 100%;
      }
 
 
