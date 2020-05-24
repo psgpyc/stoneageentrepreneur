@@ -1011,7 +1011,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .title-wrap-secondary-picks a h1{
-        margin-top: 4px;
+        /*margin-top: 4px;*/
         font-size: 4vw;
         margin-bottom: 3px;
         line-height: 20px;
