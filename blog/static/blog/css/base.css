@@ -91,6 +91,10 @@ nav .search-box{
 
 }
 
+nav .rightmenu-mobile{
+    display: none;
+}
+
 .search-box-display-on-click .search-box{
     opacity: 1;
     width: 300px;
@@ -434,6 +438,10 @@ nav .rightmenu .accounts:hover{
         margin-top: -30px;
     }
 
+    nav .rightmenu-mobile{
+        display: none;
+    }
+
     .banner{
         margin-top: 90px;
     }
@@ -562,22 +570,36 @@ nav .rightmenu .accounts:hover{
 
 
     nav .leftmenu{
-        flex: 1;
+        flex: 2;
     }
 
     nav .rightmenu{
         display: none;
     }
 
+    nav .leftmenu{
+        flex: 2;
+    }
+    nav .logo{
+        flex: 3;
+        margin-right:10px;
+    }
+
+    nav .rightmenu-mobile{
+        display: flex;
+        flex: 1;
+        margin-right: -10vw;
+    }
+
+     nav .rightmenu-mobile i{
+         font-size: 20px;
+         margin: 5px;
+     }
+
     nav .leftmenu .search{
         display: none;
     }
 
-    nav .logo{
-        flex: 2;
-        justify-content: flex-end;
-        margin-right: 5vw;
-    }
 
      .whereiam-wrapper{
         margin-top: -30px;
@@ -850,6 +872,30 @@ nav .rightmenu .accounts:hover{
     body{
         overflow-x: hidden;
     }
+    nav .leftmenu{
+        flex: 2;
+    }
+    nav .logo{
+        flex: 2;
+        margin-right:10vw ;
+    }
+
+    nav .rightmenu-mobile{
+         flex: 2;
+    }
+
+     nav .rightmenu-mobile i{
+         font-size: 20px;
+         margin-left: 5px;
+         margin-right: 5px;
+         margin-top: 10px;
+         cursor: pointer;
+     }
+    nav .rightmenu-mobile i:hover{
+        color: #007dc3;
+    }
+
+
 
     .whereiam-wrapper{
         margin-top: -26px;
@@ -1254,6 +1300,10 @@ nav .rightmenu .accounts:hover{
         overflow-y: scroll;
     }
 
+    nav .leftmenu{
+        flex: 2;
+    }
+
     nav .leftmenu .hamburger{
         font-size: 17px;
     }
@@ -1264,8 +1314,9 @@ nav .rightmenu .accounts:hover{
     }
 
     nav .logo{
+        flex: 2;
         font-size: 20px;
-        margin-right: 16vw;
+        margin-right: 10vw;
     }
 
 
@@ -1294,6 +1345,14 @@ nav .rightmenu .accounts:hover{
      .left-nav-mobile .mini-mini-category{
          margin: -2px 15px;
          font-size: 14px;
+     }
+
+     nav .rightmenu-mobile{
+         flex: 2;
+     }
+
+     nav .rightmenu-mobile i{
+         margin: 0 5px;
      }
 
      .search-box-mini{
@@ -1739,35 +1798,5 @@ nav .rightmenu .accounts:hover{
     .whereiam-wrapper-mini{
         font-size: 14px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
