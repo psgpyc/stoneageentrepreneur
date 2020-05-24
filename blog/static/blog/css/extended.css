@@ -1,5 +1,5 @@
 .extended-wrapper{
-    width: 100%;
+    width: 80%;
     margin: auto;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .extended-content-header{
-    width: 50%;
+    width: 60%;
     margin: auto;
     text-align: center;
 
@@ -31,9 +31,10 @@
 
 
 .extended-image-wrapper img{
-    width: 30vw;
-    height: 200px;
+    width: 20vw;
+    height: 170px;
     align-items: center;
+    border-radius: 10px;
 }
 
 
@@ -54,6 +55,3 @@ footer{
 }
 
 
-.extended-wrapper{
-    /*text-align: center;*/
-}

@@ -651,6 +651,191 @@ nav .rightmenu .accounts:hover{
          display: none;
      }
 
+      .post-content{
+        margin-top: 70px;
+    }
+
+    .post-content .title-post-content{
+
+        width: 100%;
+        margin: auto;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .post-content .title-post-content h1{
+        line-height: 22px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .post-content .title-post-content p{
+        width: 80%;
+        margin: auto;
+        line-height: 15px;
+    }
+
+    .profile-links{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .profile-links .profile-details img{
+        height: 40px;
+        width: 9vw;
+        border-radius: 50%;
+    }
+
+    .profile-link{
+        margin-right: 0;
+    }
+
+    .profile-name{
+        margin-top: 5px;
+        line-height: 18px;
+    }
+
+    .profile-link a{
+        margin: 0 2px;
+        font-size: 17px;
+    }
+
+    .post-image-wrapper{
+        width: 80%;
+        margin: auto;
+    }
+
+    .post-image-wrapper img{
+        height: 200px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*    post main text */
+
+    .post-content-text{
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 30px;
+        font-size: 16px;
+
+    }
+
+    .post-content-text h2{
+        margin: 12px 0;
+        font-weight: 300;
+        font-size: 20px;
+        color: #007dc3;
+    }
+
+    .highlight{
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .highlight p{
+        font-style: italic;
+        font-size: 16px;
+        color: green;
+
+    }
+
+    .list-title p{
+        font-size: 16px;
+        font-weight: 100;
+        color: #007dc3;
+    }
+
+    .list-content ul li{
+        width: 85%;
+        margin-left: auto;
+        list-style: disc;
+        font-size: 15px;
+    }
+
+    .gist{
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .post-wrapper{
+        width: 80%;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .post-header ul li{
+        margin: 0 5px;
+
+    }
+
+    .extended-wrapper{
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .extended-content-header{
+        width: 70%;
+        margin: auto;
+    }
+
+    .extended-content-header h2{
+        color: #007dc3;
+        font-weight: 200;
+        line-height: 24px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .extended-image-wrapper img{
+        width: 20vw;
+        height: 90px;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .extended-content-header .mini-category-soft-title{
+        color: rgba(0,0,0,0.70);
+        line-height: 15px;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    .mini-category-body-mobile-wrapper{
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+    .mini-category-body-mobile{
+        width: 90%;
+        margin: auto;
+        line-height: 20px;
+
+    }
+    .mini-category-soft-title{
+        width: 100%;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
@@ -840,6 +1025,191 @@ nav .rightmenu .accounts:hover{
      .categories-mobile-view{
          display: none;
      }
+
+     .post-content{
+        margin-top: 70px;
+    }
+
+    .post-content .title-post-content{
+
+        width: 100%;
+        margin: auto;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .post-content .title-post-content h1{
+        line-height: 22px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .post-content .title-post-content p{
+        width: 80%;
+        margin: auto;
+        line-height: 15px;
+    }
+
+    .profile-links{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .profile-links .profile-details img{
+        height: 40px;
+        width: 9vw;
+        border-radius: 50%;
+    }
+
+    .profile-link{
+        margin-right: 0;
+    }
+
+    .profile-name{
+        margin-top: 5px;
+        line-height: 18px;
+    }
+
+    .profile-link a{
+        margin: 0 2px;
+        font-size: 17px;
+    }
+
+    .post-image-wrapper{
+        width: 80%;
+        margin: auto;
+    }
+
+    .post-image-wrapper img{
+        height: 200px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*    post main text */
+
+    .post-content-text{
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 30px;
+        font-size: 16px;
+
+    }
+
+    .post-content-text h2{
+        margin: 12px 0;
+        font-weight: 300;
+        font-size: 20px;
+        color: #007dc3;
+    }
+
+    .highlight{
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .highlight p{
+        font-style: italic;
+        font-size: 16px;
+        color: green;
+
+    }
+
+    .list-title p{
+        font-size: 16px;
+        font-weight: 100;
+        color: #007dc3;
+    }
+
+    .list-content ul li{
+        width: 85%;
+        margin-left: auto;
+        list-style: disc;
+        font-size: 15px;
+    }
+
+    .gist{
+        margin-left: -10px;
+        width: 100%;
+    }
+
+    .post-wrapper{
+        width: 80%;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .post-header ul li{
+        margin: 0 5px;
+
+    }
+
+    .extended-wrapper{
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .extended-content-header{
+        width: 70%;
+        margin: auto;
+    }
+
+    .extended-content-header h2{
+        color: #007dc3;
+        font-weight: 200;
+        line-height: 24px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .extended-image-wrapper img{
+        width: 20vw;
+        height: 90px;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .extended-content-header .mini-category-soft-title{
+        color: rgba(0,0,0,0.70);
+        line-height: 15px;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    .mini-category-body-mobile-wrapper{
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+    .mini-category-body-mobile{
+        width: 90%;
+        margin: auto;
+        line-height: 20px;
+
+    }
+    .mini-category-soft-title{
+        width: 100%;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1125,7 +1495,7 @@ nav .rightmenu .accounts:hover{
 
      .left-nav-mobile .mini-mini-category{
          margin: -2px 15px;
-         font-size: 10px;
+         font-size: 14px;
      }
 
      .category-rest-view{
@@ -1167,7 +1537,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .profile-links .profile-details img{
-        height: 50px;
+        height: 40px;
         width: 9vw;
         border-radius: 50%;
     }
@@ -1251,7 +1621,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .post-wrapper{
-        width: 90%;
+        width: 80%;
         margin: auto;
         font-size: 15px;
     }
@@ -1260,6 +1630,65 @@ nav .rightmenu .accounts:hover{
         margin: 0 5px;
 
     }
+
+/*    Mini Categories page */
+
+    .extended-wrapper{
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .extended-content-header{
+        width: 70%;
+        margin: auto;
+    }
+
+    .extended-content-header h2{
+        color: #007dc3;
+        font-weight: 200;
+        line-height: 24px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .extended-image-wrapper img{
+        width: 20vw;
+        height: 90px;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .extended-content-header .mini-category-soft-title{
+        color: rgba(0,0,0,0.70);
+        line-height: 15px;
+        margin-top: 3px;
+        text-align: center;
+    }
+
+    .mini-category-body-mobile-wrapper{
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+    .mini-category-body-mobile{
+        width: 90%;
+        margin: auto;
+        line-height: 20px;
+
+    }
+    .mini-category-soft-title{
+        width: 100%;
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 

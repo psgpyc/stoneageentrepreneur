@@ -153,12 +153,13 @@
             {% endif %}
 
         </div>
-    </div>
     <div class="post-wrapper">
         <div class="post-header">
             <ul>
                 {% for tag in post.has_tags.all %}
-                    <li>#{{ tag|upper }}</li>
+                    {% if forloop.counter <= 3 %}
+                        <li>#{{ tag|upper }}</li>
+                    {% endif %}
 
                 {% endfor %}
 

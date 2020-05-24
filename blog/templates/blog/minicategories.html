@@ -17,17 +17,23 @@
         <div class="extended-wrapper">
         {% for post in posts %}
             <div class="extended-content-wrapper">
-                <div class="extended-content-header">
-                    <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
-                    <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
-                    <p class="mini-category-body">{{ post.post_body_first|truncatewords:40 }}</p>
-                </div>
-
                 <div class="extended-image-wrapper">
                     <img src="{{ post.title_image.url }}" alt="post content image">
                 </div>
+                <div class="extended-content-header">
+                    <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
+                    <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
+                   <p class="mini-category-body category-rest-view">{{ post.post_body_first|truncatewords:30 }}</p>
+                </div>
+
+
+            </div>
+            <div class="mini-category-body-mobile-wrapper">
+                <p class="mini-category-body-mobile categories-mobile-view">{{ post.post_body_first|truncatewords:30 }}</p>
+
             </div>
         {% endfor %}
+
         </div>
 
     </div>
