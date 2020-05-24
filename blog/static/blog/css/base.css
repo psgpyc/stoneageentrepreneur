@@ -416,133 +416,6 @@ nav .rightmenu .accounts:hover{
 
 /*START PRODUCT */
 
-
-/*END PRODUCT  */
-
-
-/*Responsive import*/
-
-@media screen and (max-width: 1150px){
-
-    .secondary-nav{
-        display: none;
-    }
-
-    .whereiam-wrapper{
-        margin-top: -30px;
-    }
-
-    nav .rightmenu-mobile{
-        display: none;
-    }
-
-    .banner{
-        margin-top: 90px;
-    }
-
-    .right-banner{
-        display: none;
-    }
-
-    .banner .left-banner{
-        width: 50%;
-    }
-
-    .banner .left-banner .img-wrap-lb img{
-        height: 150px;
-        width: 100%;
-        border-radius: 5px;
-        object-fit: cover;
-    }
-
-    .banner .left-banner .title-wrap-lb{
-        margin-top: 5px;
-        width: 100%;
-        text-align: center;
-        line-height: 25px;
-        font-size: 12px;
-
-
-    }
-
-    .left-banner .title-wrap-lb a h1{
-        font-size: 2vw;
-    }
-
-    .middle-banner{
-        width: 50%;
-        margin-left: 40px;
-    }
-
-    .img-wrapper-mb{
-        width: 40%;
-    }
-
-    .img-wrapper-mb img{
-        width: 100%;
-    }
-
-    .content-wrapper-mb{
-        width: 70%;
-        margin-left: 20px;
-    }
-
-    .content-wrapper-mb h2{
-        font-size: 2vw;
-        /*line-height: 20px;*/
-        font-weight: 300;
-    }
-
-    .content-wrapper-mb p{
-        line-height: 16px;
-        margin: 5px;
-    }
-
-    .tab-view{
-        display: none;
-    }
-
-    .product-first img{
-        width: 20vw;
-    }
-
-    .btn-shop{
-        left: 35%;
-    }
-
-    .search-box-mini{
-        display: none;
-    }
-
-    .category-pick-one .category-img-wrapper{
-        width: 28vw;
-        margin: 0 2vw;
-    }
-
-    .category-pick-one .category-img-wrapper img{
-        width: 100%;
-        /*height: 30vh;*/
-        border-radius: 5px;
-    }
-
-    .category-pick-one .category-content-wrapper{
-        width: 50vw;
-    }
-
-    .category-pick-one .category-content-wrapper a h1{
-        font-weight: 300;
-        font-size: 25px;
-
-    }
-
-    .category-content-wrapper .category-soft-title{
-        color: rgba(0,0,0,0.54);
-    }
-
-    .categories-mobile-view{
-         display: none;
-     }
-
                                                                                 /*    START  PRODUCT CSS*/
     .tech-kit-wrapper{
     margin-top: 30px;
@@ -711,7 +584,7 @@ nav .rightmenu .accounts:hover{
 
                                                                                 /*    END  PRODUCT CSS*/
                                                                                 /*    START EXTENDED CSS */
-    .extended-wrapper{
+.extended-wrapper{
     width: 80%;
     margin: auto;
 }
@@ -1097,6 +970,135 @@ footer{
                                                                                 /*    END POST-CONTENT CSS */
 
 
+
+
+
+
+/*END PRODUCT  */
+
+
+/*Responsive import*/
+
+@media screen and (max-width: 1150px){
+
+    .secondary-nav{
+        display: none;
+    }
+
+    .whereiam-wrapper{
+        margin-top: -30px;
+    }
+
+    nav .rightmenu-mobile{
+        display: none;
+    }
+
+    .banner{
+        margin-top: 90px;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    .banner .left-banner{
+        width: 50%;
+    }
+
+    .banner .left-banner .img-wrap-lb img{
+        height: 150px;
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    .banner .left-banner .title-wrap-lb{
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+        line-height: 25px;
+        font-size: 12px;
+
+
+    }
+
+    .left-banner .title-wrap-lb a h1{
+        font-size: 2vw;
+    }
+
+    .middle-banner{
+        width: 50%;
+        margin-left: 40px;
+    }
+
+    .img-wrapper-mb{
+        width: 40%;
+    }
+
+    .img-wrapper-mb img{
+        width: 100%;
+    }
+
+    .content-wrapper-mb{
+        width: 70%;
+        margin-left: 20px;
+    }
+
+    .content-wrapper-mb h2{
+        font-size: 2vw;
+        /*line-height: 20px;*/
+        font-weight: 300;
+    }
+
+    .content-wrapper-mb p{
+        line-height: 16px;
+        margin: 5px;
+    }
+
+    .tab-view{
+        display: none;
+    }
+
+    .product-first img{
+        width: 20vw;
+    }
+
+    .btn-shop{
+        left: 35%;
+    }
+
+    .search-box-mini{
+        display: none;
+    }
+
+    .category-pick-one .category-img-wrapper{
+        width: 28vw;
+        margin: 0 2vw;
+    }
+
+    .category-pick-one .category-img-wrapper img{
+        width: 100%;
+        /*height: 30vh;*/
+        border-radius: 5px;
+    }
+
+    .category-pick-one .category-content-wrapper{
+        width: 50vw;
+    }
+
+    .category-pick-one .category-content-wrapper a h1{
+        font-weight: 300;
+        font-size: 25px;
+
+    }
+
+    .category-content-wrapper .category-soft-title{
+        color: rgba(0,0,0,0.54);
+    }
+
+    .categories-mobile-view{
+         display: none;
+     }
 
 
 
