@@ -182,7 +182,11 @@ nav .rightmenu .accounts:hover{
     background-color: whitesmoke;
     display: none;
     z-index: 300;
+    overflow-y: scroll;
 
+}
+.left-nav-mobile{
+    display: none;
 }
 
 .click_collapse .side-bar{
@@ -1245,6 +1249,7 @@ nav .rightmenu .accounts:hover{
 @media screen and (max-width: 600px){
     body{
         overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     nav .leftmenu .hamburger{
@@ -1260,6 +1265,34 @@ nav .rightmenu .accounts:hover{
         font-size: 20px;
         margin-right: 16vw;
     }
+
+
+    .left-nav{
+         display: none;
+
+    }
+
+    .left-nav-mobile{
+        display: block;
+    }
+
+     .left-nav-mobile ul{
+         font-size: 5px;
+         text-align: left;
+
+     }
+
+     .left-nav-mobile .minicategory{
+         font-size: 15px;
+         margin-bottom: -2px ;
+         text-align: left;
+     }
+
+     .left-nav-mobile .mini-mini-category{
+         margin: -2px 15px;
+         font-size: 14px;
+     }
+
 
     .whereiam-wrapper{
         margin-top: -22px;
@@ -1481,6 +1514,8 @@ nav .rightmenu .accounts:hover{
 
      }
 
+
+
      .left-nav-mobile ul{
          font-size: 5px;
          text-align: left;
@@ -1639,8 +1674,15 @@ nav .rightmenu .accounts:hover{
 
     }
 
+    .extended-content-wrapper{
+        display: block;
+        justify-content: space-between;
+        margin: 25px 0;
+
+    }
+
     .extended-content-header{
-        width: 70%;
+        width: 90%;
         margin: auto;
     }
 
@@ -1649,12 +1691,12 @@ nav .rightmenu .accounts:hover{
         font-weight: 200;
         line-height: 24px;
         font-size: 19px;
-        text-align: center;
+        text-align: left;
     }
 
     .extended-image-wrapper img{
-        width: 20vw;
-        height: 90px;
+        width: 100%;
+        height: 200px;
         align-items: center;
         border-radius: 10px;
     }
@@ -1663,7 +1705,7 @@ nav .rightmenu .accounts:hover{
         color: rgba(0,0,0,0.70);
         line-height: 15px;
         margin-top: 3px;
-        text-align: center;
+        text-align: left;
     }
 
     .mini-category-body-mobile-wrapper{
@@ -1674,11 +1716,21 @@ nav .rightmenu .accounts:hover{
         width: 90%;
         margin: auto;
         line-height: 20px;
+        text-align: justify;
+        text-justify: inter-word;
 
     }
     .mini-category-soft-title{
         width: 100%;
+        text-align: left;
 
+    }
+    .whereiam-wrapper{
+        font-size: 13px;
+    }
+
+    .whereiam-wrapper-mini{
+        font-size: 14px;
     }
 
 
