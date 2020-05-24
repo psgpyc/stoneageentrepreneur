@@ -1500,6 +1500,7 @@ nav .rightmenu .accounts:hover{
         font-size: 4vw;
         margin-bottom: 3px;
         line-height: 20px;
+        text-align: left;
     }
 
     .title-wrap-secondary-picks .title-detail{

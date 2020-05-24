@@ -147,14 +147,14 @@
 
 .title-wrap-secondary-picks{
     margin-top: 14px;
-    width: 20vw;
-    /*text-align: center;*/
+    text-align: center;
     line-height: 25px;
     font-size: 12px;
 }
 
 .title-wrap-secondary-picks a h1{
     line-height: 20px;
+    text-align: center;
 }
 
 .title-wrap-secondary-picks p{
