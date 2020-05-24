@@ -228,8 +228,9 @@ nav .rightmenu .accounts:hover{
     cursor: pointer;
 }
 .left-nav{
+    display: block;
 
-}
+    }
 .left-nav-one{
     /*margin: 0 10px;*/
     display: flex;
@@ -864,7 +865,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .banner .left-banner{
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
 
@@ -872,7 +873,6 @@ nav .rightmenu .accounts:hover{
         height: 150px;
         width: 100%;
         margin: auto;
-        border-radius: 5px;
         object-fit: cover;
     }
 
@@ -894,16 +894,13 @@ nav .rightmenu .accounts:hover{
         margin-top: 30px;
     }
 
-    .first-mb{
-        margin-left: -20px;
-    }
-
     .img-wrapper-mb{
         width: 30%;
     }
 
     .img-wrapper-mb img{
         width: 100%;
+        height: 100px;
     }
 
     .middle-banner .first-mb .content-wrapper-mb{
@@ -913,7 +910,6 @@ nav .rightmenu .accounts:hover{
 
     .content-wrapper-mb h2{
         font-size: 4vw;
-        /*line-height: 20px;*/
         font-weight: 300;
     }
 
@@ -923,7 +919,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .tech-kit-wrapper{
-        width: 100%;
+        margin-left: -7px;
     }
     .tech-kit-wrapper .sub-headings-post{
         font-size: 4vw;
@@ -936,10 +932,12 @@ nav .rightmenu .accounts:hover{
 
     .product-first img{
         width: 60%;
+        height: 250px;
     }
 
     .product-first .btn-shop{
         left: 40%;
+        top: 65%;
         width: 17vw;
     }
 
@@ -956,16 +954,20 @@ nav .rightmenu .accounts:hover{
         cursor: pointer;
     }
 
+    .secondary-picks{
+        margin: 5px 0;
+    }
+
     .secondary-picks .img-wrap-secondary-picks img{
         width: 30vw;
-        height: 20vh;
+        height: 130px;
         margin-top: 3px;
 
     }
 
 
     .secondary-picks-wrapper .secondary-picks .title-wrap-secondary-picks{
-        width: 90vw;
+        width: 100vw;
         margin-left: 25px;
         text-align: left;
 
@@ -999,7 +1001,7 @@ nav .rightmenu .accounts:hover{
 
     .category-pick-one .category-img-wrapper img{
         width: 100%;
-        height: 22vh;
+        height: 150px;
         border-radius: 5px;
     }
 
@@ -1052,6 +1054,28 @@ nav .rightmenu .accounts:hover{
           width: 30vw;
           border-radius: 10px;
 
+     }
+
+     .left-nav{
+         display: none;
+
+     }
+
+     .left-nav-mobile ul{
+         font-size: 5px;
+         text-align: left;
+
+     }
+
+     .left-nav-mobile .minicategory{
+         font-size: 15px;
+         margin-bottom: -2px ;
+         text-align: left;
+     }
+
+     .left-nav-mobile .mini-mini-category{
+         margin: -2px 15px;
+         font-size: 10px;
      }
 
 
