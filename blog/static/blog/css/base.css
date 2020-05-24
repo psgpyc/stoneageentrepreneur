@@ -429,7 +429,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .banner{
-        margin-top: 90px!important;
+        margin-top: 90px;
     }
 
     .right-banner{
@@ -576,6 +576,7 @@ nav .rightmenu .accounts:hover{
      .whereiam-wrapper{
         margin-top: -30px;
     }
+
     .secondary-picks-wrapper{
         display: flex;
         flex-direction: column;
@@ -663,6 +664,7 @@ nav .rightmenu .accounts:hover{
         margin-top: -26px;
     }
     .banner{
+        margin-top: 1px;
         display: flex;
         flex-direction: column;
     }
@@ -895,6 +897,7 @@ nav .rightmenu .accounts:hover{
 
 
     .banner{
+        margin: 1px;
         display: flex;
         flex-direction: column;
 
@@ -927,7 +930,7 @@ nav .rightmenu .accounts:hover{
 
     .middle-banner{
         width: 100%;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: 17px;
     }
 
@@ -1008,6 +1011,10 @@ nav .rightmenu .accounts:hover{
         margin-left: 25px;
         text-align: left;
 
+    }
+
+    .title-wrap-secondary-picks{
+        margin-top: 8px;
     }
 
     .title-wrap-secondary-picks a h1{
@@ -1128,6 +1135,140 @@ nav .rightmenu .accounts:hover{
      .categories-mobile-view{
          display: block;
      }
+
+/*     POST DESIGN MODEL  */
+    .post-content{
+        margin-top: 70px;
+    }
+
+    .post-content .title-post-content{
+
+        width: 90%;
+        margin: auto;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .post-content .title-post-content h1{
+        line-height: 22px;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .post-content .title-post-content p{
+        width: 80%;
+        margin: auto;
+        line-height: 15px;
+    }
+
+    .profile-links{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .profile-links .profile-details img{
+        height: 50px;
+        width: 9vw;
+        border-radius: 50%;
+    }
+
+    .profile-link{
+        margin-right: 0;
+    }
+
+    .profile-name{
+        margin-top: 5px;
+        line-height: 18px;
+    }
+
+    .profile-link a{
+        margin: 0 2px;
+        font-size: 17px;
+    }
+
+    .post-image-wrapper{
+        width: 90%;
+        margin: auto;
+    }
+
+    .post-image-wrapper img{
+        height: 200px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*    post main text */
+
+    .post-content-text{
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 30px;
+        font-size: 16px;
+
+    }
+
+    .post-content-text h2{
+        margin: 12px 0;
+        font-weight: 300;
+        font-size: 20px;
+        color: #007dc3;
+    }
+
+    .highlight{
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .highlight p{
+        font-style: italic;
+        font-size: 16px;
+        color: green;
+
+    }
+
+    .list-title p{
+        font-size: 16px;
+        font-weight: 100;
+        color: #007dc3;
+    }
+
+    .list-content ul li{
+        width: 85%;
+        margin-left: auto;
+        list-style: disc;
+        font-size: 15px;
+    }
+
+    .gist{
+        margin-left: -10px;
+        width: 110%;
+    }
+
+    .post-wrapper{
+        width: 90%;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .post-header ul li{
+        margin: 0 5px;
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 

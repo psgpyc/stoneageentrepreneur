@@ -8,16 +8,7 @@
 
 {% block body %}
 
-{#    <div class="post-wrapper">#}
-{#        <div class="post-header">#}
-{#            <ul>#}
-{#                {% for tag in post.has_tags.all %}#}
-{#                    <li>{{ tag }}</li>#}
-{##}
-{#                {% endfor %}#}
-{##}
-{#            </ul>#}
-{#        </div>#}
+
 
         <div class="post-content">
             <div class="title-post-content">
@@ -163,6 +154,15 @@
 
         </div>
     </div>
+    <div class="post-wrapper">
+        <div class="post-header">
+            <ul>
+                {% for tag in post.has_tags.all %}
+                    <li>#{{ tag|upper }}</li>
 
+                {% endfor %}
+
+            </ul>
+    </div>
 
 {% endblock %}
