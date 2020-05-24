@@ -50,12 +50,13 @@
 
 .category-pick-one-wrapper{
     margin-bottom: 30px;
-    height: 30%;
+    height: 230px;
 }
 
 
 .category-img-wrapper{
     width: 30vw;
+
     margin: 0 2vw;
     object-fit: cover;
 
@@ -63,7 +64,7 @@
 
 .category-img-wrapper img{
     width: 100%;
-    height: 35vh;
+    height: 230px;
     border-radius: 5px;
 }
 
@@ -75,7 +76,7 @@
     line-height: 28px;
     text-justify: inter-word;
     text-align: center;
-    height: 200px;
+    height: 230px;
 
 }
 
@@ -135,4 +136,5 @@
 
 .mini-category-soft-title{
     color: rgba(0,0,0,0.70);
+    line-height: 15px;
 }

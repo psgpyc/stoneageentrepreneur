@@ -25,7 +25,7 @@
 
 .product-view-all-btn{
     width: 10vw;
-    height: 5vh;
+    height: 30px;
     margin-top: 20px;
     font-size: 14px;
     border: 1px solid #000;
@@ -60,7 +60,7 @@
 
 .product-first img{
 
-    height: 40vh;
+    height: 300px;
     width: 15vw;
     margin: 10px 20px;
     object-fit: cover;
@@ -86,7 +86,7 @@
 .btn-shop{
     position: absolute;
     width: 8vw;
-    height: 4vh;
+    height: 30px;
     font-size: 16px;
     border: 1px solid #000;
     border-radius: 5px;

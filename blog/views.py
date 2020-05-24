@@ -78,6 +78,8 @@ class MiniCategories(View):
             belongs_to__slug_name=self.kwargs['post_slug']).\
             prefetch_related('has_tags')
 
+
+
         ctx = {
             'posts': qs,
             'whereiam': get_where_i_am(self.kwargs['post_slug']),

@@ -40,7 +40,7 @@
                         {{ the_featured_one.soft_title }}
                     </p>
                     <p class="category-content">
-                        {{ the_featured_one.post_body_first|truncatewords:23 }}
+                        {{ the_featured_one.post_body_first|truncatewords:20 }}
                     </p>
                     <div class="tags">
                         {% for tag in the_featured_one.has_tags.all %}

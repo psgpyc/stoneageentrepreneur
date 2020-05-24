@@ -16,29 +16,16 @@
             </div>
         <div class="extended-wrapper">
         {% for post in posts %}
-            <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
-            <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
-
-
-            <div class="extended-contents-one">
-                <div class="extended-contents-one-wrapper">
-                    <div class="extended-contents-content">
-                        <p>{{ post.post_body_first|truncatewords:20 }}</p>
-                    </div>
-                    <div class="tags">
-
-
-                            </div>
-                            <div class="timeofpost">
-                                a few hours ago | 4 mins read
-                            </div>
-                </div>
-                <div class="extended-contents-one-wrap-img">
-                    <a href="{% url 'post-details' post.slug_name %}"><img src="{{ post.title_image.url }}" alt=""></a>
+            <div class="extended-content-wrapper">
+                <div class="extended-content-header">
+                    <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
+                    <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
+                    <p class="mini-category-body">{{ post.post_body_first|truncatewords:40 }}</p>
                 </div>
 
-
-
+                <div class="extended-image-wrapper">
+                    <img src="{{ post.title_image.url }}" alt="post content image">
+                </div>
             </div>
         {% endfor %}
         </div>

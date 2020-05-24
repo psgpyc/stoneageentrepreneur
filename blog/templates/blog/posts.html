@@ -54,7 +54,7 @@
         <div class="post-content-text">
             {% if post.post_body_first %}
 
-                <p>{{ post.post_body_first|linebreaksbr }}</p>
+                <p>{{ post.post_body_first|safe|linebreaks }}</p>
             {% endif %}
             {% if post.highlight_content != '' %}
                 <div class="highlight">
