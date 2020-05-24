@@ -398,6 +398,11 @@ nav .rightmenu .accounts:hover{
 
 .search-box-mini{
     display: none;
+
+
+}
+.categories-mobile-view{
+    display: none;
 }
 
 
@@ -417,6 +422,10 @@ nav .rightmenu .accounts:hover{
 
     .secondary-nav{
         display: none;
+    }
+
+    .whereiam-wrapper{
+        margin-top: -30px;
     }
 
     .banner{
@@ -522,6 +531,10 @@ nav .rightmenu .accounts:hover{
         color: rgba(0,0,0,0.54);
     }
 
+    .categories-mobile-view{
+         display: none;
+     }
+
 
 
 
@@ -539,6 +552,8 @@ nav .rightmenu .accounts:hover{
 
 
 @media screen and (max-width: 1000px) {
+
+
 
     nav .leftmenu{
         flex: 1;
@@ -558,6 +573,9 @@ nav .rightmenu .accounts:hover{
         margin-right: 5vw;
     }
 
+     .whereiam-wrapper{
+        margin-top: -30px;
+    }
     .secondary-picks-wrapper{
         display: flex;
         flex-direction: column;
@@ -628,6 +646,10 @@ nav .rightmenu .accounts:hover{
         color: rgba(0,0,0,0.54);
     }
 
+      .categories-mobile-view{
+         display: none;
+     }
+
 
 
 }
@@ -635,6 +657,10 @@ nav .rightmenu .accounts:hover{
 @media screen and (max-width: 800px) {
     body{
         overflow-x: hidden;
+    }
+
+    .whereiam-wrapper{
+        margin-top: -26px;
     }
     .banner{
         display: flex;
@@ -777,6 +803,7 @@ nav .rightmenu .accounts:hover{
 
     .category-pick-one .category-img-wrapper img{
         width: 100%;
+        height: 200px;
         border-radius: 5px;
     }
 
@@ -807,6 +834,12 @@ nav .rightmenu .accounts:hover{
      .extended-contents-one-wrapper .extended-contents-content{
          width: 60vw;
      }
+
+     .categories-mobile-view{
+         display: none;
+     }
+
+
 
 
 
@@ -856,12 +889,15 @@ nav .rightmenu .accounts:hover{
         margin-right: 16vw;
     }
 
-
+    .whereiam-wrapper{
+        margin-top: -22px;
+    }
 
 
     .banner{
         display: flex;
         flex-direction: column;
+
     }
 
     .banner .left-banner{
@@ -892,6 +928,7 @@ nav .rightmenu .accounts:hover{
     .middle-banner{
         width: 100%;
         margin-top: 30px;
+        margin-left: 17px;
     }
 
     .img-wrapper-mb{
@@ -904,7 +941,7 @@ nav .rightmenu .accounts:hover{
     }
 
     .middle-banner .first-mb .content-wrapper-mb{
-        width: 60%;
+        width: 100%;
         text-align: left;
     }
 
@@ -959,8 +996,8 @@ nav .rightmenu .accounts:hover{
     }
 
     .secondary-picks .img-wrap-secondary-picks img{
-        width: 30vw;
-        height: 130px;
+        width: 23vw;
+        height: 100px;
         margin-top: 3px;
 
     }
@@ -974,8 +1011,14 @@ nav .rightmenu .accounts:hover{
     }
 
     .title-wrap-secondary-picks a h1{
+        margin-top: 4px;
         font-size: 4vw;
         margin-bottom: 3px;
+        line-height: 20px;
+    }
+
+    .title-wrap-secondary-picks .title-detail{
+        line-height: 14px;
     }
 
     .tags{
@@ -1076,6 +1119,14 @@ nav .rightmenu .accounts:hover{
      .left-nav-mobile .mini-mini-category{
          margin: -2px 15px;
          font-size: 10px;
+     }
+
+     .category-rest-view{
+         display: none;
+     }
+
+     .categories-mobile-view{
+         display: block;
      }
 
 

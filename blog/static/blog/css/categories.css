@@ -49,7 +49,7 @@
 }
 
 .category-pick-one-wrapper{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     height: 230px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .category-content-wrapper{
-    margin-top: 1vh;
+    margin-top: 10px;
     display: block;
     width: 60vw;
 
@@ -82,17 +82,21 @@
 
 .category-content-wrapper a h1{
     font-weight: 500;
+    line-height: 19px;
 }
 
 .category-soft-title{
     font-size: 15px;
+    margin-top: 5px;
 }
+
 
 
 
 .category-content{
     margin: 10px 0;
     font-size: 17px;
+    line-height: 19px;
 }
 
 .whereiam-wrapper{

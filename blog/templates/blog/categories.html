@@ -29,7 +29,7 @@
                 <a href="{% url 'home' %}">HOME</a> > <a href="">{{ whereiam |upper }} ></a>
             </div>
 
-            <div class="category-pick-one">
+            <div class="category-pick-one category-rest-view">
                 <div class="category-img-wrapper">
                     <img src="{{ the_featured_one.title_image.url }}" alt="CategoryPickOne">
                 </div>
@@ -54,6 +54,46 @@
                                 a few hours ago | 4 mins read
                     </div>
                 </div>
+            </div>
+             <div class="banner categories-mobile-view">
+                <div class="left-banner">
+                    <div class="img-wrap-lb">
+                        <a href="#"><img src="{{ the_featured_one.title_image.url }}" alt=""></a>
+                    </div>
+
+                    <div class="title-wrap-lb">
+                        <a href="{% url 'post-details' the_featured_one.slug_name %}"><h1>{{ the_featured_one.hard_title }}</h1></a>
+
+                        <p class="title-detail">
+                            {{ the_featured_one.soft_title }}
+                        </p>
+
+                        <div class="tags">
+                            {% for tag in the_featured_one.has_tags.all %}
+                                {% if forloop.counter <= 2 %}
+                                 <a href="#"><p>#{{ tag }}</p></a>
+                                {% endif %}
+
+
+                            {% endfor%}
+
+                        </div>
+                        <div class="timeofpost">
+                            a few hours ago | 4 mins read
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
                 {#            End Category Content Wrapper     #}
             </div>
 

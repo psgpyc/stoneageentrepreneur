@@ -1,5 +1,5 @@
 .tech-kit-wrapper{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     margin-left: 3vw;
     margin-right: 3vw;
@@ -134,7 +134,7 @@
 }
 
 .secondary-picks{
-    margin: 30px 13px;
+    margin: 10px 13px;
     border: black;
 }
 
@@ -146,10 +146,19 @@
 }
 
 .title-wrap-secondary-picks{
-    margin-top: 5px;
-    width: 25vw;
+    margin-top: 14px;
+    width: 20vw;
     /*text-align: center;*/
     line-height: 25px;
     font-size: 12px;
+}
+
+.title-wrap-secondary-picks a h1{
+    line-height: 20px;
+}
+
+.title-wrap-secondary-picks p{
+    margin-top: 6px;
+    line-height: 17px;
 }
 
