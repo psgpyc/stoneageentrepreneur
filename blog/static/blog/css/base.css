@@ -530,9 +530,9 @@ nav .rightmenu .accounts:hover{
     display: none;
 }
 
-.product-first:hover  .btn-fav{
-    display: inline;
-}
+/*.product-first:hover  .btn-fav{*/
+/*    display: inline;*/
+/*}*/
 
 .top-picks{
     margin-top: 30px;
