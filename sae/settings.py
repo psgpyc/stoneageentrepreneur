@@ -135,8 +135,6 @@ MEDIA_URL = '/media/'
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
-AWS_S3_SIGNATURE_VERSION = os.environ.get('AWS_S3_SIGNATURE_VERSION')
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
@@ -144,9 +142,9 @@ AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
-CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243.compute-1.amazonaws.com:13879'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
+# CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243.compute-1.amazonaws.com:13879'
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
 
 django_heroku.settings(locals())
 
