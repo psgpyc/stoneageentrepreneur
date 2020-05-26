@@ -5,9 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = os.environ.get('DEBUG_VALUE')
+DEBUG = os.environ.get('DEBUG_VALUE') == 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.stoneageentrepreneur.com', 'stoneageentrepreneur.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
