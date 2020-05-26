@@ -9,7 +9,7 @@ SECRET_KEY = ')tjzpjk6b6eqs%5fhtun^d4kk(!m4bsb90sxrmf^hoyfu66$9r'
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.stoneageentrepreneur.com']
 
 
 
@@ -138,6 +138,9 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243' \
