@@ -121,12 +121,6 @@ AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
-CELERY_BROKER_URL = 'redis://h:p7ec8f2fe3728aa04d88dd194f1e6eb6c64f68d08e003f461063c8ac21c8ec14a@ec2-34-239-200-243' \
-                    '.compute-1.amazonaws.com:13879'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-
-
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
