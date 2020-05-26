@@ -530,9 +530,9 @@ nav .rightmenu .accounts:hover{
     display: none;
 }
 
-/*.product-first:hover  .btn-fav{*/
-/*    display: inline;*/
-/*}*/
+.product-first:hover  .btn-fav{
+    display: inline;
+}
 
 .top-picks{
     margin-top: 30px;
@@ -1542,7 +1542,7 @@ footer{
         width: 17vw;
     }
 
-    .product-first .btn-fav{
+    .btn-fav{
         left: 68%;
     }
 
@@ -2009,7 +2009,7 @@ footer{
         width: 17vw;
     }
 
-    .product-first .btn-fav{
+    .btn-fav{
         left: 72%;
     }
 

@@ -5,7 +5,7 @@ __pycache__/
 .DS_Store
 saenv/
 .idea/
-settings.py
+locals.py
 
 # C extensions
 *.so
