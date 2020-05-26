@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = os.environ.get('DEBUG_VALUE')
 
-ALLOWED_HOSTS = ['www.stoneageentrepreneur.com','stoneageentrepreneur.com','stoneageentrepreneur.herokuapp.com']
+ALLOWED_HOSTS = ['www.stoneageentrepreneur.com','stoneageentrepreneur.com']
 
 
 INSTALLED_APPS = [
