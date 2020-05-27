@@ -3,8 +3,6 @@ let content = document.querySelector('.main');
 let search_button = document.querySelector('.search');
 let leftmenu = document.querySelector('.leftmenu');
 let searchbox = document.querySelector('.search-box');
-// let product = document.querySelector('.img-class-product')
-// let shop_btn = document.querySelector('.product-shop-btn')
 
 
 hamburger.addEventListener("click", ()=>{
