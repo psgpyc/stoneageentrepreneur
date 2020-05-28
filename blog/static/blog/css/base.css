@@ -1974,19 +1974,26 @@ footer{
      }
 
      nav .rightmenu-mobile i{
-         margin: 0 5px;
+         margin: 0 10px;
      }
+
+
 
      .search-box-mini{
          width: 100%;
      }
 
 
+
+
+
      .social-links{
         position: fixed;
-        width: 100%;
-        top: 90%;
-        left: 30%;
+         display: flex;
+         flex-direction: column;
+        /*width: 30%;*/
+        top: 40%;
+        left: 90%;
         height: 50px;
         background-color: whitesmoke;
         font-size: 25px;
@@ -1995,7 +2002,18 @@ footer{
     }
 
     .social-links i{
-        margin: 0 5px;
+        margin: 5px 0;
+    }
+
+    .auth-links{
+        position: fixed;
+        top: 95%;
+        left: 65%;
+        font-size: 18px;
+    }
+
+    .auth-links a{
+        margin: 0 10px;
     }
 
 
