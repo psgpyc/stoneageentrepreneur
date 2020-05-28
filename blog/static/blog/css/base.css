@@ -1972,6 +1972,7 @@ footer{
 
      nav .rightmenu-mobile{
          flex: 1;
+         float: right;
          margin-left: 20px;
 
      }
@@ -2010,14 +2011,16 @@ footer{
     }
 
     .auth-links{
+        display: flex;
+        flex-direction: column;
         position: fixed;
-        top: 95%;
-        left: 70%;
-        font-size: 18px;
+        top: 90%;
+        left: 90%;
+        font-size: 25px;
     }
 
     .auth-links a{
-        margin: 0 10px;
+        /*margin: 15px 10px;*/
     }
 
 
