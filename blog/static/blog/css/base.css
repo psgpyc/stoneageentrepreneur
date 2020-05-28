@@ -1971,6 +1971,7 @@ footer{
 
      nav .rightmenu-mobile{
          flex: 2;
+         margin-right: 10px;
      }
 
      nav .rightmenu-mobile i{
@@ -2008,7 +2009,7 @@ footer{
     .auth-links{
         position: fixed;
         top: 95%;
-        left: 50%;
+        left: 70%;
         font-size: 18px;
     }
 
