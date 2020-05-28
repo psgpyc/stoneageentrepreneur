@@ -1453,12 +1453,12 @@ footer{
         width: 90%;
     }
     nav .leftmenu{
-        flex: 1;
+        flex: 2;
 
     }
     nav .logo{
         flex: 4;
-        margin-right:10vw ;
+        /*margin-right:vw ;*/
     }
 
     nav .rightmenu-mobile{
@@ -1531,7 +1531,7 @@ footer{
     }
 
     .left-banner .title-wrap-lb a h1{
-        font-size: 3.5vw;
+        font-size: 3vw;
     }
 
     .middle-banner{
@@ -1557,7 +1557,7 @@ footer{
     }
 
     .content-wrapper-mb h2{
-        font-size: 3.5vw;
+        font-size: 2.7vw;
         /*line-height: 20px;*/
         font-weight: 300;
     }
@@ -1617,7 +1617,7 @@ footer{
     }
 
     .title-wrap-secondary-picks a h1{
-        font-size: 3.3vw;
+        font-size: 3vw;
         margin-bottom: 3px;
     }
 
