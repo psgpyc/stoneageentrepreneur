@@ -1938,7 +1938,7 @@ footer{
     nav .logo{
         flex: 2;
         font-size: 20px;
-        margin-right: 10vw;
+        margin-left: -8vw;
     }
 
 
@@ -1971,7 +1971,6 @@ footer{
 
      nav .rightmenu-mobile{
          flex: 2;
-         margin-right: 10px;
      }
 
      nav .rightmenu-mobile i{
