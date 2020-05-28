@@ -246,7 +246,7 @@ nav .rightmenu .accounts:hover{
 .social-links{
     position: fixed;
     top: 90%;
-    left: 50%;
+    left: 41%;
     height: 50px;
     background-color: whitesmoke;
     font-size: 30px;
@@ -1980,6 +1980,24 @@ footer{
      .search-box-mini{
          width: 100%;
      }
+
+
+     .social-links{
+        position: fixed;
+        width: 100%;
+        top: 90%;
+        left: 30%;
+        height: 50px;
+        background-color: whitesmoke;
+        font-size: 25px;
+        text-align: center;
+
+    }
+
+    .social-links i{
+        margin: 0 5px;
+    }
+
 
 
     .whereiam-wrapper{
