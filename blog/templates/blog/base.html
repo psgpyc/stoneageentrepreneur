@@ -53,81 +53,26 @@
 {#    SIDE BAR STARTS#}
         <div class="side-bar">
             <div class="side-bar-0">
-             <form method="post">
-                <label>
-                    <input class='search-box-mini' id="searchbox" type="search" placeholder="SEARCH SAE">
-                </label>
-            </form>
-
-
-                    <ul class="left-nav">
-                        <div class="left-nav-one">
-                            {% for catgeory in categories %}
-                                {% if forloop.counter <= 3 %}
-                                    <div>
-
-                                        <li><a class="minicategory" href="{% url 'categories' catgeory.slug_name %}">{{ catgeory.name }}</a></li>
-
-                                        <ul>
-                                            {% for mini in catgeory.postcategory_set.all %}
-                                                <li><a class="mini-mini-category" href="{% url 'mini-categories' mini.slug_name %}">{{ mini.name }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-
-
-
-                                {% endif %}
-
-                            {% endfor %}
+                <form method="post">
+                    {% csrf_token %}
+                    <label>
+                        <input class='search-box-mini' id="searchbox" type="search" placeholder="SEARCH SAE">
+                    </label>
+                </form>
+                <div class="bar-category-wrapper">
+                    {% for category in categories  %}
+                        {% if forloop.counter <= 6 %}
+                        <div class="category-mini-wrapper">
+                            <a href="{% url 'categories' category.slug_name %}"><h1>{{ category }}</h1></a>
+                            <ul>
+                                {% for mini in category.postcategory_set.all %}
+                                    <a href="{% url 'mini-categories' mini.slug_name %}"><li>{{ mini }}</li></a>
+                                {% endfor %}
+                            </ul>
                         </div>
-
-                         <div class="left-nav-one">
-                            {% for catgeory in categories %}
-                                {% if forloop.counter > 3 %}
-                                    <div>
-
-                                        <li><a class="minicategory" href="{% url 'categories' catgeory.slug_name %}">{{ catgeory.name }}</a></li>
-
-                                        <ul>
-                                            {% for mini in catgeory.postcategory_set.all %}
-                                                <li><a class="mini-mini-category" href="{% url 'mini-categories' mini.slug_name %}">{{ mini.name }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-
-
-
-                                {% endif %}
-
-                            {% endfor %}
-                        </div>
-
-                     </ul>
-
-                    <ul class="left-nav-mobile">
-                        {% for catgeory in categories %}
-
-                                    <div>
-
-                                        <li><a class="minicategory" href="{% url 'categories' catgeory.slug_name %}">{{ catgeory.name }}</a></li>
-
-                                        <ul>
-                                            {% for mini in catgeory.postcategory_set.all %}
-                                                <li><a class="mini-mini-category" href="{% url 'mini-categories' mini.slug_name %}">{{ mini.name }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-
-
-
-
-
-                            {% endfor %}
-
-                    </ul>
-
-
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
             <div class="side-bar-footer">
 

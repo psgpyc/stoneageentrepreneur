@@ -201,18 +201,18 @@ nav .rightmenu .accounts:hover{
 }
 
 .side-bar-0{
+    margin-top: 15px;
+    margin-bottom: 25px;
 
-    margin-top: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    height: 100%;
 }
+
+
 
 .side-bar-0 ul a{
     display: block;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
     color: black;
-    margin: 15px 0;
+
 }
 
 
@@ -221,32 +221,40 @@ nav .rightmenu .accounts:hover{
     cursor: pointer;
 }
 
-.side-bar-1 ul a{
-    display: block;
-    padding: 0 10px;
-    color: black;
+.bar-category-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+
 }
 
-.side-bar-1 ul a:hover{
-    color: #007dc3;
-    cursor: pointer;
+.category-mini-wrapper{
+    margin: 30px 0;
 }
+
+.category-mini-wrapper a h1:hover{
+    color: #007dc3;
+}
+
+.category-mini-wrapper h1{
+    /*font-weight: 300;*/
+    font-size: 16px;
+    width: 400px;
+}
+
+
+
+
+
+
 .left-nav{
     display: block;
 
     }
 .left-nav-one{
-    /*margin: 0 10px;*/
     display: flex;
     justify-content: space-around;
     width: 100%;
-
-    /*align-items: center;    */
-}
-
-.minicategory{
-    font-size: 23px;
-    text-align: center;
 }
 
 
@@ -994,6 +1002,23 @@ footer{
         display: none;
     }
 
+    .side-bar-0{
+         height: 100%;
+     }
+
+     .category-mini-wrapper{
+         margin: 5px 0;
+     }
+
+     .category-mini-wrapper a h1{
+         font-size: 17px;
+     }
+
+     .category-mini-wrapper a li{
+         font-size: 15px;
+     }
+
+
     .banner{
         margin-top: 90px;
     }
@@ -1118,8 +1143,6 @@ footer{
 
 @media screen and (max-width: 1000px) {
 
-
-
     nav .leftmenu{
         flex: 2;
     }
@@ -1150,6 +1173,7 @@ footer{
     nav .leftmenu .search{
         display: none;
     }
+
 
 
      .whereiam-wrapper{
@@ -1192,8 +1216,9 @@ footer{
     }
 
     .search-box-mini{
-        display: inline;
-        width: 40vw;
+        display: block;
+        width: 80%;
+        margin: auto;
         font-size: 15px;
         height: 35px;
         border-radius: 8px;
@@ -1451,6 +1476,22 @@ footer{
     nav .rightmenu-mobile i:hover{
         color: #007dc3;
     }
+
+    .side-bar-0{
+         height: 150%;
+     }
+
+     .category-mini-wrapper{
+         margin: 5px 0;
+     }
+
+     .category-mini-wrapper a h1{
+         font-size: 16px;
+     }
+
+     .category-mini-wrapper a li{
+         font-size: 13px;
+     }
 
 
 
@@ -2134,6 +2175,24 @@ footer{
           width: 30vw;
           border-radius: 10px;
 
+     }
+     .side-bar-0{
+         height: 150%;
+     }
+     .bar-category-wrapper{
+         margin-top: 20px;
+     }
+
+     .category-mini-wrapper{
+         margin: 5px 0;
+     }
+
+     .category-mini-wrapper a h1{
+         font-size: 16px;
+     }
+
+     .category-mini-wrapper a li{
+         font-size: 13px;
      }
 
      .left-nav{
