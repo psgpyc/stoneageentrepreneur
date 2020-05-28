@@ -224,12 +224,12 @@ nav .rightmenu .accounts:hover{
 .bar-category-wrapper{
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: center;*/
+    margin-left: 3vw;
 
 }
 
 .category-mini-wrapper{
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 .category-mini-wrapper a h1:hover{
@@ -1480,6 +1480,10 @@ footer{
     .side-bar-0{
          height: 150%;
      }
+
+    .bar-category-wrapper{
+        justify-content: left;
+    }
 
      .category-mini-wrapper{
          margin: 5px 0;
