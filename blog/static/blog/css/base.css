@@ -1923,7 +1923,7 @@ footer{
     }
 
     nav .leftmenu{
-        flex: 2;
+        flex: 1;
     }
 
     nav .leftmenu .hamburger{
@@ -1970,7 +1970,7 @@ footer{
      }
 
      nav .rightmenu-mobile{
-         flex: 2;
+         flex: 1;
      }
 
      nav .rightmenu-mobile i{
