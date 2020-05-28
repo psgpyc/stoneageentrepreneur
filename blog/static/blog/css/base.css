@@ -1919,11 +1919,12 @@ footer{
         overflow-y: scroll;
     }
     nav{
-        width: 95%;
+        width: 100%;
     }
 
     nav .leftmenu{
         flex: 1;
+        margin-left: -10px;
     }
 
     nav .leftmenu .hamburger{
@@ -1931,14 +1932,14 @@ footer{
     }
 
     nav .leftmenu .hamburger:hover{
-    font-size: 20px;
-    color: #007dc3;
+        font-size: 20px;
+        color: #007dc3;
     }
 
     nav .logo{
-        flex: 2;
-        font-size: 20px;
-        margin-left: -8vw;
+        flex: 1;
+        font-size: 18px;
+        margin-left: -10px;
     }
 
 
@@ -1971,10 +1972,13 @@ footer{
 
      nav .rightmenu-mobile{
          flex: 1;
+         padding: 20px;
+
      }
 
      nav .rightmenu-mobile i{
-         margin: 0 10px;
+         font-size: 16px;
+         margin: 5px 0;
      }
 
 
