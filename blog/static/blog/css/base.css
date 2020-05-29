@@ -1017,6 +1017,46 @@ footer{
 
 @media screen and (max-width: 1150px){
 
+    .mobile-view-nav{
+        width: 100%;
+        left: 2%;
+        display: flex;
+        align-items: center;
+    }
+    nav .leftmenu-mobile{
+        flex: 1;
+        margin-left: 10px;
+        font-size: 20px;
+        cursor: pointer;
+
+    }
+
+    nav .leftmenu-mobile i:last-child{
+        margin-left: 10px;
+    }
+    nav .logo-mobile{
+        display: none;
+    }
+
+    nav .logo-tabs{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        /*margin-left: 6vw;*/
+        line-height: 14px;
+
+    }
+
+
+    .mobile-view-nav  .rightmenu-mobilex{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+        font-size: 20px;
+    }
+
     .secondary-nav{
         display: none;
     }
@@ -1495,13 +1535,19 @@ footer{
         margin-left: 10px;
     }
     nav .logo-mobile{
+        display: none;
+
+    }
+
+    nav .logo-tabs{
         flex: 2;
         display: flex;
         justify-content: center;
-        font-size: 20px;
-        margin-left: 2vw;
+        font-size: 30px;
         line-height: 14px;
+
     }
+
 
 
     .mobile-view-nav  .rightmenu-mobilex{
@@ -1943,31 +1989,26 @@ footer{
         width: 100%;
     }
 
-    nav .leftmenu{
-        flex: 1;
-        margin-left: -10px;
-    }
-
-    nav .leftmenu .hamburger{
-        font-size: 17px;
-    }
-
-    nav .leftmenu .hamburger:hover{
-        font-size: 20px;
-        color: #007dc3;
-    }
-
-    nav .logo{
-        flex: 1;
-        font-size: 18px;
-        margin-left: 12px;
-    }
-
 
     .left-nav{
          display: none;
 
     }
+
+    nav .logo-mobile{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        margin-left: 6vw;
+        line-height: 14px;
+    }
+
+    nav .logo-tabs{
+        display: none;
+    }
+
+
 
     .left-nav-mobile{
         display: block;
