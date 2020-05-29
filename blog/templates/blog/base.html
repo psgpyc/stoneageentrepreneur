@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
 </head>
 <body>
-    <nav>
+    <nav class="desktop-view">
         <div class="leftmenu">
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -36,14 +36,35 @@
             <a  href="{% url 'home' %}">Stone<span>Age</span>Entrepreneur.</a>
 
         </div>
-        <div class="rightmenu-mobile">
-            <i class="fas fa-cart-plus"></i>
-        </div>
+
         <div class="rightmenu">
             <div class="health">Cart</div>
             <div class="store">Merchandise</div>
             <div class="accounts">Login</div>
         </div>
+    </nav>
+
+    <nav class="mobile-view-nav">
+        <div class="leftmenu-mobile">
+
+            <i class="fas fa-bars hamburger-mobile"></i>
+
+
+             <i class="far fa-user"></i>
+
+        </div>
+
+
+        <div class="logo-mobile">
+            <a  href="{% url 'home' %}">StoneAge<div>Entrepreneur.</div></a>
+        </div>
+
+        <div class="rightmenu-mobilex">
+            <i class="fas fa-cart-plus"></i>
+        </div>
+
+
+
     </nav>
 
 
