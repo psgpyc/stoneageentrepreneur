@@ -331,7 +331,7 @@ nav .rightmenu .accounts:hover{
 
 
 .banner .left-banner .img-wrap-lb img{
-    height: 350px;
+    height: 320px;
     width: 90%;
     object-fit: cover;
 }
@@ -401,7 +401,7 @@ nav .rightmenu .accounts:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 
