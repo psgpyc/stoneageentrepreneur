@@ -2120,6 +2120,8 @@ footer{
         height: 100px;
     }
 
+
+
     .banner .middle-banner .first-mb .content-wrapper-mb{
         width: 100%;
         text-align: left;
@@ -2134,6 +2136,26 @@ footer{
         line-height: 16px;
         margin: 5px;
     }
+
+    .most-popular-wrapper .most-popular-left .middle-banner .first-mb{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb{
+        width: 90%;
+        margin: auto;
+    }
+
+    .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb a img{
+        height: 200px;
+    }
+
+
+
+
+
+
 
     .most-popular-wrapper .most-popular-right {
         width: 100%;
