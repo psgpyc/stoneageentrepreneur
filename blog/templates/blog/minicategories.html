@@ -14,29 +14,39 @@
             <div class="whereiam-wrapper-mini">
                 <a href="{% url 'home' %}"> HOME  </a> > <a href="{% url 'categories' whereiwas.slug_name %}">{{ whereiwas |upper }}</a> <span> ></span>   <a href="#">{{ whereiam |upper }}</a>
             </div>
-        <div class="extended-wrapper">
-        {% for post in posts %}
-            <div class="extended-content-wrapper">
-                <div class="extended-image-wrapper">
-                    <img src="{{ post.title_image.url }}" alt="post content image">
-                </div>
-                <div class="extended-content-header">
-                    <a href="{% url 'post-details' post.slug_name %}"><h2>{{ post.hard_title|truncatewords:13}}</h2></a>
-                    <a href="{% url 'post-details' post.slug_name %}"><p class="mini-category-soft-title">{{ post.soft_title|truncatewords:10 }}</p></a>
-                   <p class="mini-category-body category-rest-view">{{ post.post_body_first|truncatewords:30 }}</p>
-                </div>
+            <div class="middle-banner">
+                {% for featured in posts %}
+                    <div class="first-mb">
+                        <div class="content-wrapper-mb">
+                            <p class="belongs_to">{{ featured.belongs_to }}</p>
+                            <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
+                            <p class="title-detail">
+                               {{ featured.soft_title }}
+                            </p>
+                            <div class="timeofpost">
+                                <div>
+                                    a few hours ago | 4 mins read
+                                </div>
+                                <div class="post-icons">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                    <i class="far fa-bookmark"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="img-wrapper-mb">
+                            <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
+
+                        </div>
 
 
-            </div>
-            <div class="mini-category-body-mobile-wrapper">
-                <p class="mini-category-body-mobile categories-mobile-view">{{ post.post_body_first|truncatewords:30 }}</p>
+                    </div>
 
-            </div>
-        {% endfor %}
 
-        </div>
+                {% endfor %}
 
-    </div>
+         </div>
 
 
 {% endblock %}

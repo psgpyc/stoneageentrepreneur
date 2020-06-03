@@ -121,7 +121,7 @@ class PostManager(models.Manager):
         return PostQuerySet(self.model, using=self._db)
 
     def featured_post(self, flags):
-        return self.get_queryset().featured_post(flags).prefetch_related(Prefetch('has_tags'))
+        return self.get_queryset().featured_post(flags)
 
 
 class Post(TimeStampModel):

@@ -11,8 +11,8 @@
 {% block body %}
     <div class="secondary-nav">
         <ul class="secondary-nav">
-        {% if blog_categories.postcategory_set.all %}
-            {% for navheading in blog_categories.postcategory_set.all  %}
+        {% if active_category.postcategory_set.all %}
+            {% for navheading in active_category.postcategory_set.all  %}
                 <li><a href="{% url 'mini-categories' navheading.slug_name %}">{{ navheading }}</a></li>
             {% endfor %}
         {% endif %}
@@ -25,128 +25,77 @@
                 <a href="{% url 'home' %}">HOME</a> > <a href="">{{ whereiam |upper }} ></a>
             </div>
 
-            <div class="category-pick-one category-rest-view">
-                <div class="category-img-wrapper">
-                    <img src="{{ the_featured_one.title_image.url }}" alt="CategoryPickOne">
-                </div>
-                <div class="category-content-wrapper">
 
-                    <a class="category-hard-title" href="#"><h1>{{ the_featured_one.hard_title }}</h1></a>
-                    <p class="category-soft-title">
-                        {{ the_featured_one.soft_title }}
-                    </p>
-                    <p class="category-content">
-                        {{ the_featured_one.post_body_first|truncatewords:20 }}
-                    </p>
-                    <div class="tags">
-                        {% for tag in the_featured_one.has_tags.all %}
-                            {% if forloop.counter <= 3 %}
-                                 <a href="#"><p>#{{ tag }}</p></a>
-                            {% endif %}
-                        {% endfor %}
-
-                    </div>
-                    <div class="timeofpost">
-                                a few hours ago | 4 mins read
-                    </div>
-                </div>
-            </div>
-             <div class="banner categories-mobile-view">
+             <div class="banner">
                 <div class="left-banner">
                     <div class="img-wrap-lb">
                         <a href="#"><img src="{{ the_featured_one.title_image.url }}" alt=""></a>
                     </div>
 
                     <div class="title-wrap-lb">
+                        <p class="belongs_to">{{ the_featured_one.belongs_to }}</p>
                         <a href="{% url 'post-details' the_featured_one.slug_name %}"><h1>{{ the_featured_one.hard_title }}</h1></a>
 
                         <p class="title-detail">
                             {{ the_featured_one.soft_title }}
                         </p>
-
-                        <div class="tags">
-                            {% for tag in the_featured_one.has_tags.all %}
-                                {% if forloop.counter <= 2 %}
-                                 <a href="#"><p>#{{ tag }}</p></a>
-                                {% endif %}
-
-
-                            {% endfor%}
-
-                        </div>
                         <div class="timeofpost">
-                            a few hours ago | 4 mins read
+                            <div>
+                                a few hours ago | 4 mins read
+                            </div>
+                            <div class="post-icons">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <i class="far fa-bookmark"></i>
+
+                            </div>
                         </div>
                     </div>
+
+
+
+
+
+{#                  end left banner   #}
+
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-                {#            End Category Content Wrapper     #}
-            </div>
-
-    </div>
-    {#    End of category-wrapper#}
-
-
-   <div class="tech-kit-wrapper">
-       {% if blog_categories.postcategory_set.all %}
-            {% for postcategory in blog_categories.postcategory_set.all %}
-                    <h1 class="sub-headings-post">{{ postcategory.name}}</h1>
-                     <div class="secondary-picks-wrapper">
-                          {% for post in postcategory.post_set.all  %}
-                              {% if post.flags != 41 %}
-                                  {% if forloop.counter <= 3 %}
-
-
-        {#                START SECONDARY PICKS E&S      #}
-
-
-                                    <div class="secondary-picks">
-                                          <div class="img-wrap-secondary-picks">
-                                              <a href="{% url 'post-details' post.slug_name %}"><img src="{{ post.title_image.url }}" alt=""></a>
-                                          </div>
-
-                                        <div class="title-wrap-secondary-picks">
-                                            <a href="{% url 'post-details' post.slug_name %}"><h1>{{ post.hard_title|truncatewords:10 }}</h1></a>
-                                            <p class="title-detail">
-                                                {{ post.soft_title|truncatechars:70 }}
-                                            </p>
-
-                                            <div class="tags">
-                                                {% for tag in post.has_tags.all %}
-                                                    {% if forloop.counter <= 4 %}
-                                                        <a href="#"><p>#{{ tag }}</p></a>
-                                                    {% endif %}
-                                                {% endfor %}
-
-                                            </div>
-                                            <div class="timeofpost">
-                                                a few hours ago | 4 mins read
-                                            </div>
-                                        </div>
+                <div class="middle-banner-category">
+                    {% for featured in blog_categories %}
+                        <div class="first-mb">
+                            <div class="content-wrapper-mb">
+                                <p class="belongs_to">{{ featured.belongs_to }}</p>
+                                <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
+                                <p class="title-detail">
+                                   {{ featured.soft_title }}
+                                </p>
+                                <div class="timeofpost">
+                                    <div>
+                                        a few hours ago | 4 mins read
+                                    </div>
+                                    <div class="post-icons">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                        <i class="far fa-bookmark"></i>
 
                                     </div>
-                                      {% endif %}
-                              {% endif %}
-                            {% endfor %}
+                                </div>
+                            </div>
 
-                    </div>
+                            <div class="img-wrapper-mb">
+                                <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
 
-    {#                      END SECONDARY PICKS E&S                    #}
-            <button type="button" class="product-view-all-btn">VIEW MORE</button>
-            {% endfor %}
-       {% endif %}
+                            </div>
 
-   </div>
 
+                        </div>
+
+
+                    {% endfor %}
+{#                #}
+
+                </div>
+{#        #end middle  banner#}
+
+            </div>
+{#            END BANNER                    #}
+    </div>
 
 {% endblock %}

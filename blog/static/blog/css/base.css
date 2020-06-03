@@ -37,6 +37,10 @@ nav{
 
 }
 
+.search-box-mini{
+    display: none;
+}
+
 .mobile-view-nav{
     display: none;
 }
@@ -60,7 +64,7 @@ nav .leftmenu .hamburger{
     cursor: pointer;
 }
 
-nav .leftmenu .hamburger:hover{
+nav .leftmenu .hamburger i:hover{
     font-size: 25px;
     color: #007dc3;
 }
@@ -307,62 +311,75 @@ nav .rightmenu .accounts:hover{
 .banner{
     margin-top:120px;
     display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 
 
+}
+
+.content-wrapper-mb .belongs_to{
+    color: #007dc3;
+    font-family: 'Baloo Paaji 2', cursive;
 }
 
 /*START LEFT BANNER*/
 
 .banner .left-banner{
-    width: 35vw;
+    width: 50%
 }
 
 
 .banner .left-banner .img-wrap-lb img{
-    height: 150px;
-    width: 35vw;
-    border-radius: 5px;
+    height: 350px;
+    width: 90%;
     object-fit: cover;
 }
 
 .banner .left-banner .title-wrap-lb{
-    margin-top: 5px;
-    width: 35vw;
-    text-align: center;
-    line-height: 25px;
+    /*margin-top: 15px;*/
+    width: 90%;
+    /*text-align: center;*/
+    /*line-height: 25px;*/
     font-size: 12px;
 
 
 }
 
 .banner .title-wrap-lb a h1{
-    font-size: 1.7vw;
-    font-weight: 300;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
+.banner .title-wrap-lb .belongs_to{
+    color: #007dc3;
+    font-size: 1.2rem;
+}
 .title-detail{
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
+    font-size: .875rem;
+    width: 90%;
+    margin: 5px 0;
+    color: #616161;
+    font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
 }
-
-
-
-.tags a p{
-    display: inline-block;
-    font-size: 15px;
-    color: black;
-    /*padding: 1px;*/
-}
-
-.tags a p:hover{
-    font-size: 1.3vw;
-}
-
 
 
 .timeofpost{
-    color: rgba(0,0,0,.54);
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0,0,0,.99);
     font-size: 14px;
+}
+
+.timeofpost i{
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.timeofpost i:hover{
+    color: #007dc3;
 }
 
 /*END FIRST BANNER*/
@@ -370,42 +387,51 @@ nav .rightmenu .accounts:hover{
 /*START MIDDLE BANNER*/
 
 .middle-banner{
-    /*flex: 2;*/
-    margin-left: 20px;
-    width: 35vw;
+    width: 50%;
 
+}
+
+.middle-banner-category{
+    width: 50%;
 }
 
 
 .first-mb{
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 
-
+.img-wrapper-mb{
+    width: 20%;
+}
 
 .img-wrapper-mb img{
-    height: 150px;
-    width: 10vw;
-    object-fit: cover;
-    border-radius: 5px;
+    height: 130px;
+    width: 100%
 }
 
 
 
 .content-wrapper-mb{
-    margin-left: 17px;
-    /*text-align: center;*/
+    width: 70%;
 }
 
 .content-wrapper-mb h2{
-    font-size: 1.5vw;
-    line-height: 20px;
-    font-weight: 300;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 .5rem;
+    line-height: 125%;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 .content-wrapper-mb p{
+    color: #616161;
+    font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
     line-height: 16px;
     margin: 5px;
 }
@@ -416,30 +442,7 @@ nav .rightmenu .accounts:hover{
 
 /*END MIDDLE BANNER*/
 
-.right-banner{
-    width: 20vw;
-    margin-left: 25px;
 
-}
-
-.right-banner .img-wrapper-rb img{
-    height: 20vh;
-    width: 20vw;
-    border-radius: 5px;
-}
-
-
-
-.right-banner .img-wrapper-rb h2, .right-banner .img-wrapper-rb p {
-    margin-top: 3px;
-    line-height: 20px;
-}
-
-.search-box-mini{
-    display: none;
-
-
-}
 .categories-mobile-view{
     display: none;
 }
@@ -452,7 +455,7 @@ nav .rightmenu .accounts:hover{
 /*START PRODUCT */
 
                                                                                 /*    START  PRODUCT CSS*/
-    .tech-kit-wrapper{
+.tech-kit-wrapper{
     margin-top: 30px;
     text-align: center;
     margin-left: 3vw;
@@ -518,7 +521,6 @@ nav .rightmenu .accounts:hover{
     width: 15vw;
     margin: 10px 20px;
     object-fit: cover;
-    border-radius: 10px;
 
 
 }
@@ -529,7 +531,8 @@ nav .rightmenu .accounts:hover{
 .arrow-button{
     cursor: pointer;
     width: 40px;
-    border-radius: 8px;
+    /*border-radius: 20px;*/
+    border: none;
     font-size: 17px;
     padding: 2px 2px;
     margin-bottom: 90px;
@@ -570,99 +573,91 @@ nav .rightmenu .accounts:hover{
     display: inline;
 }
 
+
+/* After Merch Section  */
+
+
 .top-picks{
     margin-top: 30px;
     text-align: center;
 }
 
-
-.img-wrap-top-picks img{
-    width: 60%;
-    height: 40vh;
-    border-radius: 10px;
-}
-
-
-.secondary-picks-wrapper{
-    display: flex;
-    justify-content: center;
-}
-
-.secondary-picks{
-    margin: 10px 13px;
-    border: black;
-}
-
-.img-wrap-secondary-picks img{
-    width: 25vw;
-    height: 30vh;
-    border-radius: 10px;
-
-}
-
-.title-wrap-secondary-picks{
-    margin-top: 14px;
-    text-align: center;
-    line-height: 25px;
-    font-size: 12px;
-}
-
-.title-wrap-secondary-picks a h1{
-    line-height: 20px;
-    text-align: center;
-}
-
-.title-wrap-secondary-picks p {
-    margin-top: 6px;
-    line-height: 17px;
-
-}
-
-                                                                                /*    END  PRODUCT CSS*/
-                                                                                /*    START EXTENDED CSS */
-.extended-wrapper{
-    width: 80%;
-    margin: auto;
-}
-
-.extended-content-wrapper{
+.most-popular-wrapper{
+    margin-top: 80px;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;
+
 
 }
+.most-popular-left{
+    width: 50%;
+}
 
-.extended-content-header{
-    width: 60%;
+.most-popular-left .middle-banner{
+    width: 100%;
     margin: auto;
-    text-align: center;
+}
+
+.most-popular-left .middle-banner .content-wrapper-mb{
+    width: 70%;
+}
+
+.most-popular-right{
+    width: 40%;
+
 
 }
 
-.mini-category-body{
-    text-align: center;
+.update-from-category{
+   
+
+}
+
+.update-from-category h3{
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+    text-align: right;
+
+
+}
+
+.most-popular-right .update-from-category .first-mb{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.most-popular-right .update-from-category .first-mb .content-wrapper-mb{
+    width: 90%;
+    margin-left: auto;
+}
+
+
+.final-from-category{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 13%;
+}
+
+.final-from-category h3{
+     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+    text-align: right;
+
+}
+
+.most-popular-wrapper .most-popular-right .final-from-category .first-mb {
     margin: 10px 0;
 }
 
 
-.extended-content-header h2{
-    color: #007dc3;
-    font-weight: 200;
-    line-height: 24px;
+.most-popular-wrapper .most-popular-right .final-from-category .first-mb .content-wrapper-mb{
+    width: 90%;
+    margin-left: auto;
 }
 
-
-.extended-image-wrapper img{
-    width: 20vw;
-    height: 170px;
-    align-items: center;
-    border-radius: 10px;
-}
-
-
-
-
-
+/*END AFTER MERCH SECTION */
 
 /*   footer content  */
 
@@ -721,63 +716,24 @@ footer{
     margin-top: 140px;
 }
 
-.category-pick-one{
-    width: 90%;
-    margin: auto;
-    display: flex;
-
-}
-
-.category-pick-one-wrapper{
-    margin-bottom: 20px;
-    height: 230px;
+.category-distance .banner .left-banner{
+    width: 45%;
 }
 
 
-.category-img-wrapper{
-    width: 30vw;
-
-    margin: 0 2vw;
-    object-fit: cover;
-
+.category-distance .banner .left-banner{
+    top: 20%;
+    left: 50%;
+    margin-left: 60px;
+    position: fixed;
 }
 
-.category-img-wrapper img{
-    width: 100%;
-    height: 230px;
-    border-radius: 5px;
+.category-distance .banner .right-banner{
 }
-
-.category-content-wrapper{
-    margin-top: 10px;
-    display: block;
-    width: 60vw;
-
-    line-height: 28px;
-    text-justify: inter-word;
-    text-align: center;
-    height: 230px;
-
-}
-
-.category-content-wrapper a h1{
-    font-weight: 500;
-    line-height: 19px;
-}
-
-.category-soft-title{
-    font-size: 15px;
-    margin-top: 5px;
-}
-
-
-
-
-.category-content{
-    margin: 10px 0;
-    font-size: 17px;
-    line-height: 19px;
-}
+.category-distance .middle-banner{
+     width: 60%;
+     margin: auto;
+ }
 
 .whereiam-wrapper{
     position: fixed;
@@ -818,21 +774,20 @@ footer{
 }
 
 
-.mini-category-soft-title{
-    color: rgba(0,0,0,0.70);
-    line-height: 15px;
-    margin-top: 3px;
-}
-
                                                                                 /*    END CATEGORIES CSS */
                                                                                 /*    START POST-CONTENT CSS */
-    .gist .gist-file article {
+.gist .gist-file article {
     font-size: 17px;!important;
 }
 
 .gist .markdown-body .highlight{
     font-size: 17px;
 }
+
+
+/* POST CONTENT */
+
+
 
 .post-wrapper{
     margin-top: 80px;
@@ -2002,6 +1957,10 @@ footer{
         font-size: 20px;
         margin-left: 6vw;
         line-height: 14px;
+    }
+
+    nav .leftmenu-mobile i:last-child{
+        margin-left: 20px;
     }
 
     nav .logo-tabs{
