@@ -2093,14 +2093,18 @@ footer{
 
     }
 
+    .title-detail{
+        width: 100%;
+    }
+
     .left-banner .title-wrap-lb a h1{
         font-size: 4.5vw;
+        width: 100%;
     }
 
     .middle-banner{
         width: 100%;
-        margin-top: 10px;
-        margin-left: 17px;
+        margin-top: 30px;
     }
 
     .img-wrapper-mb{
@@ -2126,6 +2130,28 @@ footer{
         line-height: 16px;
         margin: 5px;
     }
+
+    .most-popular-wrapper .most-popular-right {
+        width: 100%;
+        /*margin: auto;*/
+    }
+
+    .most-popular-right .update-from-category .first-mb .content-wrapper-mb {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .most-popular-wrapper .most-popular-right .final-from-category .first-mb .content-wrapper-mb {
+        width: 90%;
+        margin-left: 0;
+    }
+
+
+
+
+
+
+
 
     .tech-kit-wrapper{
         margin-left: -7px;
