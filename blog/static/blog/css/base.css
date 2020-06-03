@@ -2093,6 +2093,10 @@ footer{
 
     }
 
+    .banner .left-banner .title-wrap-lb a h1{
+        font-weight: 500;
+    }
+
     .title-detail{
         width: 100%;
     }
@@ -2123,7 +2127,7 @@ footer{
 
     .content-wrapper-mb h2{
         font-size: 4vw;
-        font-weight: 300;
+        font-weight: 500;
     }
 
     .content-wrapper-mb p{
