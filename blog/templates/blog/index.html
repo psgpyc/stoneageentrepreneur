@@ -143,7 +143,7 @@
 
  <div class="most-popular-wrapper">                                                                   {#            END SAE PICKS IN TECH#}
      <div class="most-popular-left">
-         <div class="middle-banner">
+         <div class="middle-banner only-mobile">
 
                         {% for featured in all_posts %}
                             <div class="first-mb">
@@ -179,6 +179,48 @@
                         {% endfor %}
 
          </div>
+
+
+
+        <div class="middle-banner except-mobile">
+
+                        {% for featured in all_posts %}
+                            <div class="first-mb">
+
+                                <div class="content-wrapper-mb">
+                                    <p class="belongs_to">{{ featured.belongs_to }}</p>
+                                    <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
+
+                                    <p class="title-detail">
+                                       {{ featured.soft_title }}
+                                    </p>
+                                    <div class="timeofpost">
+                                        <div>
+                                            a few hours ago | 4 mins read
+                                        </div>
+                                        <div class="post-icons">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                            <i class="far fa-bookmark"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="img-wrapper-mb">
+                                    <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
+
+                                </div>
+
+
+
+
+                            </div>
+
+
+                        {% endfor %}
+
+         </div>
+
 
      </div>
      <div class="most-popular-right">

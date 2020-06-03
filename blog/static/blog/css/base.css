@@ -1900,6 +1900,10 @@ footer{
         margin: auto;
     }
 
+    .only-mobile{
+        display: none;
+    }
+
 
 
 
@@ -2144,12 +2148,11 @@ footer{
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .content-wrapper-mb{
-        width: 100%;
+        width: 95%;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb{
-        width: 100%;
-        margin: auto;
+        width: 95%;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb a img{
@@ -2574,6 +2577,14 @@ footer{
 
     .whereiam-wrapper-mini{
         font-size: 14px;
+    }
+
+    .except-mobile{
+        display: none;
+    }
+
+    .only-mobile{
+        display: block;
     }
 }
 
