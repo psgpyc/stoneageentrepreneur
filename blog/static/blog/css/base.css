@@ -2142,13 +2142,18 @@ footer{
         flex-direction: column;
     }
 
+    .most-popular-wrapper .most-popular-left .middle-banner .first-mb .content-wrapper-mb{
+        width: 100%;
+    }
+
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb{
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb a img{
         height: 200px;
+        margin-left: 0;
     }
 
 
