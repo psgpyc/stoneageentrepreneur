@@ -190,13 +190,14 @@
  <div class="most-popular-wrapper">                                                                   {#            END SAE PICKS IN TECH#}
      <div class="most-popular-left">
          <div class="middle-banner only-mobile">
+            <h3 class="most-popular-heading">Preferences</h3>
 
                         {% for featured in all_posts %}
                             <div class="first-mb">
 
                                 <div class="content-wrapper-mb">
                                     <p class="belongs_to">{{ featured.belongs_to }}</p>
-                                    <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
+                                       <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
                                     <div class="img-wrapper-mb">
                                     <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
 

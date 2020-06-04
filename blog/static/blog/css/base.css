@@ -2162,12 +2162,20 @@ footer{
         margin: 5px;
     }
 
+    .most-popular-left .middle-banner .most-popular-heading{
+        text-align: center;
+        color: #007dc3;
+        font-size: 25px;
+        font-weight: 300;
+
+    }
+
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb{
         display: flex;
         flex-direction: column;
         margin: 30px 0;
-        border-bottom: 1px solid #007dc3;
-        border-top: 1px solid #007dc3;
+        border-bottom: 1px solid #cbe4f1;
+        border-top: 1px solid #cbe4f1;
         border-radius: 10px;
         padding-bottom: 20px;
         padding-top: 20px;
