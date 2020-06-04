@@ -2354,6 +2354,9 @@ footer{
     .mobile-view {
         display: none;
     }
+    .product-first p{
+        text-align: center;
+    }
 
 
     .product-first img{
