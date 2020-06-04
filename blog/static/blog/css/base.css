@@ -2161,14 +2161,17 @@ footer{
         display: flex;
         flex-direction: column;
         margin: 40px 0;
+        border-bottom: 5px solid silver;
+        padding-bottom: 40px;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .content-wrapper-mb{
-        width: 95%;
+        width: 100%;
+        margin-left: 0;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb{
-        width: 95%;
+        width: 100%;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb a img{
@@ -2188,7 +2191,7 @@ footer{
     }
 
     .most-popular-right .update-from-category .first-mb .content-wrapper-mb {
-        width: 90%;
+        width: 100%;
         margin-left: 0;
     }
 
