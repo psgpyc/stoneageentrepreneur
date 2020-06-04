@@ -2164,7 +2164,8 @@ footer{
         border-bottom: 1px solid rgba(23, 21, 21, 0.78);
         border-top: 1px solid rgba(23, 21, 21, 0.78);
         border-radius: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .content-wrapper-mb{
