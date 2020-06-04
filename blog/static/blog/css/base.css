@@ -2145,6 +2145,14 @@ footer{
         height: 100px;
     }
 
+    .banner .middle-banner .first-mb{
+        border-bottom: 1px solid #cbe4f1;
+        border-top: 1px solid #cbe4f1;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
 
 
     .banner .middle-banner .first-mb .content-wrapper-mb{
