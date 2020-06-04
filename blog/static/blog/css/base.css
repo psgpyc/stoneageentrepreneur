@@ -2166,8 +2166,8 @@ footer{
         display: flex;
         flex-direction: column;
         margin: 30px 0;
-        border-bottom: 1px solid rgba(23, 21, 21, 0.78);
-        border-top: 1px solid rgba(23, 21, 21, 0.78);
+        border-bottom: 1px solid #007dc3;
+        border-top: 1px solid #007dc3;
         border-radius: 10px;
         padding-bottom: 20px;
         padding-top: 20px;
