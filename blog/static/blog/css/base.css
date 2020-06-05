@@ -1569,6 +1569,7 @@ footer{
 
     .bar-category-wrapper{
         justify-content: left;
+        margin-top: 20px;
     }
 
      .category-mini-wrapper{
@@ -2155,7 +2156,7 @@ footer{
         position: fixed;
          display: flex;
          flex-direction: column;
-        /*width: 30%;*/
+        /*width: 100%;*/
         top: 40%;
         left: 90%;
         height: 50px;
