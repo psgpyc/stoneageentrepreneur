@@ -25,7 +25,7 @@
 
                         <div class="timeofpost">
                             <div>
-                                a few hours ago | 4 mins read
+                                <p>a few hours ago | 4 mins read</p>
                             </div>
                             <div class="post-icons">
                                 <i class="fas fa-ellipsis-h"></i>
@@ -58,16 +58,16 @@
                                     <p class="title-detail">
                                        {{ featured.soft_title }}
                                     </p>
-                                    <div class="timeofpost">
+                                   <div class="timeofpost">
                                         <div>
-                                            a few hours ago | 4 mins read
+                                            <p>a few hours ago | 4 mins read</p>
                                         </div>
                                         <div class="post-icons">
                                             <i class="fas fa-ellipsis-h"></i>
                                             <i class="far fa-bookmark"></i>
 
                                         </div>
-                                    </div>
+                                   </div>
                                 </div>
 
 
@@ -99,14 +99,14 @@
                                 </p>
                                 <div class="timeofpost">
                                     <div>
-                                        a few hours ago | 4 mins read
+                                        <p>a few hours ago | 4 mins read</p>
                                     </div>
                                     <div class="post-icons">
                                         <i class="fas fa-ellipsis-h"></i>
                                         <i class="far fa-bookmark"></i>
 
                                     </div>
-                                </div>
+                                 </div>
                             </div>
 
                             <div class="img-wrapper-mb">
@@ -138,7 +138,7 @@
                     <div class="product-first">
                         <img src="{% static 'blog/img/techwaterbottle.webp' %}" alt="SAE MERCH">
                         <button class="btn-shop" type="button">SHOP</button>
-                        <p>BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
+                        <p class="product-desc">BLACK & GOLD SAE INSULATED <br> WATER BOTTLE </p>
                         <h4>Nrs. 1800</h4>
 
 
@@ -243,7 +243,7 @@
                                     </p>
                                     <div class="timeofpost">
                                         <div>
-                                            a few hours ago | 4 mins read
+                                            <p>a few hours ago | 4 mins read</p>
                                         </div>
                                         <div class="post-icons">
                                             <i class="fas fa-ellipsis-h"></i>
@@ -285,7 +285,7 @@
                     </p>
                     <div class="timeofpost">
                         <div>
-                            a few hours ago | 4 mins read
+                            <p>a few hours ago | 4 mins read</p>
                         </div>
                         <div class="post-icons">
                             <i class="fas fa-ellipsis-h"></i>
@@ -301,29 +301,6 @@
 
 
 
-         </div>
-         <div class="update-from-category">
-             <h3>The Techy Experience</h3>
-             {% for featured in featured_two %}
-             <div class="first-mb">
-                <div class="content-wrapper-mb">
-                    <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
-                    <p class="title-detail">
-                       {{ featured.soft_title }}
-                    </p>
-                    <div class="timeofpost">
-                        <div>
-                            a few hours ago | 4 mins read
-                        </div>
-                        <div class="post-icons">
-                            <i class="fas fa-ellipsis-h"></i>
-                            <i class="far fa-bookmark"></i>
-
-                        </div>
-                    </div>
-                </div>
-             </div>
-             {% endfor %}
          </div>
 
         <div class="final-from-category">
@@ -339,7 +316,7 @@
                     </p>
                     <div class="timeofpost">
                         <div>
-                            a few hours ago | 4 mins read
+                            <p>a few hours ago | 4 mins read</p>
                         </div>
                         <div class="post-icons">
                             <i class="fas fa-ellipsis-h"></i>

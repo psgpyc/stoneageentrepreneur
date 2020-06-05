@@ -1,5 +1,6 @@
 *{
-    font-family: 'Baloo Paaji 2', cursive;
+    /*font-family: 'Baloo Paaji 2', cursive;*/
+    font-family: Roboto,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +15,11 @@ a{
 p, h1, h2, h3{
     text-align: justify;
     text-justify: inter-character;
+    -webkit-font-smoothing: antialiased
+}
+
+h1,h2,h3,h4{
+    color: #141414;
 }
 
 body{
@@ -39,6 +45,7 @@ nav{
     left: 0;
     width: 100%;
     height: 60px;
+
 
     background: whitesmoke;
     z-index: 300;
@@ -144,9 +151,27 @@ nav .logo{
     flex: 4;
     font-size: 30px;
     font-weight: 500;
-    /*color: #007dc3;*/
     letter-spacing: 2px;
     align-content: center;
+
+}
+
+nav .logo a, nav .logo a span{
+        font-family: 'Baloo Paaji 2', cursive;
+
+}
+
+nav .rightmenu div{
+        font-family: 'Baloo Paaji 2', cursive;
+
+}
+
+.content_wrapper .secondary-nav ul li a{
+        /*font-family: 'Baloo Paaji 2', cursive;*/
+    font-weight: 500;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased
+
 
 }
 
@@ -249,7 +274,9 @@ nav .rightmenu .accounts:hover{
 }
 
 .category-mini-wrapper{
-    margin: 10px 0;
+    margin: 15px 0;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .category-mini-wrapper a h1:hover{
@@ -257,9 +284,15 @@ nav .rightmenu .accounts:hover{
 }
 
 .category-mini-wrapper h1{
-    /*font-weight: 300;*/
     font-size: 16px;
     width: 400px;
+    letter-spacing: 1px;
+
+}
+
+.category-mini-wrapper ul  a{
+    margin: 10px;
+    letter-spacing: 1px;
 }
 
 
@@ -346,11 +379,9 @@ nav .rightmenu .accounts:hover{
 }
 
 .banner .left-banner .title-wrap-lb{
-    /*margin-top: 15px;*/
     width: 90%;
-    /*text-align: center;*/
-    /*line-height: 25px;*/
     font-size: 12px;
+
 
 
 }
@@ -359,16 +390,18 @@ nav .rightmenu .accounts:hover{
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 1.3rem;
     font-weight: 500;
+    margin: 10px 0;
 }
 
 .banner .title-wrap-lb .belongs_to{
     color: #007dc3;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 .title-detail{
     font-size: .875rem;
     width: 90%;
-    margin: 5px 0;
+    margin: 10px 0;
     color: #616161;
     font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
 }
@@ -385,6 +418,7 @@ nav .rightmenu .accounts:hover{
     margin: 0 10px;
     font-size: 1.2rem;
     cursor: pointer;
+
 }
 
 .timeofpost i:hover{
@@ -410,7 +444,7 @@ nav .rightmenu .accounts:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 
@@ -438,16 +472,18 @@ nav .rightmenu .accounts:hover{
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
-.content-wrapper-mb p{
+.content-wrapper-mb .title-detail{
     color: #616161;
     font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
     line-height: 16px;
-    margin: 5px;
+    margin: 10px 0;
 }
 
-.content-wrapper-mb .tags a p{
-    margin: 0 1px;
+.middle-banner .title-detail{
+    margin: 10px 0;
 }
+
+
 
 /*END MIDDLE BANNER*/
 
@@ -567,6 +603,10 @@ nav .rightmenu .accounts:hover{
     display: inline;
 }
 
+.product-wrapper .product-first p{
+        text-align: center;
+    }
+
 
 .btn-fav{
     border: none;
@@ -657,7 +697,7 @@ nav .rightmenu .accounts:hover{
 }
 
 .most-popular-wrapper .most-popular-right .final-from-category .first-mb {
-    margin: 10px 0;
+    margin: 30px 0;
 }
 
 
@@ -689,10 +729,12 @@ footer{
     width: 90%;
     margin: auto;
     position: fixed;
-    top: 60px;
+    height: 60px;
+    top: 40px;
     overflow: hidden;
     background: whitesmoke;
     z-index: 300;
+    letter-spacing: 0.5px;
 }
 
 .secondary-nav ul{
@@ -744,16 +786,15 @@ footer{
      margin: auto;
  }
 
-.whereiam-wrapper{
+.whereiam-wrapper {
     position: fixed;
-    top: 82px;
+    top: 90px;
     background-color: whitesmoke;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
-
+    height: 40px;
 }
-
 .whereiam-wrapper-mini{
     position: fixed;
     top: 60px;
@@ -1016,6 +1057,11 @@ footer{
 
     }
 
+    nav .logo-tabs a, nav .logo-tabs span{
+        font-family: 'Baloo Paaji 2', cursive;
+    }
+
+
 
     .mobile-view-nav  .rightmenu-mobilex{
         flex: 1;
@@ -1072,6 +1118,10 @@ footer{
         font-weight: 300;
     }
 
+    .category-distance{
+        margin-top: 100px;
+    }
+
 
      .category-distance .middle-banner{
         width: 80%;
@@ -1121,6 +1171,10 @@ footer{
 
     .product-first img{
         width: 20vw;
+    }
+
+    .product-wrapper .product-first p{
+        text-align: center;
     }
 
     .btn-shop{
@@ -1532,7 +1586,7 @@ footer{
 
 
     .whereiam-wrapper{
-        margin-top: -26px;
+        margin-top: -30px;
     }
     .banner{
         margin-top: 90px;
@@ -2032,10 +2086,15 @@ footer{
     nav .logo-mobile{
         flex: 2;
         display: flex;
+
         justify-content: center;
         font-size: 20px;
         margin-left: 6vw;
         line-height: 14px;
+    }
+
+    nav .logo-mobile a{
+        font-family: 'Baloo Paaji 2', cursive;
     }
 
     nav .leftmenu-mobile i:last-child{
@@ -2126,7 +2185,7 @@ footer{
 
 
     .whereiam-wrapper{
-        margin-top: -22px;
+        margin-top: -30px;
     }
 
 
