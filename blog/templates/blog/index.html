@@ -51,10 +51,10 @@
                                 <div class="content-wrapper-mb">
                                     <p class="belongs_to">{{ featured.belongs_to }}</p>
                                     <a href="{% url 'post-details' featured.slug_name %}"><h2>{{ featured.hard_title }}</h2></a>
-                                    <div class="img-wrapper-mb">
-                                    <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
-
-                                    </div>
+{#                                    <div class="img-wrapper-mb">#}
+{#                                    <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>#}
+{##}
+{#                                    </div>#}
                                     <p class="title-detail">
                                        {{ featured.soft_title }}
                                     </p>
@@ -109,10 +109,10 @@
                                  </div>
                             </div>
 
-                            <div class="img-wrapper-mb">
-                                <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>
-
-                            </div>
+{#                            <div class="img-wrapper-mb">#}
+{#                                <a href="{% url 'post-details' featured.slug_name %}"><img src="{{ featured.title_image.url }}" alt="STONEAGEENTREPRENEUR"></a>#}
+{##}
+{#                            </div>#}
 
 
                         </div>
@@ -230,6 +230,8 @@
 
 
         <div class="middle-banner except-mobile">
+                    <h3 class="most-popular-heading">Preferences</h3>
+
 
                         {% for featured in all_posts %}
                             <div class="first-mb">

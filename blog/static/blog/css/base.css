@@ -187,6 +187,8 @@ nav .rightmenu{
     justify-content: space-evenly;
     padding: 25px;
     flex: 2;
+    font-size: 22px;
+    color: #2c342c;
 
 }
 
@@ -299,8 +301,9 @@ nav .rightmenu .accounts:hover{
 .social-links{
     position: fixed;
     top: 90%;
-    left: 41%;
-    height: 50px;
+    /*left: 41%;*/
+    height: 450px;
+    width: 100%;
     background-color: whitesmoke;
     font-size: 30px;
     text-align: center;
@@ -368,7 +371,7 @@ nav .rightmenu .accounts:hover{
 /*START LEFT BANNER*/
 
 .banner .left-banner{
-    width: 50%
+    width: 60%
 }
 
 
@@ -449,7 +452,9 @@ nav .rightmenu .accounts:hover{
 
 
 .img-wrapper-mb{
-    width: 20%;
+    width: 170px;
+    margin-left: 50px;
+    margin-top: 3vh;
 }
 
 .img-wrapper-mb img{
@@ -460,7 +465,8 @@ nav .rightmenu .accounts:hover{
 
 
 .content-wrapper-mb{
-    width: 70%;
+    width: 100%;
+    margin-top: 1px;
 }
 
 .content-wrapper-mb h2{
@@ -556,6 +562,7 @@ nav .rightmenu .accounts:hover{
     cursor: pointer;
     text-align: center;
     position: relative;
+    margin: 0 10px;
 
 }
 
@@ -605,7 +612,12 @@ nav .rightmenu .accounts:hover{
 
 .product-wrapper .product-first p{
         text-align: center;
+        font-size: 14px;
     }
+
+.product-wrapper .product-first h4{
+    font-weight: 500;
+}
 
 
 .btn-fav{
@@ -706,6 +718,17 @@ nav .rightmenu .accounts:hover{
     margin-left: auto;
 }
 
+
+.most-popular-left .middle-banner .most-popular-heading{
+        text-align: center;
+        color: #007dc3;
+        font-size: 25px;
+        font-weight: 300;
+        border-bottom: 1px solid;
+        margin-bottom: 22px;
+
+    }
+
 /*END AFTER MERCH SECTION */
 
 /*   footer content  */
@@ -800,7 +823,7 @@ footer{
     top: 60px;
     background-color: whitesmoke;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
 
 }
@@ -1066,7 +1089,8 @@ footer{
     .mobile-view-nav  .rightmenu-mobilex{
         flex: 1;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-evenly;
+        float: right;
         margin-right: 30px;
         font-size: 20px;
     }
@@ -1110,7 +1134,7 @@ footer{
 
 
     .banner .left-banner{
-        width: 50%;
+        width: 60%;
     }
 
     .banner .title-wrap-lb a h1 {
@@ -1150,8 +1174,8 @@ footer{
     }
 
     .middle-banner .content-wrapper-mb{
-        width: 70%;
-        margin-left: 20px;
+        width: 100%;
+        /*margin-left: 20px;*/
     }
 
     .content-wrapper-mb h2{
@@ -1516,6 +1540,7 @@ footer{
 
 
 
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -1563,6 +1588,12 @@ footer{
         margin-right: 30px;
         font-size: 20px;
     }
+
+    .mobile-view-nav .rightmenu-mobilex i{
+        margin: 0 8px;
+
+    }
+
     .side-bar-0{
          height: 150%;
      }
@@ -1620,11 +1651,11 @@ footer{
 
     .middle-banner{
         width: 90%;
-        margin-top: 30px;
+        margin: 30px auto;
     }
 
     .first-mb{
-        margin-left: -20px;
+        margin-left: 0;
     }
 
     .img-wrapper-mb{
@@ -1636,7 +1667,7 @@ footer{
     }
 
     .middle-banner .first-mb .content-wrapper-mb{
-        width: 60%;
+        width: 100%;
         text-align: left;
     }
 
@@ -1655,7 +1686,7 @@ footer{
         width: 100%;
     }
     .tech-kit-wrapper .sub-headings-post{
-        font-size: 3.5vw;
+        font-size: 2.5vw;
     }
 
     .mobile-view {
