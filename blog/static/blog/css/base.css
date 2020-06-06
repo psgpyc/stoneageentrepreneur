@@ -88,6 +88,7 @@ nav .leftmenu .hamburger i:hover{
 nav .leftmenu .search{
     font-size: 23px;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 nav .leftmenu .search:hover{
@@ -121,7 +122,7 @@ nav .rightmenu-mobile{
     opacity: 1;
     width: 300px;
     font-size: 15px;
-    height: 35px;
+    height: 30px;
     /*border-radius: 8px;*/
     border: 1px solid black;
     text-align: center;
@@ -697,7 +698,7 @@ nav .rightmenu .accounts:hover{
 .final-from-category{
     position: -webkit-sticky;
     position: sticky;
-    top: 13%;
+    top: 16%;
 }
 
 .final-from-category h3{
