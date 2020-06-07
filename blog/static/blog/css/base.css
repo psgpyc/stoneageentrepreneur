@@ -443,16 +443,16 @@ nav .rightmenu .accounts:hover{
 
 
 .first-mb{
-    width: 100%;
+    width: 99%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
     border-bottom: 1px solid #cbe4f1;
     border-top: 1px solid #cbe4f1;
     border-radius: 10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 10px;
 }
 
 
@@ -724,7 +724,7 @@ nav .rightmenu .accounts:hover{
 
 
 .most-popular-wrapper .most-popular-right .final-from-category .first-mb .content-wrapper-mb{
-    width: 90%;
+    width: 99%;
     margin-left: auto;
 }
 
@@ -1178,7 +1178,7 @@ footer{
 
     .middle-banner .img-wrapper-mb img{
         width: 100%;
-        margin-left: 30px;
+        /*margin-left: 30px;*/
         object-fit: cover;
     }
 
@@ -2297,7 +2297,7 @@ footer{
         box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
 
         border-radius: 10px;
-        padding: 20px;
+        padding: 10px;
         margin-bottom: 20px;
 
     }
