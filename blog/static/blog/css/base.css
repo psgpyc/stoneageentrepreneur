@@ -228,7 +228,7 @@ nav .rightmenu .accounts:hover{
     width: 100%;
     height: 100%;
     border: 1px;
-    background-color: whitesmoke;
+    background-color: white;
     display: none;
     z-index: 300;
     overflow-y: scroll;
@@ -307,7 +307,7 @@ nav .rightmenu .accounts:hover{
     /*left: 41%;*/
     height: 450px;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     font-size: 30px;
     text-align: center;
 
@@ -677,7 +677,7 @@ nav .rightmenu .accounts:hover{
 }
 
 .most-popular-right{
-    width: 40%;
+    width: 45%;
 
 
 }
@@ -752,7 +752,7 @@ footer{
     width: 100%;
     height: 5vh;
     margin-top: 30px;
-    background: whitesmoke;
+    background: white;
     text-align: center;
     justify-content: center;
 }
@@ -825,17 +825,17 @@ footer{
 
 .whereiam-wrapper {
     position: fixed;
-    top: 90px;
-    background-color: whitesmoke;
+    top: 105px;
+    background-color: white;
     width: 100%;
     font-size: 14px;
     margin-bottom: 10px;
-    height: 40px;
+    height: 30px;
 }
 .whereiam-wrapper-mini{
     position: fixed;
     top: 60px;
-    background-color: whitesmoke;
+    background-color: white;
     width: 100%;
     font-size: 14px;
     margin-bottom: 10px;
@@ -1113,7 +1113,7 @@ footer{
     }
 
     .whereiam-wrapper{
-        margin-top: -30px;
+        margin-top: -45px;
     }
 
     nav .rightmenu-mobile{
@@ -1631,7 +1631,7 @@ footer{
 
 
     .whereiam-wrapper{
-        margin-top: -30px;
+        margin-top: -45px;
     }
     .banner{
         margin-top: 90px;
@@ -2235,7 +2235,7 @@ footer{
 
 
     .whereiam-wrapper{
-        margin-top: -30px;
+        margin-top: -45px;
     }
 
 
