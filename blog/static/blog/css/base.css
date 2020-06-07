@@ -88,7 +88,6 @@ nav .leftmenu .hamburger i:hover{
 nav .leftmenu .search{
     font-size: 23px;
     cursor: pointer;
-    margin-top: 3px;
 }
 
 nav .leftmenu .search:hover{
@@ -448,7 +447,12 @@ nav .rightmenu .accounts:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -489,6 +493,10 @@ nav .rightmenu .accounts:hover{
 .middle-banner .title-detail{
     margin: 10px 0;
 }
+.most-popular-left .middle-banner .first-mb{
+    margin-bottom: 30px;
+}
+
 
 
 
@@ -702,15 +710,16 @@ nav .rightmenu .accounts:hover{
 }
 
 .final-from-category h3{
-     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-    font-weight: 500;
-    border-bottom: 1px solid black;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-weight: 300;
+    color: #007dc3;
+    font-size: 25px;
     text-align: right;
 
 }
 
 .most-popular-wrapper .most-popular-right .final-from-category .first-mb {
-    margin: 30px 0;
+    margin: 28px 0;
 }
 
 
@@ -725,7 +734,7 @@ nav .rightmenu .accounts:hover{
         color: #007dc3;
         font-size: 25px;
         font-weight: 300;
-        border-bottom: 1px solid;
+        /*border-bottom: 1px solid;*/
         margin-bottom: 22px;
 
     }
@@ -1092,7 +1101,6 @@ footer{
         display: flex;
         justify-content: space-evenly;
         float: right;
-        margin-right: 30px;
         font-size: 20px;
     }
 
@@ -2138,6 +2146,10 @@ footer{
         display: none;
     }
 
+    nav .mobile-view-nav .leftmenu-mobile i:hover{
+        color: #007dc3;
+    }
+
 
 
     .left-nav-mobile{
@@ -2188,11 +2200,10 @@ footer{
         position: fixed;
          display: flex;
          flex-direction: column;
-        /*width: 100%;*/
+         width: 0;
         top: 40%;
         left: 90%;
-        height: 50px;
-        background-color: whitesmoke;
+        background-color: transparent;
         font-size: 25px;
         text-align: center;
 
@@ -2278,6 +2289,10 @@ footer{
 
     .banner .middle-banner .first-mb{
         margin-left: 0;
+        border-bottom: 1px solid #cbe4f1;
+        border-top: 1px solid #cbe4f1;
+        border-radius: 10px;
+        padding-bottom: 20px
     }
 
 
@@ -2407,6 +2422,7 @@ footer{
 
     .content_wrapper .category-distance .banner .middle-banner-category .first-mb .content-wrapper-mb .img-wrapper-mb{
         width: 100%;
+        margin-left: 0;
     }
 
     .content_wrapper .category-distance .banner .middle-banner-category .first-mb .content-wrapper-mb .img-wrapper-mb img {
