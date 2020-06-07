@@ -1788,6 +1788,8 @@ footer{
     .content_wrapper .category-distance .banner .middle-banner-category .first-mb{
         width: 100%;
         margin: 40px 0;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+
 
 
     }
@@ -2274,7 +2276,7 @@ footer{
     }
 
     .middle-banner{
-        width: 100%;
+        width: 98%;
         margin-top: 30px;
     }
 
@@ -2289,10 +2291,15 @@ footer{
 
     .banner .middle-banner .first-mb{
         margin-left: 0;
-        border-bottom: 1px solid #cbe4f1;
         border-top: 1px solid #cbe4f1;
+
+        border-bottom: 1px solid #cbe4f1;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+
         border-radius: 10px;
-        padding-bottom: 20px
+        padding: 20px;
+        margin-bottom: 20px;
+
     }
 
 
@@ -2323,13 +2330,14 @@ footer{
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb{
         display: flex;
         flex-direction: column;
-        /*margin: 50px 0;*/
         border-bottom: 1px solid #cbe4f1;
         border-top: 1px solid #cbe4f1;
-        border-radius: 10px;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        padding: 10px;
         margin-left: 0;
+        border-radius: 10px;
+
+
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .content-wrapper-mb{
@@ -2362,8 +2370,14 @@ footer{
         margin-left: 0;
     }
 
+    .most-popular-wrapper .most-popular-right .final-from-category .first-mb{
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        padding: 10px;
+
+    }
+
     .most-popular-wrapper .most-popular-right .final-from-category .first-mb .content-wrapper-mb {
-        width: 90%;
+        width: 100%;
         margin-left: 0;
     }
 
