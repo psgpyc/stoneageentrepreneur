@@ -141,6 +141,7 @@
             <p><i class="arrow up"></i></p>
 
             <div class="login-wrapper">
+                <div class="login-wrapper-login">
                 <span class="sign-in">SIGN IN</span>
 
                 <form class="login-form-control" action="" method="post">
@@ -149,10 +150,11 @@
                         <input  class="username" type="email" placeholder="Enter your Email">
                     </label>
                     <label >
+
                     <input class="password" type="password" placeholder="Enter your Password">
                     </label>
                     <div class="reset-forget-wrapper">
-                        <a href="#">Register?</a>
+                        <a class="register-link" href="#">Register?</a>
                         <a href="#">Forget Password?</a>
                     </div>
 
@@ -174,13 +176,6 @@
                         </a>
                     </div>
                 </div>
-
-
-
-
-
-
-
             </div>
 
             <div class="termscond">
@@ -188,10 +183,57 @@
                     <small>Terms of Service & Privacy Policy.</small>
 
             </div>
+            </div>
 
 
 
+            <div class="login-wrapper-signup">
+                <span class="sign-in">SIGN UP</span>
+
+                <form class="login-form-control" action="" method="post">
+                    {% csrf_token %}
+                    <label>
+                        <input  class="username" type="email" placeholder="Enter your Email">
+                    </label>
+                    <label >
+
+                    <input class="password" type="password" placeholder="Enter your Password">
+                    </label>
+                    <div class="reset-forget-wrapper">
+                        <a class="login-link" href="#">Login?</a>
+                        <a href="#">Forget Password?</a>
+                    </div>
+
+                    <button class="login-submit" type="submit">Sign Up</button>
+                </form>
+
+                <div class="social-link-wrapper">
+                    <p>Or sign Up with</p>
+                    <div class="social-facebook">
+                        <a href="#">
+                            <i class="fab fa-google"></i>
+                            <p>Sign Up with Google</p>
+                        </a>
+                    </div>
+                     <div class="social-facebook">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                            <p>Sign Up with Facebook</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="termscond">
+                <small>Click “Sign In” above to accept Stone Age Entrepreneur's</small>
+                    <small>Terms of Service & Privacy Policy.</small>
+
+            </div>
+            </div>
         </div>
+
+
+
         <div class="content_wrapper" id="contentWrapper">
             {% block secondary-nav %}
                 <div class="secondary-nav">

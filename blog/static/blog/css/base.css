@@ -272,6 +272,10 @@ nav .rightmenu .accounts:hover{
     text-align: center;
 }
 
+.login-wrapper-signup{
+    text-align: center;
+}
+
 .sign-in{
     font-size: 25px;
     margin: 40px 10px;
@@ -329,7 +333,7 @@ nav .rightmenu .accounts:hover{
 
 .social-facebook{
     width: 80%;
-    height: 30px;
+    height: 35px;
     margin: 20px auto;
     align-items: center;
     box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
@@ -341,7 +345,7 @@ nav .rightmenu .accounts:hover{
 .social-facebook a{
     display: flex;
     width: 100%;
-    margin: 4px auto;
+    margin: 6px auto;
     justify-content: space-evenly;
 
 }
@@ -357,6 +361,10 @@ nav .rightmenu .accounts:hover{
     left: 50px;
     margin: auto;
     font-size: 10px;
+}
+
+.active_display{
+    display: none;
 }
 
 

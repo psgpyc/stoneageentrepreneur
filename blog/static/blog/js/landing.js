@@ -26,13 +26,31 @@ search_button.addEventListener("click", ()=>{
 // Login Modal
 
 var modal = document.querySelector('.login-modal')
+var modal_signup = document.querySelector('.login-wrapper-signup')
 var loginBtn = document.querySelector('.user-login')
 var bodyContentWrapper = document.getElementById('contentWrapper')
 var closemodal = document.getElementById('closeButton')
 
 loginBtn.addEventListener('click', ()=> {
-    console.log(' neoal')
     modal.classList.toggle('login-modal-none');
+    modal_signup.classList.add('active_display')
 
 });
 
+var register_el = document.querySelector('.register-link');
+var login_el = document.querySelector('.login-link')
+var login_wrapper = document.querySelector('.login-wrapper')
+
+register_el.addEventListener('click', ()=>{
+    login_wrapper.classList.toggle('active_display')
+    modal_signup.classList.toggle('active_display')
+    console.log('help me');
+
+})
+
+login_el.addEventListener('click', ()=>{
+    login_wrapper.classList.toggle('active_display')
+    modal_signup.classList.toggle('active_display')
+    console.log('help me');
+
+})
