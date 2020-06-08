@@ -245,12 +245,13 @@ nav .rightmenu .accounts:hover{
 .arrow {
   position: fixed;
   top: 42px;
-  left: 93.5vw;
+  left: 93.3%;
   border: solid #cbe4f1;
   background-color: white;
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 7px;
+
 }
 
 .up {
@@ -339,9 +340,9 @@ nav .rightmenu .accounts:hover{
 
 .social-facebook a{
     display: flex;
-    width: 60%;
+    width: 100%;
     margin: 4px auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 
