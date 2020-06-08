@@ -220,6 +220,153 @@ nav .rightmenu .accounts:hover{
 
 /*END NAV*/
 
+/* START Login Modal*/
+.login-modal{
+    width: 30%;
+    height: 90%;
+    margin: auto;
+    position: fixed;
+    overflow: auto;
+    top: 50px;
+    left: 65%;
+    z-index: 900;
+    background-color: white;
+    box-shadow: 2px 6px 6px 2px rgba(32,33,36,.28);
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.login-modal-none{
+    display: none;
+}
+
+.arrow {
+  position: fixed;
+  top: 42px;
+  left: 93.5vw;
+  border: solid #cbe4f1;
+  background-color: white;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 7px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+
+
+
+
+/*END */
+
+
+/*START LOGIN FORM*/
+.login-wrapper{
+    text-align: center;
+}
+
+.sign-in{
+    font-size: 25px;
+    margin: 40px 10px;
+}
+
+.login-form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+
+}
+
+.username{
+    border: none;
+    margin: 20px;
+    border-bottom: 1px solid #007dc3;
+    width: 80%;
+    height: 20px;
+}
+
+.password{
+    border: none;
+    margin: 20px;
+    border-bottom: 1px solid #007dc3;
+    width: 80%;
+    height: 20px;
+}
+
+.login-submit{
+    width: 80%;
+    height: 30px;
+    margin: 20px auto;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border: 1px solid #007dc3;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.reset-forget-wrapper{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+
+.social-link-wrapper{
+}
+
+.social-link-wrapper p{
+    text-align: center;
+}
+
+.social-facebook{
+    width: 80%;
+    height: 30px;
+    margin: 20px auto;
+    align-items: center;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border: 1px solid #007dc3;
+    border-radius: 3px;
+
+}
+
+.social-facebook a{
+    display: flex;
+    width: 60%;
+    margin: 4px auto;
+    justify-content: space-between;
+
+}
+
+.social-facebook a i {
+    margin: 2px 0;
+}
+
+.termscond{
+    /*width: 80%;*/
+    position: absolute;
+    top: 97%;
+    left: 50px;
+    margin: auto;
+    font-size: 10px;
+}
+
+
+
+/*END LOGIN FORM*/
+
+
+
+
+
+
 /*START SIDEBAR*/
 .side-bar{
     position: fixed;

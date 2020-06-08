@@ -44,9 +44,13 @@
         <div class="rightmenu">
             <div class="health"><i class="fas fa-cart-plus"></i></div>
             <div class="store"><i class="fas fa-store"></i></div>
-            <div class="accounts"><i class="fas fa-user"></i></div>
+            <div class="accounts">
+                <i  id="loginBtn" class="fas fa-user user-login"></i>
+            </div>
         </div>
     </nav>
+
+
 
     <nav class="mobile-view-nav">
         <div class="leftmenu-mobile">
@@ -131,7 +135,64 @@
         </div>
 {#              SIDEBAR ENDS              #}
 {#        MAIN CONTENT STARTS #}
-        <div class="content_wrapper">
+
+
+        <div class="login-modal login-modal-none " id="loginModal">
+            <p><i class="arrow up"></i></p>
+
+            <div class="login-wrapper">
+                <span class="sign-in">SIGN IN</span>
+
+                <form class="login-form-control" action="" method="post">
+                    {% csrf_token %}
+                    <label>
+                        <input  class="username" type="email" placeholder="Enter your Email">
+                    </label>
+                    <label >
+                    <input class="password" type="password" placeholder="Enter your Password">
+                    </label>
+                    <div class="reset-forget-wrapper">
+                        <a href="#">Register?</a>
+                        <a href="#">Forget Password?</a>
+                    </div>
+
+                    <button class="login-submit" type="submit">Sign in</button>
+                </form>
+
+                <div class="social-link-wrapper">
+                    <p>Or sign in with</p>
+                    <div class="social-facebook">
+                        <a href="#">
+                            <i class="fab fa-google"></i>
+                            <p>Sign in with Google</p>
+                        </a>
+                    </div>
+                     <div class="social-facebook">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                            <p>Sign in with Facebook</p>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <div class="termscond">
+                <small>Click “Sign In” above to accept Stone Age Entrepreneur's</small>
+                    <small>Terms of Service & Privacy Policy.</small>
+
+            </div>
+
+
+
+        </div>
+        <div class="content_wrapper" id="contentWrapper">
             {% block secondary-nav %}
                 <div class="secondary-nav">
                     <ul class="secondary-nav">

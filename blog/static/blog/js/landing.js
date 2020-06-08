@@ -23,3 +23,16 @@ search_button.addEventListener("click", ()=>{
 
 
 
+// Login Modal
+
+var modal = document.querySelector('.login-modal')
+var loginBtn = document.querySelector('.user-login')
+var bodyContentWrapper = document.getElementById('contentWrapper')
+var closemodal = document.getElementById('closeButton')
+
+loginBtn.addEventListener('click', ()=> {
+    console.log(' neoal')
+    modal.classList.toggle('login-modal-none');
+
+});
+
