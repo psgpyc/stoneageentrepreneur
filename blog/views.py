@@ -91,8 +91,7 @@ class MiniCategories(View):
         return render(request, template_name=self.template_name, context=ctx)
 
 
-
-
-
+class SaeLoginView(TemplateView):
+    template_name = 'blog/login.html'
 
 

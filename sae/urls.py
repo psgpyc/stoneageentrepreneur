@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 
-from blog.views import HomePage,PostDetails, Categories, MiniCategories
+from blog.views import HomePage,PostDetails, Categories, MiniCategories, SaeLoginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('posts/<slug:post_slug>/', PostDetails.as_view(), name='post-details'),
     path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
     path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
+    path('login', SaeLoginView.as_view(), name='login-view')
 
 ]
 

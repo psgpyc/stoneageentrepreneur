@@ -442,6 +442,7 @@ nav .rightmenu .accounts:hover{
 
 .middle-banner-category{
     width: 50%;
+    margin: 0 10px;
 }
 
 
@@ -575,8 +576,7 @@ nav .rightmenu .accounts:hover{
     cursor: pointer;
     text-align: center;
     position: relative;
-    margin: 0 10px;
-
+    margin: 0 25px;
 }
 
 
@@ -584,7 +584,7 @@ nav .rightmenu .accounts:hover{
 
     height: 300px;
     width: 15vw;
-    margin: 10px 20px;
+    /*margin: 10px 10px;*/
     object-fit: cover;
 
 
@@ -601,7 +601,7 @@ nav .rightmenu .accounts:hover{
     font-size: 17px;
     padding: 2px 2px;
     margin-bottom: 90px;
-    background: whitesmoke;
+    background: white;
 }
 
 
@@ -710,7 +710,8 @@ nav .rightmenu .accounts:hover{
 .final-from-category{
     position: -webkit-sticky;
     position: sticky;
-    top: 16%;
+    top: 10%;
+
 }
 
 .final-from-category h3{
@@ -755,6 +756,10 @@ footer{
     background: white;
     text-align: center;
     justify-content: center;
+}
+
+footer p{
+    text-align: center;
 }
 
                                                                                 /*    END EXTENDED CSS */
@@ -2366,12 +2371,16 @@ footer{
 
     .most-popular-wrapper .most-popular-right {
         width: 100%;
-        /*margin: auto;*/
+        height: 200%;
     }
 
     .most-popular-right .update-from-category .first-mb .content-wrapper-mb {
         width: 100%;
         margin-left: 0;
+    }
+
+    .most-popular-wrapper .most-popular-right .final-from-category{
+        margin-bottom: 200px;
     }
 
     .most-popular-wrapper .most-popular-right .final-from-category .first-mb{
