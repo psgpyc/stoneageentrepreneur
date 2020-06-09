@@ -10,6 +10,7 @@ hamburger.addEventListener("click", ()=>{
     content.classList.toggle('click_collapse')
 });
 
+
 hamburgermobile.addEventListener("click", ()=>{
     content.classList.toggle('click_collapse')
 });
@@ -31,15 +32,19 @@ var loginBtn = document.querySelector('.user-login')
 var bodyContentWrapper = document.getElementById('contentWrapper')
 var closemodal = document.getElementById('closeButton')
 
-loginBtn.addEventListener('click', ()=> {
-    modal.classList.toggle('login-modal-none');
-    modal_signup.classList.add('active_display')
 
-});
 
 var register_el = document.querySelector('.register-link');
 var login_el = document.querySelector('.login-link')
 var login_wrapper = document.querySelector('.login-wrapper')
+
+
+loginBtn.addEventListener('click', ()=> {
+    modal.classList.toggle('login-modal-none');
+    login_wrapper.classList.remove('active_display')
+    modal_signup.classList.add('active_display')
+
+});
 
 register_el.addEventListener('click', ()=>{
     login_wrapper.classList.toggle('active_display')
