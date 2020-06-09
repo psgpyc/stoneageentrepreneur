@@ -290,7 +290,7 @@ nav .rightmenu .accounts:hover{
 
 .username{
     border: none;
-    margin: 20px;
+    margin: 20px auto;
     border-bottom: 1px solid #007dc3;
     width: 80%;
     height: 20px;
@@ -298,7 +298,7 @@ nav .rightmenu .accounts:hover{
 
 .password{
     border: none;
-    margin: 20px;
+    margin: 20px auto;
     border-bottom: 1px solid #007dc3;
     width: 80%;
     height: 20px;

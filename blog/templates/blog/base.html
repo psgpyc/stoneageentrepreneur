@@ -146,13 +146,9 @@
 
                 <form class="login-form-control" action="" method="post">
                     {% csrf_token %}
-                    <label>
-                        <input  class="username" type="email" placeholder="Enter your Email">
-                    </label>
-                    <label >
+                    {{ form }}
 
-                    <input class="password" type="password" placeholder="Enter your Password">
-                    </label>
+
                     <div class="reset-forget-wrapper">
                         <a class="register-link" href="#">Register?</a>
                         <a href="#">Forget Password?</a>
@@ -192,17 +188,7 @@
 
                 <form class="login-form-control" action="" method="post">
                     {% csrf_token %}
-                    <label>
-                        <input  class="username" type="email" placeholder="Enter your Email">
-                    </label>
-                    <label >
-
-                    <input class="password" type="password" placeholder="Enter your Password">
-                    </label>
-                    <div class="reset-forget-wrapper">
-                        <a class="login-link" href="#">Login?</a>
-                        <a href="#">Forget Password?</a>
-                    </div>
+                    {{ regForm }}
 
                     <button class="login-submit" type="submit">Sign Up</button>
                 </form>

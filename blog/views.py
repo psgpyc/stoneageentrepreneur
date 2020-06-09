@@ -2,10 +2,13 @@ from django.shortcuts import render
 from django.views.generic import View
 from django.views.generic import TemplateView, DetailView
 from django.db.models import Prefetch
+
 from blog.models import Post, SubPostContent, SubPostListElements, ListElements, BlogCategory, PostCategory
 from django.db import connection, reset_queries
 from blog.utils import get_where_i_am, get_categories_featured
 import random
+
+from accounts.forms import UserLoginForm, RegistrationForm
 
 
 class HomePage(View):
@@ -14,6 +17,8 @@ class HomePage(View):
     def get(self, request):
         def query_set(flag): return Post.objects.featured_post(flag)
         ctx = {
+            'form': UserLoginForm(),
+            'regForm': RegistrationForm(),
             'featured_one': random.choice(query_set(1)),
             'featured_two': random.sample(tuple(query_set(2)), k=3),
             'all_posts': Post.objects.exclude(flags__gt=0),

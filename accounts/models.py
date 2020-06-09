@@ -28,8 +28,7 @@ class UserManager(BaseUserManager):
             raise ValueError('You must set your email username')
         if not full_name:
             raise ValueError('You must set your Full Name')
-        if not phone_number:
-            raise ValueError('You must set your Phone Number')
+
         email = self.normalize_email(email)
         full_name = self.model.normalize_username(full_name)
         user = self.model(email=email, full_name=full_name, phone_number=phone_number,  **extra_fields)
@@ -37,7 +36,7 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_user(self, email, full_name, phone_number, password=None, **extra_fields):
+    def create_user(self, email, full_name, phone_number=None, password=None, **extra_fields):
         extra_fields.setdefault('is_staff', False)
         extra_fields.setdefault('is_superuser', False)
         extra_fields.setdefault('is_active', False)
@@ -45,6 +44,8 @@ class UserManager(BaseUserManager):
         return self._create_user(email, full_name, phone_number, password, **extra_fields)
 
     def create_superuser(self, email, full_name, phone_number, password=None, **extra_fields):
+        if not phone_number:
+            raise ValueError('You must set your Phone Number')
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
@@ -84,7 +85,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     phone_number = models.CharField(
                                max_length=14,
                                unique=True,
+                               null=True,
+                               blank=True,
+                               default='9800000000',
                                verbose_name='Phone Number',
+
                                 )
     full_name = models.CharField(max_length=100,
                                  verbose_name='Full Name')
