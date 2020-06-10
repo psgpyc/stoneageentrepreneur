@@ -1,14 +1,22 @@
-from django.shortcuts import render
+from django.contrib.auth.views import LogoutView, PasswordResetCompleteView
+from django.shortcuts import render, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse
+from django.utils.safestring import mark_safe
+
 from django.views.generic import View
 from django.views.generic import TemplateView, DetailView
 from django.db.models import Prefetch
+from django.views.generic.edit import FormMixin
 
+from accounts.models import ActivateEmail
 from blog.models import Post, SubPostContent, SubPostListElements, ListElements, BlogCategory, PostCategory
 from django.db import connection, reset_queries
 from blog.utils import get_where_i_am, get_categories_featured
 import random
+from django.contrib import messages
 
-from accounts.forms import UserLoginForm, RegistrationForm
+from accounts.forms import UserLoginForm, RegistrationForm, ReactivateEmailForm
 
 
 class HomePage(View):
@@ -96,7 +104,112 @@ class MiniCategories(View):
         return render(request, template_name=self.template_name, context=ctx)
 
 
-class SaeLoginView(TemplateView):
-    template_name = 'blog/login.html'
+class Home(LoginRequiredMixin,TemplateView):
+    template_name = 'blog/home.html'
+
+
+class RegistrationView(View):
+    template_name = 'blog/register.html'
+    ctx = {
+        'form': RegistrationForm(),
+        'title': 'Register'
+    }
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('home-auth')
+
+        return render(request, template_name=self.template_name, context=self.ctx)
+
+    def post(self, request, *args, **kwargs):
+        form = RegistrationForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('full_name')
+            print(username)
+            messages.success(request,
+                             'Hey {} ! Your account has been registered. '
+                             'Please check your email to activate your account.'.format(username))
+            return redirect('user-register')
+
+        return render(request, template_name=self.template_name,
+                      context={'form': form, 'title': 'Registration'})
+
+
+class UserLogoutView(LogoutView):
+    def __init__(self, *args, **kwargs):
+        super(UserLogoutView, self).__init__(*args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = UserLoginForm()
+
+        return context
+
+
+class UserPasswordResetComplete(PasswordResetCompleteView):
+    def __init__(self, *args, **kwargs):
+        super(PasswordResetCompleteView, self).__init__(*args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        super(PasswordResetCompleteView, self).__init__(*args, **kwargs)
+        messages.success(request, 'You have successfully reset your password. '
+                                  'Please Login to continue.')
+
+
+
+        return redirect('/login/')
+
+
+class AccountEmailActivate(FormMixin, View):
+    form_class = ReactivateEmailForm
+    success_url = '/reset/done/'
+
+    def get(self, request, key, *args, **kwargs):
+        qs = ActivateEmail.objects.filter(path_key__iexact=key)
+        qs_confirm = qs.confirmable()
+        print(qs_confirm)
+        if qs_confirm.count() == 1:
+            obj = qs.first()
+            obj.activate()
+            messages.success(request, 'Your Email has been confirmed. '
+                                      'You can now login to SAE using your email and password.')
+            return redirect('user-login')
+        else:
+            qs_activated = qs.filter(activated=True)
+            if qs_activated.exists():
+                reset_link = reverse('password-reset')
+                msg = """
+                    You have already confirmed your Email address. In case you forget,
+                    Do you want to <a href={}>reset your password?</a>
+                """.format(reset_link)
+                messages.success(request, mark_safe(msg))
+                return redirect('user-login')
+        ctx = {'form':self.get_form()}
+        return render(request, template_name='blog/registration-error.html', context=ctx)
+
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        msg = """
+        Activation link has been sent to you, Please check your Email.
+        """
+        messages.success(self.request, msg)
+        email = form.cleaned_data.get('email')
+        obj = ActivateEmail.objects.email_exists(email).first()
+        if obj.regenerate():
+            obj.send_activation_email()
+        return super(AccountEmailActivate, self).form_valid(form)
+
+    def form_invalid(self, form):
+
+        ctx = {'form':self.get_form()}
+        return render(self.request, template_name='blog/registration-error.html', context=ctx)
 
 

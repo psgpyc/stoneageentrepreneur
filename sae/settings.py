@@ -12,7 +12,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['www.stoneageentrepreneur.com']
 
 
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -62,10 +61,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sae.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -82,10 +77,6 @@ AUTHENTICATION_BACKENDS = (
         'django.contrib.auth.backends.ModelBackend',
     )
 
-
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -101,10 +92,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Kathmandu'
@@ -117,11 +104,12 @@ USE_TZ = True
 
 
 DEFAULT_FEATURE_DAYS = 30
-# update before final deploy
+DEFAULT_ACTIVATION_DAYS = 30
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home-auth'
+LOGOUT_REDIRECT_URL = 'home-auth'
+BASE_URL = 'https://www.stoneageentrepreneur.com'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -29,6 +29,7 @@ search_button.addEventListener("click", ()=>{
 var modal = document.querySelector('.login-modal')
 var modal_signup = document.querySelector('.login-wrapper-signup')
 var loginBtn = document.querySelector('.user-login')
+var loginBtnMobile = document.querySelector('.user-login-mobile')
 var bodyContentWrapper = document.getElementById('contentWrapper')
 var closemodal = document.getElementById('closeButton')
 
@@ -40,6 +41,13 @@ var login_wrapper = document.querySelector('.login-wrapper')
 
 
 loginBtn.addEventListener('click', ()=> {
+    modal.classList.toggle('login-modal-none');
+    login_wrapper.classList.remove('active_display')
+    modal_signup.classList.add('active_display')
+
+});
+
+loginBtnMobile.addEventListener('click', ()=> {
     modal.classList.toggle('login-modal-none');
     login_wrapper.classList.remove('active_display')
     modal_signup.classList.add('active_display')
@@ -59,3 +67,16 @@ login_el.addEventListener('click', ()=>{
     console.log('help me');
 
 })
+
+
+// Ajax
+
+// $(document).ready(function() {
+//     let loginForm = $('#login-form');
+//     loginForm.submit(function(event){
+//         event.preventDefault();
+//         console.log('default prevented')
+//     })
+//
+//
+// });

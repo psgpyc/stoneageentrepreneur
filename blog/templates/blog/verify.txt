@@ -1,0 +1,15 @@
+Greeting from StoneAgeEntrepreneur,
+
+You're receiving this email because you have registered an account at www.stoneageentrepreneur.com
+
+Your are registered under the following email: {{ email }}
+
+Please go to the following page and activate your account:
+
+{{ path }}
+
+Once you activate your account, you can login.
+
+Thank you for joining.
+
+stoneageentrepreneur

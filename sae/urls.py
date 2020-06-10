@@ -1,24 +1,14 @@
-"""sae URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.contrib.auth.decorators import login_required
+from django.urls import path, re_path
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 
-from blog.views import HomePage,PostDetails, Categories, MiniCategories, SaeLoginView
+
+from blog.views import HomePage, PostDetails, Categories, MiniCategories, Home, RegistrationView, UserLogoutView, \
+    AccountEmailActivate, UserPasswordResetComplete
+from accounts.forms import UserLoginForm, UserPasswordResetForm, UserPasswordResetConfirmForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +16,48 @@ urlpatterns = [
     path('posts/<slug:post_slug>/', PostDetails.as_view(), name='post-details'),
     path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
     path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
-    path('login', SaeLoginView.as_view(), name='login-view')
+    path('home', Home.as_view(), name='home-auth'),
+
+    path('login/', auth_views.LoginView.as_view(redirect_authenticated_user=True,
+         template_name='blog/login.html',
+         authentication_form=UserLoginForm), name='user-login'),
+    path('register/', RegistrationView.as_view(), name='user-register'),
+
+    path('logout/',
+         login_required(UserLogoutView.as_view(template_name='blog/index.html', )),
+         {'next_page': settings.LOGOUT_REDIRECT_URL}, name='user-logout'),
+
+
+    re_path(r'^email/confirm/(?P<key>[0-9A-Za-z]+)/$',
+                AccountEmailActivate.as_view(),
+                name='email-activate'),
+
+    path('reset/',
+         auth_views.PasswordResetView.as_view(
+             template_name='blog/password_reset_form.html',
+             form_class=UserPasswordResetForm,
+         ),
+
+         name='password-reset'),
+    path('reset/done/',
+         auth_views.PasswordResetDoneView.as_view(
+             template_name='blog/password_reset_done.html'
+         ),
+         name='password_reset_done'),
+
+
+    path('reset/confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='blog/password_reset_confirm.html',
+             form_class=UserPasswordResetConfirmForm,
+
+         ),
+         name='password_reset_confirm'),
+    path('reset/complete/',
+         UserPasswordResetComplete.as_view(
+             template_name='blog/password_reset_complete.html',
+         ),
+         name='password_reset_complete'),
 
 ]
 

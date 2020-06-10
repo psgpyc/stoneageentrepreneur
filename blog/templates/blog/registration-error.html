@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block navigation %}
+
+{% endblock %}
+
+{% block secondary-nav %}
+
+{% endblock %}
+
+{% block body %}
+
+ <div class="login-modal-individual " id="loginModal">
+
+            <div class="login-wrapper">
+                <div class="login-wrapper-login">
+
+
+
+{#                <span class="sign-in">Enter Your Email to Reset Your Password</span>#}
+
+                    <h4 class="sign-in">You have either forgot to activate your account or an error has occurred !!!</h4>
+
+                <h5 class="sign-in">Do you want us to resend a verification Link?</h5>
+
+                <form id="login-form" class="login-form-control"  method="post">
+                    {% csrf_token %}
+                    {{ form }}
+
+
+
+
+                    <button class="login-submit" type="submit">Submit</button>
+                </form>
+
+
+            </div>
+
+ </div>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}

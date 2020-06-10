@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
 </head>
 <body>
+{% block navigation %}
     <nav class="desktop-view">
         <div class="leftmenu">
             <div class="hamburger">
@@ -58,7 +59,6 @@
             <i class="fas fa-bars hamburger-mobile"></i>
 
 
-             <i class="fas fa-user"></i>
 
         </div>
 
@@ -75,6 +75,8 @@
         <div class="rightmenu-mobilex">
             <i class="fas fa-cart-plus"></i>
                 <div class="store"><i class="fas fa-store"></i></div>
+                         <i  class="fas fa-user user-login-mobile"></i>
+
 
         </div>
 
@@ -144,14 +146,14 @@
                 <div class="login-wrapper-login">
                 <span class="sign-in">SIGN IN</span>
 
-                <form class="login-form-control" action="" method="post">
+                <form id="login-form" class="login-form-control" action="{% url 'user-login' %}" method="post">
                     {% csrf_token %}
                     {{ form }}
 
 
                     <div class="reset-forget-wrapper">
                         <a class="register-link" href="#">Register?</a>
-                        <a href="#">Forget Password?</a>
+                        <a href="{% url 'password-reset' %}">Forget Password?</a>
                     </div>
 
                     <button class="login-submit" type="submit">Sign in</button>
@@ -186,9 +188,12 @@
             <div class="login-wrapper-signup">
                 <span class="sign-in">SIGN UP</span>
 
-                <form class="login-form-control" action="" method="post">
+                <form class="login-form-control" action="{% url 'user-register' %}" method="post">
                     {% csrf_token %}
                     {{ regForm }}
+                    <div class="reset-forget-wrapper">
+                        <a class="login-link" href="#">Have an account? Login here.</a>
+                    </div>
 
                     <button class="login-submit" type="submit">Sign Up</button>
                 </form>
@@ -218,7 +223,7 @@
             </div>
         </div>
 
-
+{% endblock %}
 
         <div class="content_wrapper" id="contentWrapper">
             {% block secondary-nav %}
@@ -237,7 +242,7 @@
          {% endblock %}
 
 
-
+        {% block footer %}
             <footer class="footer-wrapper">
 
 
@@ -249,6 +254,7 @@
 
 
             </footer>
+        {% endblock %}
 
 
 

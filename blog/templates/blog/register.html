@@ -19,29 +19,30 @@
 
             <div class="login-wrapper">
                 <div class="login-wrapper-login">
-                <span class="sign-in">SIGN IN</span>
-                <div class="success-message">
-                  {% if messages %}
-                        {% for message in messages %}
-                            {% if color %}
-                                <div style="margin-top: 20px; color: red;">
+
+                <span class="sign-in">SIGN UP</span>
+                    <div class="success-message">
+                          {% if messages %}
+                            {% for message in messages %}
+                                {% if color %}
+                                    <div style="margin-top: 20px; color: red;">
+
+                                            {{ message }}
+
+                                    </div>
+                                {% else %}
+                                    <div style="margin-top: 20px; color: green;">
 
                                         {{ message }}
 
-                                </div>
-                            {% else %}
-                                <div style="margin-top: 20px; color: green;">
-
-                                    {{ message }}
-
-                                </div>
-                            {% endif %}
+                                    </div>
+                                {% endif %}
 
 
-                        {% endfor %}
+                            {% endfor %}
 
-                  {% endif %}
-                </div>
+                             {% endif %}
+                     </div>
 
                 <form id="login-form" class="login-form-control"  method="post">
                     {% csrf_token %}
@@ -49,25 +50,24 @@
 
 
                     <div class="reset-forget-wrapper">
-                        <a class="register-link" href="{% url 'user-register' %}">Register?</a>
-                        <a href="{% url 'password-reset' %}">Forget Password?</a>
+                         <a class="register-link" href="{% url 'user-login' %}">Have an account? Login here.</a>
                     </div>
 
-                    <button class="login-submit" type="submit">Sign in</button>
+                    <button class="login-submit" type="submit">Sign Up</button>
                 </form>
 
                 <div class="social-link-wrapper">
-                    <p>Or sign in with</p>
+                    <p>Or sign up with</p>
                     <div class="social-facebook">
                         <a href="#">
                             <i class="fab fa-google"></i>
-                            <p>Sign in with Google</p>
+                            <p>Sign up with Google</p>
                         </a>
                     </div>
                      <div class="social-facebook">
                         <a href="#">
                             <i class="fab fa-facebook"></i>
-                            <p>Sign in with Facebook</p>
+                            <p>Sign up with Facebook</p>
                         </a>
                     </div>
                 </div>
