@@ -414,10 +414,12 @@ nav .rightmenu .accounts .user-login:hover{
 
 .termscond{
     /*width: 80%;*/
-    position: absolute;
-    top: 90%;
     margin: auto;
     font-size: 10px;
+}
+
+.termscond p{
+    text-align: center;
 }
 
 
@@ -1267,6 +1269,7 @@ footer p{
 .only-mobile{
         display: none;
     }
+
 
 
                                                                                 /*    END POST-CONTENT CSS */
@@ -3063,6 +3066,23 @@ footer p{
 
     .only-mobile{
         display: block;
+    }
+
+    .close-circle{
+        font-size: 30px;
+        position: absolute;
+        top: 90%;
+        left: 90%;
+        cursor: pointer;
+
+    }
+
+    .close-circle:hover{
+        color: #007dc3;
+    }
+
+    .login-modal{
+        width: 90%;
     }
 }
 

@@ -144,6 +144,9 @@
             <div class="login-wrapper">
                 <div class="login-wrapper-login">
                 <span class="sign-in">SIGN IN</span>
+                <div class="only-mobile close-circle">
+                  <i class="far fa-times-circle "></i>
+                </div>
 
                 <form id="login-form" class="login-form-control" action="{% url 'user-login' %}" method="post">
                     {% csrf_token %}
@@ -175,11 +178,7 @@
                 </div>
             </div>
 
-            <div class="termscond">
-                <small>Click “Sign In” above to accept Stone Age Entrepreneur's Terms of Service & Privacy Policy.</small>
 
-
-            </div>
             </div>
 
 
@@ -215,7 +214,9 @@
             </div>
 
             <div class="termscond">
-                <small>Click “Sign In” above to accept Stone Age Entrepreneur's Terms of Service & Privacy Policy.</small>
+                <small>
+                    <p>Click “Sign In” above to accept Stone Age Entrepreneur's Terms of Service & Privacy Policy.</p>
+                </small>
 
             </div>
             </div>
