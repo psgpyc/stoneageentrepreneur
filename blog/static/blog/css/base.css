@@ -2876,26 +2876,27 @@ footer p{
     .post-content .title-post-content{
 
         width: 100%;
-        margin: auto;
+        margin-top: 90px;
         line-height: 22px;
-        text-align: center;
+        /*text-align: center;*/
     }
 
     .post-content .title-post-content h1{
         line-height: 22px;
-        font-size: 25px;
+        font-size: 22px;
         margin-bottom: 10px;
     }
 
     .post-content .title-post-content p{
-        width: 80%;
-        margin: auto;
+        width: 97%;
+        margin: 20px auto;
         line-height: 15px;
     }
 
     .profile-links{
-        width: 90%;
-        margin-top: 10px;
+        /*width: 100%;*/
+        /*margin: 10px auto;*/
+        display: none;
     }
 
     .profile-links .profile-details img{
@@ -2919,7 +2920,7 @@ footer p{
     }
 
     .post-image-wrapper{
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
 
@@ -2933,7 +2934,7 @@ footer p{
     /*    post main text */
 
     .post-content-text{
-        width: 90%;
+        width: 100%;
         margin: auto;
         text-align: justify;
         text-justify: inter-word;
