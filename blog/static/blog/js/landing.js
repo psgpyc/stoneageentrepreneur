@@ -39,6 +39,7 @@ var register_el = document.querySelector('.register-link');
 var login_el = document.querySelector('.login-link')
 var login_wrapper = document.querySelector('.login-wrapper')
 var crossBtn = document.querySelector('.close-circle')
+var closeNav = document.querySelector('.close-nav')
 
 
 loginBtn.addEventListener('click', ()=> {
@@ -51,6 +52,15 @@ loginBtn.addEventListener('click', ()=> {
 crossBtn.addEventListener('click', ()=> {
     modal.classList.add('login-modal-none')
 })
+
+closeNav.addEventListener('click', ()=> {
+    content.classList.remove('click_collapse')
+
+})
+
+
+
+
 
 loginBtnMobile.addEventListener('click', ()=> {
     modal.classList.toggle('login-modal-none');
