@@ -15,23 +15,33 @@
                 <h1>{{ post.hard_title }}</h1>
                 <p>{{ post.soft_title }}</p>
             </div>{#           #end of title of post#}
-            <div class="profile-links">
-                <div class="profile-details">
-                    <div class="profile-image">
-                        <img src="{% static 'blog/img/profileimg.png' %}" alt="User Profile Image">
-                    </div>
-                    <div class="profile-name">
-                        <p>Paritosh Sharma Ghimire</p>
-                        <p> 4th May - 5 min read</p>
-                    </div>
+             <div class="timeofpost">
+                <div>
+                    <p>a few hours ago | 4 mins read</p>
                 </div>
+                <div class="post-icons">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="far fa-bookmark"></i>
 
-                <div class="profile-link">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    <a href="#"><i class="far fa-bookmark"></i></a>
                 </div>
+            </div>
+            <div class="profile-links">
+{#                <div class="profile-details">#}
+{#                    <div class="profile-image">#}
+{#                        <img src="{% static 'blog/img/profileimg.png' %}" alt="User Profile Image">#}
+{#                    </div>#}
+{#                    <div class="profile-name">#}
+{#                        <p>Paritosh Sharma Ghimire</p>#}
+{#                        <p> 4th May - 5 min read</p>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <div class="profile-link">#}
+{#                    <a href="#"><i class="fab fa-linkedin"></i></a>#}
+{#                    <a href="#"><i class="fab fa-facebook-square"></i></a>#}
+{#                    <a href="#"><i class="fab fa-twitter-square"></i></a>#}
+{#                    <a href="#"><i class="far fa-bookmark"></i></a>#}
+{#                </div>#}
             </div>   {#            end of profile links#}
 
 

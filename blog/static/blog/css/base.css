@@ -1128,8 +1128,16 @@ footer p{
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
+.post-content .timeofpost{
+    width: 80%;
+    margin: auto;
+}.post-content .timeofpost{
+    width: 80%;
+    margin: auto;
+}
+
 .post-content .title-post-content{
-    width: 60%;
+    width: 80%;
     margin: auto;
     font-size: 18px;
     line-height: 32px;
@@ -1204,7 +1212,7 @@ footer p{
 
 
 .post-content-text{
-    width: 60%;
+    width: 70%;
     margin: auto;
     text-align: justify;
     text-justify: inter-word;
@@ -1501,7 +1509,7 @@ footer p{
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
     nav .leftmenu{
         flex: 2;
@@ -1622,6 +1630,11 @@ footer p{
         margin-top: 70px;
     }
 
+    .post-content .timeofpost{
+        width: 80%;
+        margin: 25px auto;
+    }
+
     .post-content .title-post-content{
 
         width: 100%;
@@ -1633,7 +1646,8 @@ footer p{
     .post-content .title-post-content h1{
         line-height: 22px;
         font-size: 25px;
-        margin-bottom: 10px;
+        width: 80%;
+        margin: 25px auto;
     }
 
     .post-content .title-post-content p{
@@ -2126,13 +2140,19 @@ footer p{
     .post-content .title-post-content h1 {
         line-height: 22px;
         font-size: 25px;
-        margin-bottom: 10px;
+        width: 90%;
+        margin: 25px auto;
     }
 
     .post-content .title-post-content p {
-        width: 80%;
+        width: 90%;
         margin: auto;
         line-height: 15px;
+    }
+
+    .post-content .timeofpost{
+        width: 90%;
+        margin: 20px auto;
     }
 
     .profile-links {
@@ -2881,9 +2901,11 @@ footer p{
         /*text-align: center;*/
     }
 
+
     .post-content .title-post-content h1{
         line-height: 22px;
         font-size: 22px;
+        font-weight: 500;
         margin-bottom: 10px;
     }
 
@@ -2891,6 +2913,8 @@ footer p{
         width: 97%;
         margin: 20px auto;
         line-height: 15px;
+        color: #007dc3;
+        font-style: italic;
     }
 
     .profile-links{
