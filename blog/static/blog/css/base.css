@@ -633,7 +633,7 @@ nav .rightmenu .accounts .user-login:hover{
 .timeofpost{
     display: flex;
     justify-content: space-between;
-    color: rgba(0,0,0,.99);
+    color: #007dc3;
     font-size: 14px;
 }
 
@@ -1124,17 +1124,33 @@ footer p{
 
 .post-content{
     margin-top: 120px;
-    width: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.post-content > p{
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
+
 }
 
 .post-content .timeofpost{
-    width: 60%;
+    width: 100%;
     margin: auto;
 }
 
 .post-content .title-post-content{
-    width: 60%;
+    width: 100%;
     margin: auto;
     font-size: 18px;
     line-height: 32px;
@@ -1153,48 +1169,9 @@ footer p{
     margin-bottom: 30px;
     font-size: 16px;
 }
-.profile-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 58%;
-    margin: auto;
-}
-
-.profile-details{
-    display: flex;
-}
-.profile-links .profile-details img{
-    height: 10vh;
-    width: 5vw;
-    border-radius: 50%;
-}
-
-.profile-link{
-    margin-right: 40px;
-
-}
-
-.profile-name{
-    margin: 0 10px;
-
-}
-
-.profile-name p:last-child{
-    color: rgba(0,0,0,0.75);
-}
-
-
-.profile-link a{
-    margin: 0 10px;
-    font-size: 20px;
-    color: #007dc3;
-
-
-}
 
 .post-image-wrapper{
-    width: 60%;
+    width: 96%;
     margin: auto;
 }
 
@@ -1209,6 +1186,11 @@ footer p{
 /*main text*/
 
 
+
+
+
+
+
 .post-content-text{
     width: 70%;
     margin: auto;
@@ -1217,6 +1199,7 @@ footer p{
     line-height: 40px;
     font-size: 18px;
 
+
 }
 
 .post-content-text h2{
@@ -1224,6 +1207,7 @@ footer p{
     font-weight: 300;
     color: #007dc3;
 }
+
 
 .highlight{
     width: 90%;
@@ -2125,6 +2109,8 @@ footer p{
 
     .post-content {
         margin-top: 70px;
+        width: 90%;
+
     }
 
     .post-content .title-post-content {
@@ -2149,7 +2135,7 @@ footer p{
     }
 
     .post-content .timeofpost{
-        width: 90%;
+        width: 100%;
         margin: 20px auto;
     }
 
@@ -2179,7 +2165,7 @@ footer p{
     }
 
     .post-image-wrapper {
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
 
@@ -2892,7 +2878,7 @@ footer p{
 
 /*     POST DESIGN MODEL  */
     .post-content{
-        /*margin-top: 70px;*/
+        width: 100%;
         border-bottom: 1px solid #cbe4f1;
         box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
         border-radius: 10px;
@@ -3128,5 +3114,7 @@ footer p{
     .final-from-category h3{
         text-align: center;
     }
+
+
 }
 
