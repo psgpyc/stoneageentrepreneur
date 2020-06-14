@@ -1159,6 +1159,11 @@ footer p{
     margin-right: auto;
     width: 70%;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 10px;
+    padding: 10px;
 
 }
 
@@ -1229,6 +1234,11 @@ footer p{
     text-justify: inter-word;
     line-height: 40px;
     font-size: 18px;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 10px;
+    padding: 10px;
 
 
 }
