@@ -13,9 +13,26 @@
         <div class="post-content">
             <div class="title-post-content">
                 <h1>{{ post.hard_title }}</h1>
-                <p>{{ post.soft_title }}</p>
             </div>{#           #end of title of post#}
-             <div class="timeofpost">
+{#             <div class="timeofpost">#}
+{#                <div>#}
+{#                    <p>a few hours ago | 4 mins read</p>#}
+{#                </div>#}
+{#                <div class="post-icons">#}
+{#                    <i class="fas fa-ellipsis-h"></i>#}
+{#                    <i class="far fa-bookmark"></i>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+
+
+
+            <div class="post-image-wrapper">
+                <img src="{{ post.title_image.url }}" alt="">
+            </div>
+                            <p>{{ post.soft_title }}</p>
+
+         <div class="timeofpost">
                 <div>
                     <p>a few hours ago | 4 mins read</p>
                 </div>
@@ -24,30 +41,6 @@
                     <i class="far fa-bookmark"></i>
 
                 </div>
-            </div>
-            <div class="profile-links">
-{#                <div class="profile-details">#}
-{#                    <div class="profile-image">#}
-{#                        <img src="{% static 'blog/img/profileimg.png' %}" alt="User Profile Image">#}
-{#                    </div>#}
-{#                    <div class="profile-name">#}
-{#                        <p>Paritosh Sharma Ghimire</p>#}
-{#                        <p> 4th May - 5 min read</p>#}
-{#                    </div>#}
-{#                </div>#}
-{##}
-{#                <div class="profile-link">#}
-{#                    <a href="#"><i class="fab fa-linkedin"></i></a>#}
-{#                    <a href="#"><i class="fab fa-facebook-square"></i></a>#}
-{#                    <a href="#"><i class="fab fa-twitter-square"></i></a>#}
-{#                    <a href="#"><i class="far fa-bookmark"></i></a>#}
-{#                </div>#}
-            </div>   {#            end of profile links#}
-
-
-
-            <div class="post-image-wrapper">
-                <img src="{{ post.title_image.url }}" alt="">
             </div>
 
         </div>
@@ -163,17 +156,6 @@
             {% endif %}
 
         </div>
-    <div class="post-wrapper">
-        <div class="post-header">
-            <ul>
-                {% for tag in post.has_tags.all %}
-                    {% if forloop.counter <= 3 %}
-                        <li>#{{ tag|upper }}</li>
-                    {% endif %}
 
-                {% endfor %}
-
-            </ul>
-    </div>
 
 {% endblock %}

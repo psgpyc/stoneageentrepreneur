@@ -1129,15 +1129,12 @@ footer p{
 }
 
 .post-content .timeofpost{
-    width: 80%;
-    margin: auto;
-}.post-content .timeofpost{
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
 .post-content .title-post-content{
-    width: 80%;
+    width: 60%;
     margin: auto;
     font-size: 18px;
     line-height: 32px;
@@ -1147,6 +1144,7 @@ footer p{
 .title-post-content h1{
     font-size: 32px;
     font-weight: 300;
+    margin: 20px 0;
 }
 
 .title-post-content p{
@@ -2313,7 +2311,7 @@ footer p{
 
     .most-popular-wrapper .most-popular-left {
         width: 100%;
-        margin-top: 80px;
+        /*margin-top: 80px;*/
     }
 
     .most-popular-wrapper .most-popular-left .content-wrapper-mb {
@@ -2595,6 +2593,10 @@ footer p{
         margin: 5px;
     }
 
+    .most-popular-wrapper .most-popular-left{
+        margin-top: 0px;
+    }
+
     .most-popular-left .middle-banner .most-popular-heading{
         text-align: center;
         color: #007dc3;
@@ -2647,7 +2649,7 @@ footer p{
     }
 
     .most-popular-wrapper .most-popular-right .final-from-category{
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
 
     .most-popular-wrapper .most-popular-right .final-from-category .first-mb{
@@ -2890,15 +2892,29 @@ footer p{
 
 /*     POST DESIGN MODEL  */
     .post-content{
-        margin-top: 70px;
+        /*margin-top: 70px;*/
+        border-bottom: 1px solid #cbe4f1;
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px
     }
 
     .post-content .title-post-content{
 
         width: 100%;
-        margin-top: 90px;
         line-height: 22px;
         /*text-align: center;*/
+    }
+
+    .post-content > p{
+        font-size: 14px;
+    }
+
+    .post-content .timeofpost {
+        width: 100%;
+        margin: 20px auto;
+        color: #007dc3;
     }
 
 
@@ -2907,14 +2923,13 @@ footer p{
         font-size: 22px;
         font-weight: 500;
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .post-content .title-post-content p{
-        width: 97%;
+        width: 100%;
         margin: 20px auto;
         line-height: 15px;
-        color: #007dc3;
-        font-style: italic;
     }
 
     .profile-links{
@@ -3108,6 +3123,10 @@ footer p{
 
     .login-modal{
         width: 90%;
+    }
+
+    .final-from-category h3{
+        text-align: center;
     }
 }
 
