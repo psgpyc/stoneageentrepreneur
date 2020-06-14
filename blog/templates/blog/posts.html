@@ -11,37 +11,33 @@
 
 
         <div class="post-content">
+
+
+
+
+
             <div class="title-post-content">
                 <h1>{{ post.hard_title }}</h1>
+{#                            <p>{{ post.soft_title }}</p>#}
             </div>{#           #end of title of post#}
-{#             <div class="timeofpost">#}
-{#                <div>#}
-{#                    <p>a few hours ago | 4 mins read</p>#}
-{#                </div>#}
-{#                <div class="post-icons">#}
-{#                    <i class="fas fa-ellipsis-h"></i>#}
-{#                    <i class="far fa-bookmark"></i>#}
-{##}
-{#                </div>#}
-{#            </div>#}
+             <div class="timeofpost">
+                <div>
+                    <p>By: Paritosh Sharma Ghimire @PSG</p>
+                </div>
+                <div>
+                  <p>few hours ago/14th June 2020 | 4 minutes read</p>
+                </div>
+
+         </div>
+
 
 
 
             <div class="post-image-wrapper">
                 <img src="{{ post.title_image.url }}" alt="">
             </div>
-                            <p>{{ post.soft_title }}</p>
 
-         <div class="timeofpost">
-                <div>
-                    <p>a few hours ago | 4 mins read</p>
-                </div>
-                <div class="post-icons">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <i class="far fa-bookmark"></i>
 
-                </div>
-            </div>
 
         </div>
 
@@ -158,6 +154,24 @@
             {% endif %}
 
         </div>
+
+         <div class="timeofpost-postend">
+                <div>
+                    <i class="far fa-thumbs-up"></i><span style="font-size: 12px">You and 3 others</span>
+                </div>
+                <div>
+                    <p>Comments</p>
+                </div>
+
+
+                <div class="post-icons">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="far fa-bookmark"></i>
+                    <i class="fas fa-share-alt"></i>
+
+                </div>
+         </div>
+
 
 
 {% endblock %}

@@ -635,7 +635,37 @@ nav .rightmenu .accounts .user-login:hover{
     justify-content: space-between;
     color: #007dc3;
     font-size: 14px;
+    /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
+    /*border-bottom: 1px solid #cbe4f1;*/
+    /*border-top: 1px solid #cbe4f1;*/
+    /*border-radius: 10px;*/
+    /*padding: 10px;*/
+    /*width: auto;*/
 }
+
+.timeofpost-postend{
+    display: flex;
+    justify-content: space-between;
+    color: #007dc3;
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+    border-bottom: 1px solid #cbe4f1;
+    border-top: 1px solid #cbe4f1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.timeofpost-postend i{
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.timeofpost-postend
+
+
 
 .timeofpost i{
     margin: 0 10px;
@@ -1124,16 +1154,12 @@ footer p{
 
 .post-content{
     margin-top: 120px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
-    border-bottom: 1px solid #cbe4f1;
-    border-top: 1px solid #cbe4f1;
-    border-radius: 10px;
-    padding: 10px;
+
 }
 
 
@@ -1145,8 +1171,12 @@ footer p{
 }
 
 .post-content .timeofpost{
-    width: 100%;
-    margin: auto;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 12px;
+
 }
 
 .post-content .title-post-content{
@@ -1155,12 +1185,12 @@ footer p{
     font-size: 18px;
     line-height: 32px;
     /*text-align: center;*/
+
 }
 
 .title-post-content h1{
     font-size: 32px;
     font-weight: 300;
-    margin: 20px 0;
 }
 
 .title-post-content p{
@@ -2899,8 +2929,18 @@ footer p{
 
     .post-content .timeofpost {
         width: 100%;
+        font-size: 10px;
         margin: 20px auto;
         color: #007dc3;
+    }
+
+    .timeofpost-postend{
+        width: 100%;
+    }
+
+    .timeofpost-postend p{
+        font-size: 16px;
+
     }
 
 
@@ -3114,6 +3154,11 @@ footer p{
     .final-from-category h3{
         text-align: center;
     }
+
+    nav .leftmenu .hamburger i:hover{
+        font-size: 25px;
+        color: black;
+}
 
 
 }
