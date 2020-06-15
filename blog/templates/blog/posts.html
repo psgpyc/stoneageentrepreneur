@@ -12,37 +12,21 @@
 
         <div class="post-content">
 
-
-
-
-
-            <div class="title-post-content">
+             <div class="title-post-content">
                 <h1>{{ post.hard_title }}</h1>
-{#                            <p>{{ post.soft_title }}</p>#}
-            </div>{#           #end of title of post#}
-             <div class="timeofpost">
+             </div>
+             <div class="timeofpost user-name">
                 <div>
                     <p>By: Paritosh Sharma Ghimire @PSG</p>
                 </div>
-                <div>
-                  <p>few hours ago/14th June 2020 | 4 minutes read</p>
+                 <div>
+                  <p>{{ post.created_on }} | 4 minutes read</p>
                 </div>
-
-         </div>
-
-
-
-
-            <div class="post-image-wrapper">
+             </div>
+             <div class="post-image-wrapper">
                 <img src="{{ post.title_image.url }}" alt="">
-            </div>
-
-
-
+             </div>
         </div>
-
-
-
         <div class="post-content-text">
             {% if post.post_body_first %}
 
@@ -154,20 +138,29 @@
             {% endif %}
 
         </div>
+        <div class="floating-reaction-wrapper">
+            <div class="floating-reaction">
+                <div class="user-details">
+                    <img src="{% static 'blog/img/profileimg.png' %}" alt="">
+                    <p>@PSG</p>
+                    <p>Paritosh Sharma Ghimire</p>
 
-         <div class="timeofpost-postend">
-                <div>
-                    <i class="far fa-thumbs-up"></i><span style="font-size: 12px">100</span>
-                </div>
 
-
-
-                <div class="post-icons">
-                    <i class="far fa-bookmark"></i>
-                    <i class="fas fa-share-alt"></i>
 
                 </div>
-         </div>
+
+
+                <i class="fas fa-book-reader"><span>1200 Reads</span></i>
+                <i class="fas fa-bookmark"></i>
+                <i class="fas fa-ellipsis-h"></i>
+
+
+
+
+
+
+            </div>
+        </div>
 
 
 

@@ -635,12 +635,12 @@ nav .rightmenu .accounts .user-login:hover{
     justify-content: space-between;
     color: #007dc3;
     font-size: 14px;
-    /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
-    /*border-bottom: 1px solid #cbe4f1;*/
-    /*border-top: 1px solid #cbe4f1;*/
-    /*border-radius: 10px;*/
-    /*padding: 10px;*/
-    /*width: auto;*/
+    
+}
+
+.timeofpost .post-icons i{
+    font-size: 18px;
+    margin: 0 10px;
 }
 
 .timeofpost-postend{
@@ -1154,16 +1154,11 @@ footer p{
 
 .post-content{
     margin-top: 120px;
-    margin-bottom: 20px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
-    border-bottom: 1px solid #cbe4f1;
-    border-top: 1px solid #cbe4f1;
-    border-radius: 10px;
-    padding: 10px;
+
 
 }
 
@@ -1181,8 +1176,24 @@ footer p{
     justify-content: space-between;
     text-align: center;
     font-size: 14px;
-    margin: 10px 0;
+    margin: 20px 0;
 
+}
+.user-details img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.user-details p{
+    font-size: 12px;
+    width: 100%;
+    /*margin-left: -20px;*/
+    /*text-align: center;*/
+}
+
+.user-name{
+    font-weight: 500;
 }
 
 .post-content .title-post-content{
@@ -1190,13 +1201,13 @@ footer p{
     margin: auto;
     font-size: 18px;
     line-height: 32px;
-    /*text-align: center;*/
 
 }
 
 .title-post-content h1{
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 500;
+    text-align: justify-all;
 }
 
 .title-post-content p{
@@ -1221,6 +1232,46 @@ footer p{
 
 /*main text*/
 
+/*Post likes and bookmark*/
+
+
+.floating-reaction-wrapper{
+    position: fixed;
+    top:45%;
+    left: 8%;
+    font-size: 30px;
+    /*color: rgba(117, 117, 117, 1);*/
+    color: rgba(102, 138, 170, 1);
+}
+
+.floating-reaction{
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-reaction i{
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.floating-reaction span{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    /*color: rgba(117, 117, 117, 1);*/
+    color: rgba(102, 138, 170, 1);
+}
+
+
+
+
+
+/*End Post likes and bookmarks*/
+
+
+
+
+
 
 
 
@@ -1228,19 +1279,12 @@ footer p{
 
 
 .post-content-text{
-    width: 70%;
+    width: 60%;
     margin: auto;
     text-align: justify;
     text-justify: inter-word;
     line-height: 40px;
     font-size: 18px;
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
-    border-bottom: 1px solid #cbe4f1;
-    border-top: 1px solid #cbe4f1;
-    border-radius: 10px;
-    padding: 10px;
-
-
 }
 
 .post-content-text h2{
