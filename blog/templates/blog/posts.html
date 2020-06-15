@@ -15,17 +15,34 @@
              <div class="title-post-content">
                 <h1>{{ post.hard_title }}</h1>
              </div>
-             <div class="timeofpost user-name">
-                <div>
-                    <p>By: Paritosh Sharma Ghimire @PSG</p>
+
+            <div class="user-details-mobile only-mobile">
+                <div class="user-details">
+                    <p>Ayurma Wagle</p>
+                    <p>{{ post.created_on }} </p>
+
+
                 </div>
-                 <div>
-                  <p>{{ post.created_on }} | 4 minutes read</p>
-                </div>
-             </div>
+            </div>
+
              <div class="post-image-wrapper">
                 <img src="{{ post.title_image.url }}" alt="">
              </div>
+
+
+        <div class="user-details-mobile only-mobile">
+            <div class="icons">
+                    <i class="fas fa-book-reader"></i>
+                <span class="reads">1200 Reads</span>
+                    <i class="fas fa-bookmark"></i>
+                <span>10 Bookmarks</span>
+                    <i class="fas fa-share-alt"></i>
+                <span>5 Shares</span>
+            </div>
+        </div>
+
+
+
         </div>
         <div class="post-content-text">
             {% if post.post_body_first %}
@@ -138,21 +155,23 @@
             {% endif %}
 
         </div>
-        <div class="floating-reaction-wrapper">
+        <div class="floating-reaction-wrapper except-mobile">
             <div class="floating-reaction">
                 <div class="user-details">
                     <img src="{% static 'blog/img/profileimg.png' %}" alt="">
-                    <p>@PSG</p>
-                    <p>Paritosh Sharma Ghimire</p>
-
+                    <p>Ayurma Wagle</p>
+                    <p>{{ post.created_on }} </p>
 
 
                 </div>
+                <hr class="hrline">
 
 
-                <i class="fas fa-book-reader"><span>1200 Reads</span></i>
-                <i class="fas fa-bookmark"></i>
-                <i class="fas fa-ellipsis-h"></i>
+                <i class="fas fa-book-reader"></i><span class="reads">1200 Reads</span>
+                <i class="fas fa-bookmark"></i><span>10 Bookmarks</span>
+
+
+                <i class="fas fa-share-alt"></i><span>5 Shares</span>
 
 
 
@@ -161,6 +180,8 @@
 
             </div>
         </div>
+
+
 
 
 

@@ -1237,9 +1237,9 @@ footer p{
 
 .floating-reaction-wrapper{
     position: fixed;
-    top:45%;
-    left: 8%;
-    font-size: 30px;
+    top:30%;
+    /*left: 8%;*/
+    font-size: 26px;
     /*color: rgba(117, 117, 117, 1);*/
     color: rgba(102, 138, 170, 1);
 }
@@ -1247,21 +1247,31 @@ footer p{
 .floating-reaction{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .floating-reaction i{
-    margin: 20px 0;
+    margin: 20px 5px 0 0;
     cursor: pointer;
 }
 
 .floating-reaction span{
-    font-size: 12px;
-    margin-left: 10px;
+    font-size: 10px;
     margin-top: 5px;
+    text-align: center;
     /*color: rgba(117, 117, 117, 1);*/
     color: rgba(102, 138, 170, 1);
 }
 
+.user-details p{
+    text-align: center;
+}
+
+.hrline{
+    height: 2px;
+    margin: 4px 0;
+    width: 100%;
+}
 
 
 
@@ -3217,7 +3227,38 @@ footer p{
     nav .leftmenu .hamburger i:hover{
         font-size: 25px;
         color: black;
-}
+    }
+
+    .user-details-mobile .user-details{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+
+    .user-details-mobile .user-details p:first-child{
+        text-align: left;
+    }
+
+    .user-details-mobile .user-details p:last-child{
+        text-align: right;
+    }
+
+    .user-details-mobile .icons{
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .user-details-mobile .icons span{
+        font-size: 10px;
+       margin-top: 10px;
+        margin-left: -20px;
+    }
+
+
+
+
 
 
 }
