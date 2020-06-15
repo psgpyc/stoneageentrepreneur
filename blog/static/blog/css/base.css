@@ -641,7 +641,9 @@ nav .rightmenu .accounts .user-login:hover{
 .timeofpost .post-icons i{
     font-size: 18px;
     margin: 0 10px;
+    cursor: pointer;
 }
+
 
 .timeofpost-postend{
     display: flex;
@@ -1305,13 +1307,17 @@ footer p{
 
 
 .highlight{
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: justify;
     text-justify: inter-word;
     /*border: 2px solid wheat;*/
     /*padding: 10px;*/
     /*text-decoration: cadetblue;*/
+}
+
+.highlight pre span{
+    font-size: 14px;
 }
 
 .highlight p{
@@ -2416,12 +2422,9 @@ footer p{
 
 
 
-
-
-
 @media screen and (max-width: 850px){
 
-     
+
     .login-modal {
         width: 70%;
         height: 90%;
@@ -3096,16 +3099,21 @@ footer p{
     }
 
     .highlight{
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: justify;
         text-justify: inter-word;
 
     }
 
+    .highlight pre span{
+      font-size: 12px;
+    }
+
+
     .highlight p{
         font-style: italic;
-        font-size: 16px;
+        font-size: 12px;
         color: green;
 
     }
