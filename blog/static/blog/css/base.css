@@ -2204,7 +2204,7 @@ footer p{
 
     .post-content {
         margin-top: 70px;
-        width: 90%;
+        width: 60%;
 
     }
 
@@ -2271,7 +2271,7 @@ footer p{
 
     /*    post main text */
     .post-content-text {
-        width: 90%;
+        width: 60%;
         margin: auto;
         text-align: justify;
         text-justify: inter-word;
@@ -2412,9 +2412,16 @@ footer p{
         display: none;
     }
 
+
+
+
+
+
+
+
 @media screen and (max-width: 850px){
 
-
+     
     .login-modal {
         width: 70%;
         height: 90%;
@@ -2815,6 +2822,10 @@ footer p{
     .category-distance .middle-banner .first-mb .content-wrapper-mb{
         width: 100%;
     }
+
+    /*post*/
+
+
 
 
 
@@ -3253,7 +3264,7 @@ footer p{
     .user-details-mobile .icons span{
         font-size: 10px;
        margin-top: 10px;
-        margin-left: -20px;
+        margin-left: -40px;
     }
 
 
