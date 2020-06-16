@@ -1250,6 +1250,7 @@ footer p{
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 100px;
 }
 
 .floating-reaction i{
@@ -2120,6 +2121,12 @@ footer p{
     }
 
     /*Category Page */
+
+    .most-popular-left .middle-banner .most-popular-heading {
+        margin-top: 40px;
+    }
+
+
     .category-distance {
         margin-top: 100px;
     }
@@ -2294,7 +2301,7 @@ footer p{
     }
 
     .highlight {
-        width: 80%;
+        width: 100%;
         margin: auto;
         text-align: justify;
         text-justify: inter-word;
@@ -2691,6 +2698,7 @@ footer p{
         color: #007dc3;
         font-size: 25px;
         font-weight: 300;
+        margin-top: 0;
 
     }
 
