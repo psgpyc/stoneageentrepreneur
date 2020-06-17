@@ -88,7 +88,6 @@ class User(AbstractBaseUser, PermissionsMixin):
                                unique=True,
                                null=True,
                                blank=True,
-
                                verbose_name='Phone Number',
 
                                 )

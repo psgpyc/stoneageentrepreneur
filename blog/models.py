@@ -133,7 +133,7 @@ class Post(TimeStampModel):
     post_body_first = models.TextField()
     post_body_second = models.TextField(blank=True, null=True)
     highlight_content = models.TextField(blank=True, null=True)
-
+    view_count = models.PositiveIntegerField(default=0)
     comments = models.ManyToManyField(Comment, blank=True)
     flags = models.PositiveIntegerField(blank=True, null=True)
     # flag:1-3 - featured  flag:5-10 - picks

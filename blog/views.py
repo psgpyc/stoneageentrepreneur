@@ -18,6 +18,8 @@ from django.contrib import messages
 
 from accounts.forms import UserLoginForm, RegistrationForm, ReactivateEmailForm
 
+from django.contrib.sessions.models import Session
+
 
 class HomePage(View):
     template_name = 'blog/index.html'
@@ -32,23 +34,15 @@ class HomePage(View):
             'all_posts': Post.objects.exclude(flags__gt=0),
             'title': 'HOME'
         }
-        print(len(connection.queries))
 
         return render(request, template_name=self.template_name, context=ctx)
 
 
-class PostDetails(DetailView):
-    model = Post
+class PostDetails(View):
     template_name = 'blog/posts.html'
-    slug_field = 'slug_name'
-    slug_url_kwarg = 'post_slug'
 
-    def get_context_data(self, **kwargs):
-        context = super(PostDetails, self).get_context_data(**kwargs)
-        context['title'] = self.object.hard_title
-        return context
-
-    def get_object(self, queryset=None):
+    def get(self, request, *args, **kwargs):
+        print(self.request.session.session_key)
         post = Post.objects.prefetch_related(
             Prefetch('has_tags'),
             Prefetch(
@@ -59,7 +53,12 @@ class PostDetails(DetailView):
                         queryset=SubPostListElements.objects.prefetch_related(
                             Prefetch(
                                 'listelements_set')))))).get(slug_name=self.kwargs['post_slug'])
-        return post
+        ctx = {
+            'title': post.hard_title,
+            'post': post,
+        }
+
+        return render(request, template_name=self.template_name, context=ctx)
 
 
 class Categories(View):
@@ -156,8 +155,6 @@ class UserPasswordResetComplete(PasswordResetCompleteView):
         super(PasswordResetCompleteView, self).__init__(*args, **kwargs)
         messages.success(request, 'You have successfully reset your password. '
                                   'Please Login to continue.')
-
-
 
         return redirect('/login/')
 
