@@ -112,6 +112,7 @@ DEFAULT_ACTIVATION_DAYS = 30
 
 LOGIN_URL = 'user-login'
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 BASE_URL = 'https://www.stoneageentrepreneur.com'
 
 STATIC_URL = '/static/'
