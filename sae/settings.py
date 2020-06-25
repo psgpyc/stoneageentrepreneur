@@ -111,8 +111,7 @@ DEFAULT_FEATURE_DAYS = 1000
 DEFAULT_ACTIVATION_DAYS = 30
 
 LOGIN_URL = 'user-login'
-LOGIN_REDIRECT_URL = 'home-auth'
-LOGOUT_REDIRECT_URL = 'home-auth'
+LOGIN_REDIRECT_URL = 'home'
 BASE_URL = 'https://www.stoneageentrepreneur.com'
 
 STATIC_URL = '/static/'

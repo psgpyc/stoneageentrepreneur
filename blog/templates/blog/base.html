@@ -43,11 +43,17 @@
         </div>
 
         <div class="rightmenu">
-            <div class="health"><i class="fas fa-cart-plus"></i></div>
             <div class="store"><i class="fas fa-store"></i></div>
-            <div class="accounts">
-                <i  id="loginBtn" class="fas fa-user user-login"></i>
-            </div>
+            {% if user.is_authenticated %}
+                <div class="accounts">
+                    <a href="{% url 'user-logout' %}"><i class="fas fa-user"></i></a>
+                </div>
+
+            {% else %}
+                <div class="accounts">
+                    <i title="Logout" id="loginBtn" class="fas fa-sign-out-alt user-login"></i>
+                </div>
+            {% endif %}
         </div>
     </nav>
 
@@ -59,7 +65,8 @@
             <i class="fas fa-bars hamburger-mobile"></i>
 
 
-             <i  class="fas fa-user user-login-mobile"></i>
+
+
 
         </div>
 
@@ -74,8 +81,14 @@
 
 
         <div class="rightmenu-mobilex">
-            <i class="fas fa-cart-plus"></i>
-                <div class="store"><i class="fas fa-store"></i></div>
+            <div class="store"><i class="fas fa-store"></i></div>
+             {% if user.is_authenticated %}
+                <a href="#"><i class="fas fa-user user-profile-mobile "></i></a>
+
+
+            {% else %}
+                 <a href="#"><i id="loginBtn" class="fas fa-sign-out-alt user-login-mobile"></i></a>
+            {% endif %}
 
         </div>
 
@@ -185,6 +198,9 @@
 
             <div class="login-wrapper-signup">
                 <span class="sign-in">SIGN UP</span>
+                 <div class="only-mobile close-circle-signup">
+                  <i class="far fa-times-circle "></i>
+                </div>
 
                 <form class="login-form-control" action="{% url 'user-register' %}" method="post">
                     {% csrf_token %}
@@ -220,6 +236,21 @@
 
             </div>
             </div>
+        </div>
+
+
+        <div class="profile-modal active_display">
+            <p><i class="arrow up"></i></p>
+            <div class="user-profile-cover-wrapper">
+                <img src="{% static 'blog/img/profileimg.png' %}" alt="">
+                <h4>{{ user.full_name }}</h4>
+            </div>
+            <div class="profile-modal-links">
+                <a class="profile-modal-links-wrapper" href="#">Profile</a>
+                <a class="profile-modal-links-wrapper" href="#">Settings</a>
+                <a class="profile-modal-links-wrapper" href="{% url 'user-logout' %}">Logout</a>
+            </div>
+
         </div>
 
 {% endblock %}

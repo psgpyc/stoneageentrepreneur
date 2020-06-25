@@ -116,7 +116,7 @@ class RegistrationView(View):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('home-auth')
+            return redirect('home')
 
         return render(request, template_name=self.template_name, context=self.ctx)
 
@@ -166,7 +166,6 @@ class AccountEmailActivate(FormMixin, View):
     def get(self, request, key, *args, **kwargs):
         qs = ActivateEmail.objects.filter(path_key__iexact=key)
         qs_confirm = qs.confirmable()
-        print(qs_confirm)
         if qs_confirm.count() == 1:
             obj = qs.first()
             obj.activate()
@@ -206,7 +205,7 @@ class AccountEmailActivate(FormMixin, View):
 
     def form_invalid(self, form):
 
-        ctx = {'form':self.get_form()}
+        ctx = {'form': self.get_form()}
         return render(self.request, template_name='blog/registration-error.html', context=ctx)
 
 
