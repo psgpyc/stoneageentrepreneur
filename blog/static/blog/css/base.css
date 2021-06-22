@@ -1271,6 +1271,43 @@ nav .search-cross-class{
 
 }
 
+@media screen and (max-width: 550px) {
+
+    .title-definition .left-mb{
+        padding: 20px;
+        margin: 40px 5%;
+    }
+
+    .title-definition .right-mb{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+    }
+
+    .rmb-wrapper-w {
+        max-width: 90%;
+        padding-left: 0;
+
+    }
+
+    .blog-highlight .d-blog-posts {
+        margin: 40px 20px;
+    }
+
+    .grow-together-wrapper .build-data-team-wrapper {
+        margin: 40px 20px;
+    }
+
+    .display-banner .data-literacy-wrapper h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 35px;
+        margin: 20px auto;
+    }
+
+}
+
 
 
 
