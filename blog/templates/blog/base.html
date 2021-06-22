@@ -9,6 +9,9 @@
              | STONEAGEENTREPRENEUR
         {% endblock %}
     </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
     <script defer src="https://kit.fontawesome.com/81a2d4bcab.js" ></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -22,16 +25,17 @@
 {% block navigation %}
     <nav class="desktop-view">
         <div class="leftmenu">
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger-id-desktop">
                 <i class="fas fa-bars"></i>
             </div>
-            <form method="post">
+            <form class="search-box-id" method="post">
                 <label>
-                    <input class='search-box' id="searchbox" type="search">
+                    <input class='search-box no-view' id="searchbox" type="search" placeholder="Search on StoneAgeEntrepreneur.">
                 </label>
             </form>
 
-            <div class="search">
+
+            <div class="search" id="search-icon">
 
                 <i class="fas fa-search"><span>search</span></i>
             </div>
@@ -39,6 +43,10 @@
         </div>
         <div class="logo">
             <a  href="{% url 'home' %}">Stone<span>Age</span>Entrepreneur.</a>
+
+{#                        <small style="font-size: 10px;">द डाटा साक्षरता PROJECT </small>#}
+
+{#            <small>द <span style="color: #07767A">डाटा</span> साक्षरता <small style="color: #07767A">PROJECT</small></small>#}
 
         </div>
 
@@ -50,24 +58,57 @@
                 </div>
 
             {% else %}
-                <div class="accounts">
+                <div class="accounts" id="login-btn-id">
                     <i title="Logout" id="loginBtn" class="fas fa-sign-out-alt user-login"></i>
+                </div>
+
+                <div class="cross-search no-view" id="cross-search-id">
+                    <img alt='kitabalaya search end' class="search-cross-class" id="search-end" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
+
                 </div>
             {% endif %}
         </div>
     </nav>
 
 
+     <div class="search-box-drop-down-wrapper no-view" id="search-box-drop-id">
+
+
+        <form method="post">
+            {% csrf_token %}
+            <label class="search-box-wrapper">
+                <input class='search-box' id="search-box-id" type="search" autocomplete="off"
+                       placeholder="Type to discover...">
+            </label>
+
+        </form>
+
+
+
+
+
+        <div class="search-result-wrapper" id="search-result-wrapper-id">
+           <div class="result-wrapper" id="each-result-id">
+                <p></p>
+
+
+           </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+     </div>
 
     <nav class="mobile-view-nav">
         <div class="leftmenu-mobile">
-
             <i class="fas fa-bars hamburger-mobile"></i>
-
-
-
-
-
         </div>
 
 
@@ -108,6 +149,7 @@
                         <input class='search-box-mini' id="searchbox" type="search" placeholder="SEARCH SAE">
                     </label>
                 </form>
+
                 <div class="bar-category-wrapper">
                     {% for category in categories  %}
                         {% if forloop.counter <= 6 %}
@@ -254,18 +296,18 @@
         </div>
 
 {% endblock %}
-
+{#  SECONDARY NAVIGATION STARTS    #}
         <div class="content_wrapper" id="contentWrapper">
-            {% block secondary-nav %}
-                <div class="secondary-nav">
-                    <ul class="secondary-nav">
-
-                        {% for category in categories  %}
-                            <li><a href="{% url 'categories' category.slug_name %}">{{ category }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endblock %}
+{#            {% block secondary-nav %}#}
+{#                <div class="secondary-nav">#}
+{#                    <ul class="secondary-nav">#}
+{##}
+{#                        {% for category in categories  %}#}
+{#                            <li><a href="{% url 'categories' category.slug_name %}">{{ category }}</a></li>#}
+{#                        {% endfor %}#}
+{#                    </ul>#}
+{#                </div>#}
+{#            {% endblock %}#}
          {% block body %}
 
 
@@ -277,7 +319,7 @@
 
 
 
-                <p>ALL RIGHT RESERVED @ 2020</p>
+                <p>ALL RIGHT RESERVED @ 2021</p>
 
 
 
@@ -293,6 +335,12 @@
 {# END CONTENT WRAPPER      #}
 
         </div>
+{% block body-data %}
+
+
+
+{% endblock %}
+
 
 {#        END OF MAIN CONTENT         #}
 

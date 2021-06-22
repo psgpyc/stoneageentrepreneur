@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 *{
-    /*font-family: 'Baloo Paaji 2', cursive;*/
     font-family: Roboto,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin: 0;
     padding: 0;
@@ -8,18 +11,24 @@
     text-decoration: none;
 }
 
+
+
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
 a{
     color: #000;
 }
 
 p, h1, h2, h3{
-    text-align: justify;
-    text-justify: inter-character;
+
     -webkit-font-smoothing: antialiased
 }
 
 h1,h2,h3,h4{
-    color: #141414;
+   color: rgba(41, 41, 41, 1)
 }
 
 body{
@@ -108,43 +117,95 @@ nav .leftmenu .search span{
 
 }
 
-nav .search-box{
-    width: 0;
-    height: 0;
-    font-size: 0;
-    border: 0;
-    opacity: 0;
 
+
+
+
+
+
+.search-box-drop-down-wrapper{
+    position: absolute;
+    top: 70px;
+    left: 14%;
+    height: auto;
+    width: 90%;
+    z-index: 400;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+
+    /*box-shadow: 6px 6px 6px 6px rgb(32 33 36 / 28%);*/
+    overflow: scroll;
+}
+
+.search-box-drop-down-wrapper > img{
+    position: absolute;
+
+    margin: 2%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+.no-view{
+    display: none;
 }
 
 nav .rightmenu-mobile{
     display: none;
 }
 
-.search-box-display-on-click .search-box{
-    opacity: 1;
-    width: 300px;
-    font-size: 15px;
-    height: 30px;
-    /*border-radius: 8px;*/
-    border: 1px solid black;
+
+
+.search-box-wrapper  .search-box{
+    margin: 5% 5% 1% 5%;
+    width: 70%;
+    height: 7vh;
+    font-size: 18px;
+    padding: 10px;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+    border: 1px solid rgba(230, 230, 230, 1);
+
+    border-radius: 5px;
+}
+
+
+.search-result-wrapper .result-wrapper{
+    width: 70%;
+    margin: 0 5%;
     text-align: center;
-    transition: all 0.2s ease;
-
-}
-
-.search-box-display-on-click .search{
-    margin-left: 5px;
 
 }
 
 
-.search-box-display-on-click .search-box::-webkit-search-cancel-button{
-    position:relative;
-    font-size: 20px;
-    margin-right: 5px;
+.each-result-para{
+    margin: 25px 0;
+    height: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.each-result-para a{
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+}
+
+
+.each-result-para h3{
+        font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+
 
 }
+
+.each-result-para a:hover{
+    color: #0A7DC2;
+
+}
+
+
+
+
 /* END Left Menu : HAMBURGER MENU and SEARCH    */
 
 
@@ -172,18 +233,20 @@ nav .logo{
     font-weight: 500;
     letter-spacing: 2px;
     align-content: center;
+    margin-left: -30px;
 
 }
 
 
 
 nav .logo a, nav .logo a span{
-        font-family: 'Baloo Paaji 2', cursive;
+        font-family:Raleway,"Times New Roman",Times,Georgia,serif;';
+;
 
 }
 
 nav .rightmenu div{
-        font-family: 'Baloo Paaji 2', cursive;
+        /*font-family: 'Baloo Paaji 2', cursive;*/
 
 }
 .content_wrapper .secondary-nav{
@@ -191,10 +254,12 @@ nav .rightmenu div{
 }
 
 .content_wrapper .secondary-nav ul li a{
-        /*font-family: 'Baloo Paaji 2', cursive;*/
-    font-weight: 500;
     font-size: 14px;
-    -webkit-font-smoothing: antialiased
+    font-family: "Roboto","Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 20px;
+    color: #162d3d;
 
 
 }
@@ -237,25 +302,32 @@ nav .rightmenu .accounts .user-login:hover{
 
 }
 
+nav .search-cross-class{
+    height: 21px;
+    width: 21px;
+    margin-top: 0.9rem;
+    cursor: pointer;
+}
+
 /* END RIGHT MENU : HEALTH, STORE AND LOGIN    */
 
 /*END NAV*/
 
 /* START Login Modal*/
 .login-modal{
-    width: 30%;
-    height: 90%;
+    width: 20%;
+    height: 70%;
     margin: auto;
     position: fixed;
     overflow: auto;
     top: 50px;
-    left: 68%;
+    left: 77.3%;
     z-index: 900;
     background-color: white;
     box-shadow: 2px 6px 6px 2px rgba(32,33,36,.28);
     border-bottom: 1px solid #cbe4f1;
     border-top: 1px solid #cbe4f1;
-    border-radius: 3px;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -500,8 +572,15 @@ nav .rightmenu .accounts .user-login:hover{
     z-index: 300;
     overflow-y: scroll;
 
+
 }
 .left-nav-mobile{
+
+
+
+
+
+
     display: none;
 }
 
@@ -571,9 +650,8 @@ nav .rightmenu .accounts .user-login:hover{
 .social-links{
     position: fixed;
     top: 90%;
-    /*left: 41%;*/
-    height: 450px;
-    width: 100%;
+    left: 45%;
+    /*height: 450px;*/
     background-color: white;
     font-size: 30px;
     text-align: center;
@@ -581,7 +659,7 @@ nav .rightmenu .accounts .user-login:hover{
 }
 
 .social-links i{
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .auth-links{
@@ -623,8 +701,312 @@ nav .rightmenu .accounts .user-login:hover{
 
 /* START BANNER*/
 
+
+
+
+.display-banner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+.display-banner .data-literacy-wrapper{
+    flex:1;
+    width: 50%;
+    margin: 170px 5px 170px 100px;
+    flex-wrap: wrap;
+
+
+
+}
+
+.display-banner .data-literacy-wrapper h2{
+    /*width: 100%;*/
+    font-weight: 300;
+    font-size: 2.5vw;
+    /*letter-spacing: 5px;*/
+    line-height: 1.4;
+    font-family: Raleway,Roboto,'Josefin Sans',"Times New Roman",Times,Georgia,serif;
+    color: #292929;
+    text-align: left;
+    margin: 20px 0;
+
+}
+
+/*.display-banner .data-literacy-wrapper h2 small{*/
+/*    font-size: 11px;*/
+/*}*/
+
+.display-banner .data-literacy-wrapper > p{
+    margin: 20px 0;
+    color: #616161;
+    font-family: 'Raleway',Roboto,"Times New Roman",Times,Georgia,serif;';
+
+    line-height: 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.banner-btn-learn-more{
+    height: 38px;
+    width: 140px;
+    margin-top: 2%;
+
+    background-color: white;
+    cursor: pointer;
+    font-family: Raleway,Roboto, TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+    font-size: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 28px rgb(0 0 0 / 7%);
+}
+
+
+
+.display-banner .img-cover{
+    margin: -80px 20px;
+    height: 800px;
+    width: 50%;
+    flex: 1;
+
+}
+
+
+.display-banner .img-cover svg{
+
+    height: 100%;
+    width: 600px;
+
+}
+
+
+.title-definition{
+    background-color: #FAFAFA;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.title-definition .left-mb{
+
+    height: 500px;
+    width: 520px;
+    background-color: #FFFF;
+    border-radius: 5px;
+    /*flex: 1;*/
+    margin: 100px 50px 100px 100px;
+    box-shadow: 0 6px 50px rgb(0 0 0 / 5%);
+    padding: 70px 70px;
+
+}
+
+.left-mb .see-more{
+    color: #292929;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+
+.mini-title{
+    margin-bottom: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #51828e;
+    font-family: Work Sans,Roboto, TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.display-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 1.4;
+    font-family: Roboto, Josefin Sans , TimesNewRoman,"Times New Roman",Times,Georgia,serif;;
+    font-weight: 300;
+}
+
+
+.definition-details{
+    font-family: Raleway, Roboto, 'Josefin Sans', "Times New Roman", Times, Georgia, serif;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #fff;
+    color: #696969;
+    -webkit-font-smoothing: antialiased;
+    /*-moz-osx-font-smoothing: grayscale;*/
+    text-rendering: optimizeLegibility;
+}
+
+.title-definition .right-mb{
+    display: flex;
+    flex-wrap: wrap;
+    /*max-height: 500px;*/
+    width: auto;
+    flex:1;
+    border-radius: 5px;
+    margin: 70px 100px 70px 0;
+    padding: 50px 50px;
+}
+
+
+.rmb-wrapper-w{
+    max-width: 50%;
+    flex: auto;
+
+}
+
+.p-left{
+    padding-left: 40px;
+}
+
+.mt-mb{
+    margin: 20px 0;
+
+}
+
+.rd-header{
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: Roboto, 'Josefin Sans', "Times New Roman", Times, Georgia, serif;
+    font-weight: 300;
+}
+
+.rd-body{
+    margin: 30px 0;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /*background: #fff;*/
+    color: #696969;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+.banner-btn-learn-more:hover{
+    background-color: aliceblue;
+}
+
+/*grow together wrapper start*/
+
+
+.grow-together-wrapper{
+    background-color: #FFFFFF;
+    height: auto;
+    width: 100%;
+}
+
+
+.review-title{
+    margin: 20px 0 0 0 ;
+    font-family: 'Raleway',Roboto,"Times New Roman",Times,Georgia,serif;';
+
+    line-height: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #51828e;
+
+}
+
+
+/*}*/
+
+.grow-together-wrapper{
+    text-align: center;
+}
+
+.grow-together-wrapper .build-data-team-wrapper{
+    margin: 100px 100px;
+
+}
+
+.h3-btm-card{
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 5px;
+    line-height: 1.4;
+    font-family: Raleway,Roboto,'Josefin Sans',"Times New Roman",Times,Georgia,serif;
+    color: #292929;
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+.h3-card{
+
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 5px;
+    line-height: 1.4;
+    font-family: Raleway,Roboto,'Josefin Sans',"Times New Roman",Times,Georgia,serif;
+    color: #292929;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.p-card{
+    width: 60%;
+    font-family: Raleway, Roboto, "Times New Roman", Times, Georgia, serif;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #fff;
+    color: #696969;
+    -webkit-font-smoothing: antialiased;
+    /* -moz-osx-font-smoothing: grayscale; */
+    text-rendering: optimizeLegibility;
+    text-align: center;
+}
+
+.gtw-btn{
+   justify-content: center;
+}
+/*grow together wrapper ends*/
+
+
+.our-services-wrapper{
+    margin: 0 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.each-service{
+    width: 33%;
+}
+
+
+
+
+/* END DATA*/
+
+
+
+
 .banner{
-    margin-top:120px;
+    margin-top:90px;
     display: flex;
     width: 100%;
     max-width: 100%;
@@ -637,6 +1019,263 @@ nav .rightmenu .accounts .user-login:hover{
     color: #007dc3;
     font-family: 'Baloo Paaji 2', cursive;
 }
+
+
+/* Data footer */
+
+.review-notes{
+    background-color: #FFFFFF;
+    height: auto;
+    overflow: scroll;
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+
+}
+
+
+
+
+.hr-des{
+    background-color: #e1e3ee;
+    height: 1px;
+    border: none;
+}
+
+.id-per{
+    margin-left: 15px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #51828e;
+    font-family: Work Sans,Roboto, TimesNewRoman, "Times New Roman", Times, Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+.blog-highlight{
+    background-color: #FAFAFA;
+    height: auto;
+    overflow: scroll;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+.blog-highlight .d-blog-posts{
+    margin: 100px;
+}
+
+.d-each-post-wrapper{
+    display: flex;
+
+}
+
+
+
+.d-each-post{
+    height: auto;
+    display: block;
+    width: 30%;
+    margin: 40px auto;
+    background-color: #FFFF;
+    border-radius: 5px;
+    /* flex: 1; */
+    box-shadow: 0 6px 50px rgb(0 0 0 / 5%);
+    padding: 70px 20px;
+
+}
+
+.d-each-post p:last-child{
+    cursor: pointer;
+
+}
+
+
+
+.d-each-post h3{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.d-each-post .definition-details{
+    font-size: 14px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+
+
+/*Data Footer ends*/
+
+.nav-blog-btn{
+    background: #51828e;
+    border: 0;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1250px) {
+
+    .display-banner .img-cover svg {
+        width: 500px;
+    }
+
+
+    .display-banner .data-literacy-wrapper {
+        margin: 170px 50px 170px 50px;
+
+
+    }
+
+    .title-definition .left-mb {
+
+        margin: 100px 50px 100px 50px;
+
+    }
+
+    .blog-highlight .d-blog-posts {
+        margin: 100px 50px;
+    }
+
+
+    .title-definition .left-mb {
+        height: 520px;
+        width: 520px;
+        background-color: #FFFF;
+        border-radius: 5px;
+        /* flex: 1; */
+        box-shadow: 0 6px 50px rgb(0 0 0 / 5%);
+        padding: 70px 70px;
+    }
+}
+
+
+/*@media screen and (max-width: 1200px) {*/
+
+/*    .title-definition .right-mb{*/
+/*        margin: 70px 50px 70px 50px;*/
+/*        padding: 20px 0;*/
+/*    }*/
+
+
+/*}*/
+
+
+
+@media screen and (max-width: 1100px) {
+    .display-banner {
+        display: block;
+        width: 90%;
+        margin: 40px auto;
+
+    }
+
+    .display-banner .data-literacy-wrapper {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+
+
+    }
+
+    .display-banner .data-literacy-wrapper h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        margin: 20px auto;
+
+
+    }
+
+
+    .display-banner .data-literacy-wrapper > p {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .display-banner .img-cover {
+        margin: 40px 12px;
+        height: auto;
+        width: 90%;
+    }
+
+    .display-banner .img-cover svg {
+
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .title-definition {
+        background-color: #FAFAFA;
+        height: auto;
+        overflow: auto;
+        width: 100%;
+        display: block;
+        margin: auto;
+
+    }
+
+    .title-definition .left-mb {
+        height: auto;
+        width: 90%;
+        overflow: auto;
+        margin: 100px 5%;
+    }
+
+    .title-definition .right-mb {
+        width: 100%;
+    }
+
+    .grow-together-wrapper .build-data-team-wrapper {
+        margin: 100px 50px;
+    }
+
+    .review-notes {
+        width: 90%;
+    }
+
+    .d-each-post-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .d-each-post {
+        height: auto;
+        display: block;
+        width: 100%;
+        margin: 40px auto;
+        background-color: #FFFF;
+        border-radius: 5px;
+        /* flex: 1; */
+        box-shadow: 0 6px 50px rgb(0 0 0 / 5%);
+        padding: 70px 20px;
+
+    }
+
+    .p-card{
+        width: 100%;
+    }
+
+    .h3-card{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
 
 /*START LEFT BANNER*/
 
@@ -1098,7 +1737,7 @@ footer p{
 
 .secondary-nav ul li a:hover{
     color: #007dc3;
-    font-size: 17px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -1429,6 +2068,10 @@ footer p{
 
 @media screen and (max-width: 1150px){
 
+
+
+
+
     .mobile-view-nav{
         width: 100%;
         left: 2%;
@@ -1665,6 +2308,9 @@ footer p{
         margin-right:10px;
     }
 
+
+
+
     nav .rightmenu-mobile{
         display: flex;
         flex: 1;
@@ -1841,11 +2487,13 @@ footer p{
 
     }
 
+
     .post-content-text h2{
         margin: 12px 0;
         font-weight: 300;
         font-size: 20px;
         color: #007dc3;
+
     }
 
     .highlight{
@@ -2525,6 +3173,10 @@ footer p{
 /* Pure Mobile View  */
 
 @media screen and (max-width: 600px){
+
+    side-bar{
+        width: 100%;
+    }
     body{
         overflow-x: hidden;
         overflow-y: scroll;
@@ -2551,10 +3203,12 @@ footer p{
         font-size: 20px;
         margin-left: 6vw;
         line-height: 14px;
+                font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+
     }
 
-    nav .logo-mobile a{
-        font-family: 'Baloo Paaji 2', cursive;
+    nav .logo-mobile a, nav .logo-mobile div{
+        font-family: Raleway, "Times New Roman", Times, Georgia, serif;
     }
 
     nav .leftmenu-mobile i:last-child{

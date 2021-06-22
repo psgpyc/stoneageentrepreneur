@@ -70,6 +70,31 @@ class BlogCategory(TimeStampModel):
         super(BlogCategory, self).save(*args, **kwargs)
 
 
+class SiteCategoryManager(models.Manager):
+    def active(self):
+        return self.get_queryset().filter(is_active=True)
+
+
+class SiteCategory(TimeStampModel):
+
+    name = models.CharField(max_length=100, verbose_name='Website Categories')
+
+    slug_name = models.SlugField(max_length=100, unique=True, blank=True)
+
+    objects = SiteCategoryManager()
+
+    class Meta:
+        verbose_name = 'Website Navigation Category'
+        verbose_name_plural = 'Website Navigation Categories'
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        self.slug_name = slugify(self.name)
+        super(SiteCategory, self).save(*args, **kwargs)
+
+
 class Comment(TimeStampModel):
     comment = models.TextField(blank=True, null=True)
 

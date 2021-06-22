@@ -16,6 +16,9 @@ from blog.utils import get_where_i_am, get_categories_featured
 import random
 from django.contrib import messages
 
+from django.http import JsonResponse
+
+
 from accounts.forms import UserLoginForm, RegistrationForm, ReactivateEmailForm
 
 from django.contrib.sessions.models import Session
@@ -42,7 +45,6 @@ class PostDetails(View):
     template_name = 'blog/posts.html'
 
     def get(self, request, *args, **kwargs):
-        print(self.request.session.session_key)
         post = Post.objects.prefetch_related(
             Prefetch('has_tags'),
             Prefetch(
@@ -101,6 +103,23 @@ class MiniCategories(View):
         }
 
         return render(request, template_name=self.template_name, context=ctx)
+
+
+class SearchView(View):
+    def post(self, request, *args, **kwargs):
+        result = []
+
+        q = request.POST.get('query')
+        search_qs = Post.objects.filter(hard_title__icontains=q)
+
+        for eachPost in search_qs:
+            result.append((eachPost.hard_title, eachPost.slug_name))
+
+        if request.is_ajax():
+            print(result)
+            return JsonResponse({'data': result}, status=200)
+
+        return render(request, template_name='blog/index.html', context={})
 
 
 class Home(LoginRequiredMixin,TemplateView):
@@ -209,3 +228,7 @@ class AccountEmailActivate(FormMixin, View):
         return render(self.request, template_name='blog/registration-error.html', context=ctx)
 
 
+class DataLiteracy(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(self.request, template_name='blog/data_literacy_project.html', context={'title': 'Data Literacy Project'})

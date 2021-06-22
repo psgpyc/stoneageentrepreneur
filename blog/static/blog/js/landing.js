@@ -1,3 +1,90 @@
+$(document).ready(function(){
+    // $( "#display-banner-id" ).animate({
+    //     // opacity: 0.25,
+    //     left: "+=50",
+    //     width: '40%',
+    //     height: "easyIn"
+    //   }, 5000, function() {
+    //     // Animation complete.
+    //  });
+
+    $('#search-icon').click(function (e) {
+        $('#search-box-drop-id').removeClass('no-view')
+            $("main").addClass('no-view'); // show/hide the overlay
+             $('#search-box-id').focus()
+
+            $('#login-btn-id').addClass('no-view')
+            $('#cross-search-id').removeClass('no-view')
+
+
+
+
+
+    })
+
+    $('#cross-search-id').click(function () {
+        $('#search-box-drop-id').addClass('no-view')
+         $("main").removeClass('no-view');
+
+         $('#login-btn-id').removeClass('no-view')
+        $('#cross-search-id').addClass('no-view')
+    })
+
+
+    //Search Ajax Request
+    $('#search-box-id').keyup(function (e) {
+
+        let query = $(this).val()
+
+        $.ajax({
+                  headers: { "X-CSRFToken": $.cookie("csrftoken") },
+                  url: '/ajax/search/',
+                  method: 'POST',
+                  mode: 'same-origin',
+                  data: {
+                    'query': query,
+                  },
+
+                  beforeSend: function(){
+                      $('<h3>').addClass('each-result-para').text('Searching......').appendTo($('#each-result-id'))
+
+
+
+                  },
+
+                  success: function (data) {
+                        eachSearchResult = $('#each-result-id')
+                        eachSearchResult.empty()
+
+                        $.each(data.data, function (index,value) {
+                            let searchPara = $("<p>").addClass('each-result-para')
+                            $("<a>").text(value[0]).attr('href','http://127.0.0.1:8000/posts/'+value[1]+'/').appendTo(searchPara)
+                            searchPara.appendTo($('#each-result-id'))
+                        })
+
+                       if((e.keyCode === 8) && (query.length < 1) ){
+                                 eachSearchResult.empty()
+
+                       }
+
+                       if(data.data.length === 0){
+                           let searchPara = $("<h1>").addClass('each-result-para')
+                            searchPara.text('Sorry, no data Found!').appendTo(eachSearchResult)
+
+                       }
+                },
+        })
+
+
+    })
+//    Search ajax Ends
+
+
+
+})
+
+
+
 let hamburger = document.querySelector('.hamburger');
 let hamburgermobile = document.querySelector('.hamburger-mobile')
 let content = document.querySelector('.main');
@@ -23,11 +110,6 @@ hamburgermobile.addEventListener("click", ()=>{
 });
 
 
-
-search_button.addEventListener("click", ()=>{
-   leftmenu.classList.toggle('search-box-display-on-click')
-    document.getElementById('searchbox').focus()
-})
 
 
 
@@ -104,14 +186,4 @@ login_el.addEventListener('click', ()=>{
 }
 
 
-// Ajax
 
-// $(document).ready(function() {
-//     let loginForm = $('#login-form');
-//     loginForm.submit(function(event){
-//         event.preventDefault();
-//         console.log('default prevented')
-//     })
-//
-//
-// });

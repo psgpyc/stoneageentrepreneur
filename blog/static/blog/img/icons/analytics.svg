@@ -1,0 +1,10 @@
+<svg version="1.1" id="home-services-03" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+<rect x="17" y="30" fill="#BABABA" width="11" height="1"/>
+<polyline fill="none" stroke="#BABABA" stroke-miterlimit="10" points="15.5,27.5 38.5,27.5 38.5,7.5 4.5,7.5 4.5,16.5 "/>
+<path fill="#BABABA" d="M9.5,31.75c0,0.414-0.336,0.75-0.75,0.75l0,0C8.336,32.5,8,32.164,8,31.75l0,0C8,31.336,8.336,31,8.75,31
+	l0,0C9.164,31,9.5,31.336,9.5,31.75L9.5,31.75z"/>
+<path fill="none" stroke="#BABABA" stroke-miterlimit="10" d="M3.084,34.5c-0.322,0-0.584-0.221-0.584-0.488V16.986
+	c0-0.271,0.262-0.486,0.584-0.486h11.833c0.322,0,0.583,0.216,0.583,0.486v17.025c0,0.269-0.261,0.488-0.583,0.488L3.084,34.5
+	L3.084,34.5z"/>
+</svg>

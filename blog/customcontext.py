@@ -1,5 +1,5 @@
 from accounts.forms import UserLoginForm, RegistrationForm
-from blog.models import BlogCategory
+from blog.models import BlogCategory, SiteCategory
 
 
 def get_categories(request):

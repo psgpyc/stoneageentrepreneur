@@ -7,7 +7,7 @@ from django.contrib.auth import views as auth_views
 
 
 from blog.views import HomePage, PostDetails, Categories, MiniCategories, Home, RegistrationView, UserLogoutView, \
-    AccountEmailActivate, UserPasswordResetComplete
+    AccountEmailActivate, UserPasswordResetComplete, SearchView, DataLiteracy
 from accounts.forms import UserLoginForm, UserPasswordResetForm, UserPasswordResetConfirmForm
 
 urlpatterns = [
@@ -17,6 +17,10 @@ urlpatterns = [
     path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
     path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
     path('home', Home.as_view(), name='home-auth'),
+
+    path('ajax/search/', SearchView.as_view(), name='search-view'),
+
+    path('data-literacy/', DataLiteracy.as_view(), name='data-literacy-project'),
 
     path('login/', auth_views.LoginView.as_view(redirect_authenticated_user=True,
          template_name='blog/login.html',
