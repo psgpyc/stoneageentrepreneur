@@ -11,9 +11,9 @@
 {% block body %}
 
     <div class="category-distance">
-            <div class="whereiam-wrapper-mini">
-                <a href="{% url 'home' %}"> HOME  </a> > <a href="{% url 'categories' whereiwas.slug_name %}">{{ whereiwas |upper }}</a> <span> ></span>   <a href="#">{{ whereiam |upper }}</a>
-            </div>
+{#            <div class="whereiam-wrapper-mini">#}
+{#                <a href="{% url 'home' %}"> HOME  </a> > <a href="{% url 'categories' whereiwas.slug_name %}">{{ whereiwas |upper }}</a> <span> ></span>   <a href="#">{{ whereiam |upper }}</a>#}
+{#            </div>#}
             <div class="middle-banner except-mobile">
                 {% for featured in posts %}
                     <div class="first-mb">
