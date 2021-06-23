@@ -43,7 +43,7 @@
 
         </div>
         <div class="logo">
-            <a  href="{% url 'home' %}">Stone<span>Age</span>Entrepreneur.</a>
+            <a  href="{% url 'home' %}">StoneAgeEntrepreneur.</a>
 
 {#                        <small style="font-size: 10px;">द डाटा साक्षरता PROJECT </small>#}
 
@@ -199,42 +199,40 @@
 
             <div class="login-wrapper">
                 <div class="login-wrapper-login">
-                <span class="sign-in">SIGN IN</span>
-                <div class="only-mobile close-circle">
-                  <i class="far fa-times-circle "></i>
-                </div>
-
-                <form id="login-form" class="login-form-control" action="{% url 'user-login' %}" method="post">
-                    {% csrf_token %}
-                    {{ form }}
-
-
-                    <div class="reset-forget-wrapper">
-                        <a class="register-link" href="#">Register?</a>
-                        <a href="{% url 'password-reset' %}">Forget Password?</a>
+                    <span class="sign-in">SIGN IN</span>
+                    <div class="only-mobile close-circle">
+                      <i class="far fa-times-circle "></i>
                     </div>
 
-                    <button class="login-submit" type="submit">Sign in</button>
-                </form>
-
-                <div class="social-link-wrapper">
-                    <p>Or sign in with</p>
-                    <div class="social-facebook">
-                        <a href="#">
-                            <i class="fab fa-google"></i>
-                            <p>Sign in with Google</p>
-                        </a>
-                    </div>
-                     <div class="social-facebook">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                            <p>Sign in with Facebook</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                    <form id="login-form" class="login-form-control" action="{% url 'user-login' %}" method="post">
+                        {% csrf_token %}
+                        {{ form }}
 
 
+                        <div class="reset-forget-wrapper">
+                            <a class="register-link" href="#">Register?</a>
+                            <a href="{% url 'password-reset' %}">Forget Password?</a>
+                        </div>
+
+                        <button class="login-submit" type="submit">Sign in</button>
+                    </form>
+
+{#                <div class="social-link-wrapper">#}
+{#                    <p>Or sign in with</p>#}
+{#                    <div class="social-facebook">#}
+{#                        <a href="#">#}
+{#                            <i class="fab fa-google"></i>#}
+{#                            <p>Sign in with Google</p>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                     <div class="social-facebook">#}
+{#                        <a href="#">#}
+{#                            <i class="fab fa-facebook"></i>#}
+{#                            <p>Sign in with Facebook</p>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                 </div>#}
+                 </div>
             </div>
 
 
@@ -255,21 +253,21 @@
                     <button class="login-submit" type="submit">Sign Up</button>
                 </form>
 
-                <div class="social-link-wrapper">
-                    <p>Or sign Up with</p>
-                    <div class="social-facebook">
-                        <a href="#">
-                            <i class="fab fa-google"></i>
-                            <p>Sign Up with Google</p>
-                        </a>
-                    </div>
-                     <div class="social-facebook">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                            <p>Sign Up with Facebook</p>
-                        </a>
-                    </div>
-                </div>
+{#                <div class="social-link-wrapper">#}
+{#                    <p>Or sign Up with</p>#}
+{#                    <div class="social-facebook">#}
+{#                        <a href="#">#}
+{#                            <i class="fab fa-google"></i>#}
+{#                            <p>Sign Up with Google</p>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                     <div class="social-facebook">#}
+{#                        <a href="#">#}
+{#                            <i class="fab fa-facebook"></i>#}
+{#                            <p>Sign Up with Facebook</p>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
 
             <div class="termscond">

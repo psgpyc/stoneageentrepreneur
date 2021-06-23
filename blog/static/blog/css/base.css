@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 *{
-    font-family: Roboto,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Raleway,Roboto,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,13 @@
 }
 
 
+h1{
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+}
 
+p{
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
+}
 
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
@@ -434,11 +440,13 @@ nav .search-cross-class{
 /*START LOGIN FORM*/
 .login-wrapper{
     text-align: center;
+    padding: 20px 5px;
 }
 
 
 .login-wrapper-signup{
     text-align: center;
+    padding: 20px 5px;
 }
 
 .sign-in{
@@ -635,6 +643,7 @@ nav .search-cross-class{
     font-size: 16px;
     width: 400px;
     letter-spacing: 1px;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
 
 }
 
@@ -693,6 +702,19 @@ nav .search-cross-class{
 
     width: 90%;
     transition: all 0.3s ease;
+}
+
+
+.content_wrapper .display-banner {
+    width: 100%;
+    /*margin: 50px 100px;*/
+    margin: auto;
+}
+
+
+.content_wrapper .display-banner .data-literacy-wrapper {
+
+    margin: 170px 5px 100px 50px;
 }
 
 
@@ -1012,8 +1034,9 @@ nav .search-cross-class{
 }
 
 .content-wrapper-mb .belongs_to{
+    /*font-size: 16px;*/
     color: #007dc3;
-    font-family: 'Baloo Paaji 2', cursive;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
 }
 
 
@@ -1275,8 +1298,13 @@ nav .search-cross-class{
 @media screen and (max-width: 550px) {
 
     .display-banner{
-        margin: 100px auto;
-        width: 100%;
+        margin: 50px auto;
+        width: 90%;
+    }
+
+
+    .display-banner .data-literacy-wrapper h2{
+        font-weight: 600;
     }
 
 
@@ -1376,9 +1404,9 @@ nav .search-cross-class{
 }
 
 .banner .title-wrap-lb a h1{
-    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-family: Raleway,"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px 0;
 }
 
@@ -1392,14 +1420,14 @@ nav .search-cross-class{
     width: 90%;
     margin: 10px 0;
     color: #616161;
-    font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif,"PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
 }
 
 
 .timeofpost{
     display: flex;
     justify-content: space-between;
-    color: #007dc3;
+    color: #292929;
     font-size: 14px;
     
 }
@@ -1468,10 +1496,10 @@ nav .search-cross-class{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-    box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
-    border-bottom: 1px solid #cbe4f1;
-    border-top: 1px solid #cbe4f1;
-    border-radius: 10px;
+    /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
+    /*border-bottom: 1px solid #cbe4f1;*/
+    /*border-top: 1px solid #cbe4f1;*/
+    /*border-radius: 10px;*/
     padding: 10px;
 }
 
@@ -1498,15 +1526,16 @@ nav .search-cross-class{
 .content-wrapper-mb h2{
     width: 100%;
     font-size: 1.3rem;
-    font-weight: 500;
-    margin: 0 0 .5rem;
+    font-weight: 600;
+    margin-top: 5px;
+
     line-height: 125%;
-    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-family: Raleway,"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 .content-wrapper-mb .title-detail{
     color: #616161;
-    font-family: "PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
+    font-family: Raleway,"PT Serif",TimesNewRoman,"Times New Roman",Times,Georgia,serif;
     line-height: 16px;
     margin: 10px 0;
 }
@@ -1680,7 +1709,7 @@ nav .search-cross-class{
 
 }
 .most-popular-left{
-    width: 50%;
+    width: 60%;
 }
 
 .most-popular-left .middle-banner{
@@ -1693,7 +1722,7 @@ nav .search-cross-class{
 }
 
 .most-popular-right{
-    width: 45%;
+    width: 35%;
 
 
 }
@@ -3471,12 +3500,12 @@ footer p{
 
     .banner .middle-banner .first-mb{
         margin-left: 0;
-        border-top: 1px solid #cbe4f1;
+        /*border-top: 1px solid #cbe4f1;*/
 
-        border-bottom: 1px solid #cbe4f1;
-        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        /*border-bottom: 1px solid #cbe4f1;*/
+        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
 
-        border-radius: 10px;
+        /*border-radius: 10px;*/
         padding: 10px;
         margin-bottom: 20px;
 
@@ -3515,9 +3544,9 @@ footer p{
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb{
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid #cbe4f1;
-        border-top: 1px solid #cbe4f1;
-        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        /*border-bottom: 1px solid #cbe4f1;*/
+        /*border-top: 1px solid #cbe4f1;*/
+        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
         padding: 10px;
         margin-left: 0;
         border-radius: 10px;
@@ -3532,6 +3561,7 @@ footer p{
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb{
         width: 100%;
+        margin: 20px auto;
     }
 
     .most-popular-wrapper .most-popular-left .middle-banner .first-mb .img-wrapper-mb a img{
@@ -3560,7 +3590,7 @@ footer p{
     }
 
     .most-popular-wrapper .most-popular-right .final-from-category .first-mb{
-        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
+        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
         padding: 10px;
 
     }
@@ -3612,9 +3642,10 @@ footer p{
         width: 100%;
         margin: 40px 0;
 
-        border-bottom: 1px solid #cbe4f1;
-        border-top: 1px solid #cbe4f1;
-        border-radius: 10px;
+        /*border-bottom: 1px solid #cbe4f1;*/
+        /*border-top: 1px solid #cbe4f1;*/
+        /*border-radius: 10px;*/
+        box-shadow: none;
         padding-bottom: 20px;
         padding-top: 10px;
 

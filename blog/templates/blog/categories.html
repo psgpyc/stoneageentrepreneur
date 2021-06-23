@@ -9,15 +9,15 @@
 
 
 {% block body %}
-    <div class="secondary-nav">
-        <ul class="secondary-nav">
-        {% if active_category.postcategory_set.all %}
-            {% for navheading in active_category.postcategory_set.all  %}
-                <li><a href="{% url 'mini-categories' navheading.slug_name %}">{{ navheading }}</a></li>
-            {% endfor %}
-        {% endif %}
-        </ul>
-    </div>
+{#    <div class="secondary-nav">#}
+{#        <ul class="secondary-nav">#}
+{#        {% if active_category.postcategory_set.all %}#}
+{#            {% for navheading in active_category.postcategory_set.all  %}#}
+{#                <li><a href="{% url 'mini-categories' navheading.slug_name %}">{{ navheading }}</a></li>#}
+{#            {% endfor %}#}
+{#        {% endif %}#}
+{#        </ul>#}
+{#    </div>#}
         {# END SECONDARY NAV #}
 
     <div class="category-distance">
