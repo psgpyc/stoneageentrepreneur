@@ -221,10 +221,11 @@ nav .rightmenu-mobile{
     align-content: center;
 
 
+
 }
 
 .logo-reset a, nav .logo-reset a span {
-    font-family: 'Baloo Paaji 2', cursive;
+    font-family: Raleway, "Times New Roman", Times, Georgia, serif;
 
 
 }
@@ -3515,7 +3516,7 @@ footer p{
         /*border-top: 1px solid #cbe4f1;*/
 
         /*border-bottom: 1px solid #cbe4f1;*/
-        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
 
         /*border-radius: 10px;*/
         padding: 10px;
@@ -3559,10 +3560,10 @@ footer p{
         flex-direction: column;
         /*border-bottom: 1px solid #cbe4f1;*/
         /*border-top: 1px solid #cbe4f1;*/
-        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
         padding: 10px;
         margin-left: 0;
-        border-radius: 10px;
+        /*border-radius: 10px;*/
 
 
     }
@@ -3603,7 +3604,7 @@ footer p{
     }
 
     .most-popular-wrapper .most-popular-right .final-from-category .first-mb{
-        /*box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);*/
+        box-shadow: 0 1px 6px 0 rgba(32,33,36,.28);
         padding: 10px;
 
     }
@@ -3658,7 +3659,7 @@ footer p{
         /*border-bottom: 1px solid #cbe4f1;*/
         /*border-top: 1px solid #cbe4f1;*/
         /*border-radius: 10px;*/
-        box-shadow: none;
+        box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
         padding-bottom: 20px;
         padding-top: 10px;
 
@@ -4153,10 +4154,14 @@ footer p{
 
     .login-modal-individual {
         width: 90%;
-        margin-top: 15%;
+        /*margin-top: 15%;*/
         top: 0;
         left: 0;
         position: relative;
+
+        box-shadow: none;
+        border: none;
+
 
     }
 
