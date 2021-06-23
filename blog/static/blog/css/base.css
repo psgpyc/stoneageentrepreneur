@@ -954,7 +954,6 @@ nav .search-cross-class{
 
     font-weight: 300;
     font-size: 40px;
-    letter-spacing: 5px;
     line-height: 1.4;
     font-family: Raleway,Roboto,'Josefin Sans',"Times New Roman",Times,Georgia,serif;
     color: #292929;
@@ -1237,7 +1236,7 @@ nav .search-cross-class{
 
     .title-definition .right-mb {
         width: 100%;
-        padding: 50px 20px;
+        padding: 50px 50px;
     }
 
     .grow-together-wrapper .build-data-team-wrapper {
@@ -1314,9 +1313,7 @@ nav .search-cross-class{
     .display-banner .data-literacy-wrapper h2 {
         width: 100%;
         text-align: center;
-        letter-spacing: 5px;
-        /*text-justify: inter-character;*/
-        font-size: 30px;
+        font-size: 25px;
         margin: 20px auto;
     }
 
