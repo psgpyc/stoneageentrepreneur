@@ -864,7 +864,7 @@ nav .search-cross-class{
 
 
 .rmb-wrapper-w{
-    max-width: 50%;
+    width: 50%;
     flex: auto;
 
 }
@@ -1231,8 +1231,13 @@ nav .search-cross-class{
         margin: 100px 5%;
     }
 
+    .display-title{
+        font-size: 25px;
+    }
+
     .title-definition .right-mb {
         width: 100%;
+        padding: 50px 20px;
     }
 
     .grow-together-wrapper .build-data-team-wrapper {
@@ -1273,6 +1278,13 @@ nav .search-cross-class{
 
 @media screen and (max-width: 550px) {
 
+    .display-banner{
+        margin: 100px auto;
+    }
+
+
+
+
     .title-definition .left-mb{
         padding: 20px;
         margin: 40px 5%;
@@ -1286,7 +1298,7 @@ nav .search-cross-class{
     }
 
     .rmb-wrapper-w {
-        max-width: 90%;
+        width: 100%;
         padding-left: 0;
 
     }
@@ -1302,9 +1314,42 @@ nav .search-cross-class{
     .display-banner .data-literacy-wrapper h2 {
         width: 100%;
         text-align: center;
-        font-size: 35px;
+        letter-spacing: 5px;
+        /*text-justify: inter-character;*/
+        font-size: 30px;
         margin: 20px auto;
     }
+
+
+    .display-banner .data-literacy-wrapper p{
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .rd-body{
+        text-align: center;
+    }
+
+    .each-review{
+        margin-bottom: 60px;
+    }
+
+    .d-each-post h3{
+        font-size: 25px;
+    }
+
+    .h3-card{
+        font-size: 25px;
+    }
+
+    .p-card{
+        font-size: 14px;
+    }
+
+    .review-notes{
+        margin: 50px auto;
+    }
+
 
 }
 
