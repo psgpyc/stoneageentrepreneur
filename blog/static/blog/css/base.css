@@ -813,6 +813,16 @@ nav .search-cross-class{
 }
 
 
+.title-definition-offer{
+    background-color: #FAFAFA;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+
+}
+
+
 .title-definition .left-mb{
 
     height: 500px;
@@ -882,12 +892,35 @@ nav .search-cross-class{
     padding: 50px 50px;
 }
 
+.title-definition-offer .right-mb{
+    display: flex;
+    flex-wrap: wrap;
+    /*max-height: 500px;*/
+    width: 80%;
+    flex:1;
+    border-radius: 5px;
+    margin: 50px auto;
+    /*padding: 50px 50px;*/
+}
+
 
 .rmb-wrapper-w{
     width: 50%;
     flex: auto;
 
 }
+
+.offer-img{
+    height: 95px;
+    width: 95px;
+}
+
+.f-f{
+    width: 40px;
+    height: 40px;
+
+}
+
 
 .p-left{
     padding-left: 40px;
@@ -1268,6 +1301,8 @@ nav .search-cross-class{
         width: 90%;
     }
 
+
+
     .d-each-post-wrapper {
         display: flex;
         flex-direction: column;
@@ -1351,15 +1386,15 @@ nav .search-cross-class{
 
     .display-banner .data-literacy-wrapper p{
         text-align: center;
-        letter-spacing: 2px;
+        /*letter-spacing: 2px;*/
     }
 
     .rd-body{
         text-align: center;
     }
 
-    .each-review{
-        margin-bottom: 60px;
+    .review-notes .each-review{
+        margin-bottom: 100px;
     }
 
     .d-each-post h3{
@@ -1823,15 +1858,15 @@ footer p{
 
 .secondary-nav{
     display: block;
-    width: 90%;
+    width: 100%;
     margin: auto;
     position: fixed;
-    height: 60px;
-    top: 45px;
+    height: 50px;
+    top: 47px;
     overflow: hidden;
-    background: whitesmoke;
+    background: #FFFFFF;
     z-index: 300;
-    letter-spacing: 0.5px;
+    /*letter-spacing: 0.5px;*/
 }
 
 .secondary-nav ul{
@@ -1850,6 +1885,18 @@ footer p{
 .secondary-nav ul li{
     margin: 0 15px;
 }
+
+.secondary-nav ul li a{
+    color: #292929;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Raleway, 'Josefin Sans', "Times New Roman", Times, Georgia, serif;
+
+}
+
 
 .secondary-nav ul li a:hover{
     color: #007dc3;

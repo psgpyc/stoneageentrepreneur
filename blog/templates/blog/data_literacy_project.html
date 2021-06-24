@@ -10,16 +10,31 @@
 
 द डाटा साक्षरता
 {% block body-data %}
+        <div class="secondary-nav">
+            <ul class="secondary-nav">
+{#            {% if active_category.postcategory_set.all %}#}
+{#                {% for navheading in active_category.postcategory_set.all  %}#}
+{#                    <li><a href="{% url 'mini-categories' navheading.slug_name %}">{{ navheading }}</a></li>#}
+                    <li><a>Data Literacy Project</a></li>
+                    <li><a>Data Lab</a></li>
+                    <li><a>Data Platform</a></li>
+                    <li><a>Courses</a></li>
+                    <li><a>Social Share</a></li>
+{#                  href="{% url 'mini-categories' navheading.slug_name %}">{{ navheading }}</a></li>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
+            </ul>
+        </div>
+
     <div class="display-banner" id="display-banner-id">
         <div class="data-literacy-wrapper">
             <p style="color:#51828e">WHAT WE DO?</p>
 
-            <h2>Upskilling healthcare professionals to be  data-literate.</h2>
+            <h2>Upskilling healthcare professionals to be  data-literate</h2>
 
             <p style="line-height: 1.6">
-                What do data-literate professionals do? <br>
-                They read, create, understand, summarize , and communicate data as information.
-                <br>
+                What do data-literate professionals do?
+                They read, create, understand, summarize , and communicate data as information
                 Accelerate decision-making, tell action-inspiring, life-changing stories from Data.
 
             </p>
@@ -599,9 +614,9 @@
             <h3 class="display-title">What will you learn from The Data Literacy Project?</h3>
 
             <p class="definition-details">
-                You will be learning from real-world, hands-on projects engaging in direct application of skills,
+                Designed to provide best hands-on learning experience by engaging in direct application of skills,
                 theories and models.
-                When you graduate, you will be able to apply the knowledge you have gained to real-world settings.
+                Our courses will train you to be able to apply the knowledge you have gained to real-world settings.
             <p class=" mini-title see-more">LEARN IN DETAILS </p>
 
 
@@ -665,28 +680,112 @@
 
 {#end of second title definition#}
 
-    <div class="review-notes">
+     <div class="title-definition-offer">
+            <p class="mini-title">How our courses are designed:</p>
+            <h3 class="display-title">How you will learn</h3>
 
+
+        <div class="right-mb">
+
+            <div class="rd-wrapper rmb-wrapper-w">
+                <img class="offer-img" src=" {% static 'blog/img/icons/one.svg' %}" alt="">
+                <h3 class="mt-mb rd-header">Live and Recorded Lecture Videos</h3>
+
+                <p class="rd-body">
+                    Courses run over 2-2.5 months, 3 days a week with a 2-hour video lecture that you can watch live or recorded.
+                </p>
+
+            </div>
+
+            <div class="ud-wrapper rmb-wrapper-w p-left">
+
+                <img class="offer-img" src=" {% static 'blog/img/icons/two.svg' %}" alt="">
+                <h3 class="mt-mb rd-header">Real-World Projects</h3>
+
+                <p class="rd-body">
+                    You'll get to practice and improve your skills with weekly assignments, and build a portfolio project using real-world data.
+
+                </p>
+
+            </div>
+
+            <div class="cd-wrapper rmb-wrapper-w">
+                <img class="offer-img" src=" {% static 'blog/img/icons/three.svg' %}" alt="">
+                <h3 class="mt-mb rd-header">Interactive Notebooks</h3>
+
+                <p class="rd-body">
+                    Start instantly. Courses are taught using interactive Jupyter notebooks which you can execute and experiment with on our platform
+
+                </p>
+
+            </div>
+
+            <div class="comd-wrapper rmb-wrapper-w p-left">
+                <img class="offer-img" src=" {% static 'blog/img/icons/four.svg' %}" alt="">
+                <h3 class="mt-mb rd-header">Community Driven</h3>
+
+                <p class="rd-body">
+                    Ask questions, get help, share your work and learn together with  community of like-minded learners.
+
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="what-we-offer">
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="review-notes">
         <div class="pro-reviews">
             <p class="mini-title">What our Graduates have said:</p>
             <h3 class="display-title">Testimonial</h3>
             <div class="each-review">
-                <p class="definition-details">You will be learning from real-world, hands-on projects engaging in direct application of skills, theories and models. When you graduate, you will be able to apply the knowledge you have gained to real-world settings.</p>
+                <p class="definition-details">
+                    Life as an internation student is really hectic and sometimes it's hard to manage time. Since the lectures are recorded, even if i miss one, i get to watch them later and always connect with the instructer via slack or discord. The community driven approach that the platform follows makes it easier to network with the fellow learners.
+
+                </p>
                 <p class="id-per">Ashutosh Sharma Ghimire, Public Health Graduate</p>
                 <p class="id-per">Charles Darwin University, Australia</p>
             </div>
 
             <div class="each-review">
-                <p class="definition-details">You will be learning from real-world, hands-on projects engaging in direct application of skills, theories and models. When you graduate, you will be able to apply the knowledge you have gained to real-world settings.</p>
-                <p class="id-per">Ashutosh Sharma Ghimire, Public Health Graduate</p>
-                <p class="id-per">Charles Darwin University, Australia</p>
-            </div>
+                <p class="definition-details">
+                    I was in my final year of Bachelors' in Public Health and was working on my dissertation, Factors associated with antenatal anxiety among pregnant women. Instructor mentored me through out the project period and helped me out with data analysis. The real hands-on experience I got was invaluable.
 
-            <div class="each-review">
-                <p class="definition-details">You will be learning from real-world, hands-on projects engaging in direct application of skills, theories and models. When you graduate, you will be able to apply the knowledge you have gained to real-world settings.</p>
-                <p class="id-per">Ashutosh Sharma Ghimire, Public Health Graduate</p>
-                <p class="id-per">Charles Darwin University, Australia</p>
+
+                </p>
+                <p class="id-per">Ayurma Wagle, Public Health Graduate</p>
+                <p class="id-per">Tribhuwan University, Nepal</p>
             </div>
+{##}
+{#            <div class="each-review">#}
+{#                <p class="definition-details">You will be learning from real-world, hands-on projects engaging in direct application of skills, theories and models. When you graduate, you will be able to apply the knowledge you have gained to real-world settings.</p>#}
+{#                <p class="id-per">Ashutosh Sharma Ghimire, Public Health Graduate</p>#}
+{#                <p class="id-per">Charles Darwin University, Australia</p>#}
+{#            </div>#}
 
 
 
