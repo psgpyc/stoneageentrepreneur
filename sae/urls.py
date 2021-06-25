@@ -12,7 +12,9 @@ from accounts.forms import UserLoginForm, UserPasswordResetForm, UserPasswordRes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePage.as_view(), name='home'),
+    path('blog/', HomePage.as_view(), name='data-literacy-project'),
+
+    path('', DataLiteracy.as_view(), name='home'),
     path('posts/<slug:post_slug>/', PostDetails.as_view(), name='post-details'),
     path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
     path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
