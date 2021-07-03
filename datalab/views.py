@@ -9,6 +9,7 @@ from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter
 from pygments.styles import get_style_by_name
+from .utils import get_json_ready
 
 
 class Home(LoginRequiredMixin,TemplateView):
@@ -81,8 +82,16 @@ class AddComments(View):
 class GetComments(View):
 
     def get(self, request):
-        print(request.GET.get('postId',None))
-        if request.is_ajax:
-            print('success')
+        data = {'comments': []}
+
+        post_id = int(request.GET.get('postId',None))
+        if post_id is not None and type(post_id) == int:
+            if request.is_ajax:
+                data['comments'].append(get_json_ready(model_instance=SharePost.objects.get_comments(post_id)[0]))
+                data['comments'].append(get_json_ready(model_instance=SharePost.objects.get_comments(post_id)[1]))
+                data['comments'].append(get_json_ready(model_instance=SharePost.objects.get_comments(post_id)[3]))
+                data['comments'].append(get_json_ready(model_instance=SharePost.objects.get_comments(post_id)[4]))
+                print(data)
+                return JsonResponse(data)
 
         return render(request, template_name='datalab/log-index.html', context={})

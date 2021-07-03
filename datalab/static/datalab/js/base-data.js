@@ -121,12 +121,6 @@ $(document).ready(function () {
 
 
                 $('#body-wrap-id').load(location.href + " #body-wrap-id > * ", "");
-
-
-
-
-
-
             },
             //
             // error: function(errorData){
@@ -146,34 +140,73 @@ $(document).ready(function () {
 
 
     $(document).on('click', '.post-comment-btn', function () {
-        $(this).parent().parent().parent().next().toggleClass('no-view')
-        $(this).parent().parent().parent().next().children().children('.comment-form').children('.input-des').focus()
-        $(this).parent().parent().parent().next().next().toggleClass('no-view')
+        let comment_input_wrapper = $(this).parent().parent().parent().next()
+        comment_input_wrapper.toggleClass('no-view')
+        comment_input_wrapper.children().children('.comment-form').children('.input-des').focus()
+
+        comment_display_wrapper = comment_input_wrapper.next()
+        comment_display_wrapper.toggleClass('no-view')
+
+
+
 
         let postId = $(this).attr('value')
         let endPoint = 'post/get-comments/'
         let httpMethod = 'get'
-
-        $.ajax({
-            url: endPoint,
-            method: httpMethod,
-            data: {
-                'postId': postId
-
-            },
-            mode: 'same-origin',
+        if($(this).parent().parent().parent().next().hasClass('no-view')){
+            comment_display_wrapper.children().remove()
 
 
-            success: function () {
-                alert('success worked')
+        }
+        else{
+
+            $.ajax({
+                    url: endPoint,
+                    method: httpMethod,
+                    data: {
+                        'postId': postId
+
+                    },
+                    mode: 'same-origin',
 
 
-            }
+                    beforeSend: function () {
+                        eachComment = $('#user-disp-wrap-id').clone()
+                        eachComment.removeClass('no-view')
+                        eachComment.find('.comment-each').children('p').empty().append('Loading......')
 
 
 
 
-        })
+                    },
+
+
+                    success: function (data) {
+
+                        $.each(data.comments, function(index, element) {
+                            eachComment = $('#user-disp-wrap-id').clone()
+                            eachComment.removeClass('no-view')
+                            eachComment.find('.comment-each').children('p').empty().append(element.comment)
+                            comment_display_wrapper.append(eachComment)
+
+                        });
+
+
+
+
+
+
+
+
+                    }
+
+
+
+
+                })
+
+
+        }
 
 
 
