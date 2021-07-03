@@ -171,10 +171,7 @@ $(document).ready(function () {
 
 
                     beforeSend: function () {
-                        eachComment = $('#user-disp-wrap-id').clone()
-                        eachComment.removeClass('no-view')
-                        eachComment.find('.comment-each').children('p').empty().append('Loading......')
-
+                        alert('posting.....')
 
 
 
