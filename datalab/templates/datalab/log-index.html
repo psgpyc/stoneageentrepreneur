@@ -1,0 +1,450 @@
+{% extends 'blog/base.html' %}
+
+
+{% load static %}
+
+
+
+{% block title %}
+    Get Started  {{ block.super }}
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'datalab/css/base-data.css' %}">
+    <link rel="stylesheet" href="{% static 'datalab/css/vs.css' %}">
+
+{% endblock %}
+
+{% block navigation %}
+
+
+    <nav>
+
+        <div class="left-nav">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+
+
+        </div>
+
+        <div class="logo">
+            <h3>StoneAgeEntrepreneur.</h3>
+        </div>
+
+
+        <div class="right-nav">
+
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78C15.57 19.36 13.86 20 12 20s-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/>
+            </svg>
+
+
+        </div>
+
+
+        <div class="r-nav">
+            <div class="profile-circle">
+                <img src="{% static 'datalab/img/psg.jpeg' %}" alt="User Profile Image">
+            </div>
+        </div>
+
+
+    </nav>
+
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    {#    <div class="left-sticky-wrapper" id="left-sticky-id">#}
+    {##}
+    {#            <div class="nav-options">#}
+    {##}
+    {#                <ul>#}
+    {#                    <li class="li-flex" id="li-flex-first-child">#}
+    {#                        <div class="each-side-el">#}
+    {#                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 2.08-.81 3.98-2.11 5.4z"/>#}
+    {#                            </svg>#}
+    {##}
+    {##}
+    {#                             <p class="ft-18">Social Share</p>#}
+    {##}
+    {#                        </div>#}
+    {#                    </li>#}
+    {#                    <li class="li-flex">#}
+    {#                        <div class="each-side-el">#}
+    {#                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>#}
+    {#                            </svg>#}
+    {##}
+    {#                            <p class="ft-18">Code/Notebooks</p>#}
+    {#                        </div>#}
+    {##}
+    {##}
+    {#                    </li>#}
+    {#                    <li class="li-flex">#}
+    {#                        <div class="each-side-el">#}
+    {#                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                            <g><rect fill="none" height="24" width="24"/><g><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V5h14V19z"/><rect height="5" width="2" x="7" y="12"/><rect height="10" width="2" x="15" y="7"/><rect height="3" width="2" x="11" y="14"/><rect height="2" width="2" x="11" y="10"/></g></g>#}
+    {#                        </svg>#}
+    {##}
+    {#                        <p class="ft-18">Datasets</p>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#                        </div>#}
+    {##}
+    {##}
+    {#                    </li>#}
+    {#                    <li class="li-flex">#}
+    {#                           <div class="each-side-el">#}
+    {#                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                            <g><rect fill="none" height="24" width="24" x="0"/></g><g><path d="M22.47,5.2C22,4.96,21.51,4.76,21,4.59v12.03C19.86,16.21,18.69,16,17.5,16c-1.9,0-3.78,0.54-5.5,1.58V5.48 C10.38,4.55,8.51,4,6.5,4C4.71,4,3.02,4.44,1.53,5.2C1.2,5.36,1,5.71,1,6.08v12.08c0,0.58,0.47,0.99,1,0.99 c0.16,0,0.32-0.04,0.48-0.12C3.69,18.4,5.05,18,6.5,18c2.07,0,3.98,0.82,5.5,2c1.52-1.18,3.43-2,5.5-2c1.45,0,2.81,0.4,4.02,1.04 c0.16,0.08,0.32,0.12,0.48,0.12c0.52,0,1-0.41,1-0.99V6.08C23,5.71,22.8,5.36,22.47,5.2z M10,16.62C8.86,16.21,7.69,16,6.5,16 c-1.19,0-2.36,0.21-3.5,0.62V6.71C4.11,6.24,5.28,6,6.5,6C7.7,6,8.89,6.25,10,6.72V16.62z M19,0.5l-5,5V15l5-4.5V0.5z"/></g>#}
+    {#                        </svg>#}
+    {##}
+    {#                        <p class="ft-18">Tutorials</p>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#                        </div>#}
+    {##}
+    {##}
+    {##}
+    {#                    </li>#}
+    {#                    <li class="li-flex">#}
+    {#                           <div class="each-side-el">#}
+    {#                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                            <path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>#}
+    {#                        </svg>#}
+    {##}
+    {#                        <p class="ft-18">Courses</p>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#                        </div>#}
+    {##}
+    {##}
+    {#                    </li>#}
+    {#                    <li class="li-flex">#}
+    {##}
+    {#                        <div class="each-side-el">#}
+    {#                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="rgb(95, 99, 104)">#}
+    {#                             <path d="M0 0h24v24H0V0z" fill="none"/><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>#}
+    {#                             </svg>#}
+    {##}
+    {#                        <p class="ft-18">Blog</p>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#                        </div>#}
+    {##}
+    {##}
+    {##}
+    {#                    </li>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#                </ul>#}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {##}
+    {#            </div>#}
+    {##}
+    {#        </div>#}
+
+
+    <div class="body-wrap" id="body-wrap-id">
+        {% for post in posts %}
+            <div class="post-update-wrap">
+                <div class="user-disp-wrap">
+                    <img class="user-img-disp" src="{% static 'datalab/img/psg.jpeg' %}" alt="">
+                    <div class="user-det">
+                        <div class="user-ver">
+                            <p class="user-name">{{ post.created_by.full_name }}</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px" fill="#000000">
+                                    <path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                                </svg>
+                        </div>
+                        <p class="updated-on">Engineer, Entrepreneur, Data Scientist &#x2022 {{ post.created_on }}</p>
+                    </div>
+                </div>
+                <div class="post-body-text">
+                    <div class="content-code-wrap">
+                        <p class="rd-body w-80">
+                            {{ post.content }}
+                        </p>
+
+
+                        {% if post.code %}
+                            <div class="post-code-text">
+                                <div class="rd-body w-80">
+                                    {{ post.code|safe }}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                <div class="post-btn-wrap">
+                    <div class="up-down-wrap">
+                        <div class="up">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24">
+                                <g id="upvote" class="icon_svg-stroke icon_svg-fill" stroke-width="1.5" stroke="#2F69FF"
+                                   fill="none" fill-rule="evenodd" stroke-linejoin="round">
+                                    <polygon points="12 4 3 15 9 15 9 20 15 20 15 15 21 15"></polygon>
+                                </g>
+                            </svg>
+                            <span>1.7k</span>
+                        </div>
+
+                        <div class="down">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24">
+                                <g id="downvote" class="icon_svg-stroke icon_svg-fill" stroke="#666" fill="none"
+                                   stroke-width="1.5" fill-rule="evenodd" stroke-linejoin="round">
+                                    <polygon
+                                            transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) "
+                                            points="12 4 3 15 9 15 9 20 15 20 15 15 21 15"></polygon>
+                                </g>
+                            </svg>
+                            <span> 200 </span>
+                        </div>
+
+                        <div class="comment-btn-wrap">
+                            <button class="post-comment-btn" value="{{ post.id }}" type="button">
+                                <svg  width="24px" height="24px" viewBox="0 0 24 24">
+                                    <g id="comment" class="icon_svg-stroke icon_svg-fill" stroke="#666" stroke-width="1.5"
+                                       fill="none" fill-rule="evenodd">
+                                        <path d="M12.0711496,18.8605911 C16.1739904,18.8605911 19.5,15.7577921 19.5,11.9302955 C19.5,8.102799 16.1739904,5 12.0711496,5 C7.96830883,5 4.64229922,8.102799 4.64229922,11.9302955 C4.64229922,13.221057 5.02055525,14.429401 5.67929998,15.4641215 C5.99817082,15.9649865 4.1279592,18.5219189 4.56718515,18.9310749 C5.02745574,19.3598348 7.80252458,17.6358115 8.37002246,17.9406001 C9.45969688,18.5258363 10.7235179,18.8605911 12.0711496,18.8605911 Z"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <span>20</span>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="share-options-wrap">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24">
+                            <g id="share" class="icon_svg-stroke" stroke="#666" fill="none" stroke-width="1.5"
+                               fill-rule="evenodd" stroke-linejoin="round">
+                                <path d="M12.0001053,2.99989467 L4.00010533,12.7776724 L9.33343867,12.7776724 C9.78266695,14.7041066 10.5048892,16.2782509 11.5001053,17.5001053 C12.4953215,18.7219597 13.9953215,19.8886264 16.0001053,21.0001053 C15.3415908,19.6668553 14.8428108,18.1668553 14.5037654,16.5001053 C14.16472,14.8333553 14.2190556,13.5925444 14.666772,12.7776724 L20.0001053,12.7776724 L12.0001053,2.99989467 Z"
+                                      transform="translate(12.000105, 12.000000) rotate(90.000000) translate(-12.000105, -12.000000) "></path>
+                            </g>
+                        </svg>
+                        <svg width="24px" height="24px" viewBox="0 0 24 24">
+                            <g id="overflow" class="icon_svg-stroke" stroke-width="1.5" stroke="#666" fill="none"
+                               fill-rule="evenodd">
+                                <path d="M5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 Z M12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 Z M19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 Z"></path>
+                            </g>
+                        </svg>
+
+
+                    </div>
+
+
+                </div>
+
+
+                {#                <div class="view-comment">#}
+                {#                    <p class="view-code-snip">View Code Snippet</p>#}
+                {#                    <p class="hide-code-snip no-view" id="hide-code-snip">Hide Code Snippet</p>#}
+                {#                </div>#}
+                <div class="comment-wrap no-view">
+                    <div class="comment-profile">
+                        <img src="{% static 'datalab/img/psg.jpeg' %}" alt="">
+                        <form class="comment-form" method="post" data-post-type="{{ post.id }}" action="{% url 'post-add-comment' %}">
+                            {% csrf_token %}
+                            {{ commentForm }}
+                        </form>
+                    </div>
+                </div>
+                <div class="comment-display-wrap no-view" id="comment-display-wrap-id">
+                    <div class="user-disp-wrap">
+                        <div class="user-comment">
+                            <img class="user-img-disp" src="{% static 'datalab/img/psg.jpeg' %}" alt="">
+                            <div class="comment-each">
+                                <p>
+                                    Can this be true? 55% off the yearly subscription price for Lingopie- the easiest and most exciting language learning program around! ¡Vamos-Let's go!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="post-btn-wrap">
+                            <div class="up-down-wrap">
+                                <div class="up">
+                                    <svg width="15px" height="15px" viewBox="0 0 24 24">
+                                        <g id="upvote" class="icon_svg-stroke icon_svg-fill" stroke-width="1.5" stroke="#2F69FF"
+                                           fill="none" fill-rule="evenodd" stroke-linejoin="round">
+                                            <polygon points="12 4 3 15 9 15 9 20 15 20 15 15 21 15"></polygon>
+                                        </g>
+                                    </svg>
+                                    <span>1.7k</span>
+                                </div>
+                                <div class="down">
+                                    <svg width="15px" height="15px" viewBox="0 0 24 24">
+                                        <g id="downvote" class="icon_svg-stroke icon_svg-fill" stroke="#666" fill="none"
+                                           stroke-width="1.5" fill-rule="evenodd" stroke-linejoin="round">
+                                            <polygon
+                                                    transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) "
+                                                    points="12 4 3 15 9 15 9 20 15 20 15 15 21 15"></polygon>
+                                        </g>
+                                    </svg>
+                                    <span> 200 </span>
+                                </div>
+                            </div>
+
+                            <div class="share-options-wrap">
+
+
+                                <svg width="15px" height="15px" viewBox="0 0 24 24">
+                                    <g id="overflow" class="icon_svg-stroke" stroke-width="1.5" stroke="#666" fill="none"
+                                       fill-rule="evenodd">
+                                        <path d="M5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 Z M12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 Z M19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 Z"></path>
+                                    </g>
+                                </svg>
+
+
+                            </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        {% endfor %}
+
+
+    </div>
+
+
+    <div class="add-post-wrap" id="add-post-wrap-id">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="44px" viewBox="0 0 24 24"
+             width="44px" fill="#000000">
+            <g>
+                <rect fill="none" height="24" width="24"/>
+            </g>
+            <g>
+                <g>
+                    <path d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+
+    <div class="add-post-form-wrap" id="add-post-form-wrap-id">
+        <div class="post-header">
+
+            <h3>Create Post</h3>
+        </div>
+
+        <div class="cross-btn" id="cross-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </svg>
+        </div>
+
+
+        <div class="user-disp-wrap">
+            <img class="user-img-disp" src="{% static 'datalab/img/psg.jpeg' %}" alt="">
+            <div class="user-det">
+                <div class="user-ver">
+                    <p class="user-name">{{ request.user.full_name }}</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 0 24 24" width="18px"
+                         fill="#000000">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                </div>
+                <p class="updated-on">1 hour ago.</p>
+            </div>
+        </div>
+
+
+        <form id="post-submit-form" method="post" action="{% url 'post-update' %}">
+            {% csrf_token %}
+
+            {{ postform }}
+
+            <div class="add-to-your-post-wrap">
+                <p>Add to your post</p>
+
+                <div class="add-code-link-btn">
+                    <p id="code-snip-btn-id">Code Snippet</p>
+                    <p>External Link</p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <button id="post-post-btn" class="post-post-btn" type="submit">Post</button>
+        </form>
+
+
+    </div>
+
+
+{% endblock %}
+
+
+{% block script-block %}
+    <script src="{% static 'datalab/js/base-data.js' %}"></script>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

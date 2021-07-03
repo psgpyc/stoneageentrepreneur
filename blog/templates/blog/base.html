@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,38 +13,52 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
-    <script defer src="https://kit.fontawesome.com/81a2d4bcab.js" ></script>
+{#    <script defer src="https://kit.fontawesome.com/81a2d4bcab.js" ></script>#}
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'blog/apple-touch-icon.png'  %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'blog/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'blog/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'blog/site.webmanifest' %}">
+{% block style %}
     <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+
+{% endblock %}
 </head>
 <body>
 {% block navigation %}
     <nav class="desktop-view">
+
         <div class="leftmenu">
-            <div class="hamburger" id="hamburger-id-desktop">
-                <i class="fas fa-bars"></i>
-            </div>
-            <form class="search-box-id" method="post">
-                <label>
-                    <input class='search-box no-view' id="searchbox" type="search" placeholder="Search on StoneAgeEntrepreneur.">
-                </label>
-            </form>
+            {% block left-nav-ham %}
+                <div class="hamburger" id="hamburger-id-desktop">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <form class="search-box-id" method="post">
+                    <label>
+                        <input class='search-box no-view' id="searchbox" type="search" placeholder="Search on StoneAgeEntrepreneur.">
+                    </label>
+                </form>
 
 
-            <div class="search" id="search-icon">
+                <div class="search" id="search-icon">
 
-                <i class="fas fa-search"><span>search</span></i>
-{#                <img src="{% static 'blog/img/icons/home-services-01.svg' %}" alt="">#}
-            </div>
+                    <i class="fas fa-search"><span>blog</span></i>
+    {#                <img src="{% static 'blog/img/icons/home-services-01.svg' %}" alt="">#}
+                </div>
+            {% endblock %}
+
 
         </div>
+
         <div class="logo">
-            <a  href="{% url 'home' %}">StoneAgeEntrepreneur.</a>
+            {% if user.is_authenticated %}
+                <a  href="{% url 'home-auth' %}">StoneAgeEntrepreneur.</a>
+
+            {% else %}
+                <a  href="{% url 'home' %}">StoneAgeEntrepreneur.</a>
+
+            {% endif %}
 
 {#                        <small style="font-size: 10px;">द डाटा साक्षरता PROJECT </small>#}
 
@@ -55,7 +70,12 @@
 {#            <div class="store"><i class="fas fa-store"></i></div>#}
             {% if user.is_authenticated %}
                 <div class="accounts">
-                    <a href="{% url 'user-logout' %}"><i class="fas fa-user"></i></a>
+                    <a id="account-logged" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"/></svg></i></a>
+                </div>
+
+                 <div class="cross-search no-view" id="cross-search-id">
+                    <img alt='kitabalaya search end' class="search-cross-class" id="search-end" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
+
                 </div>
 
             {% else %}
@@ -114,7 +134,13 @@
 
 
         <div class="logo-mobile">
-            <a  href="{% url 'home' %}">StoneAgeEntrepreneur.</a>
+            {% if user.is_authenticated %}
+                <a  href="{% url 'home-auth' %}">StoneAgeEntrepreneur.</a>
+
+            {% else %}
+                <a  href="{% url 'home' %}">StoneAgeEntrepreneur.</a>
+
+            {% endif %}
         </div>
         <div class="logo-tabs">
             <a  href="{% url 'home' %}">Stone<span>Age</span>Entrepreneur.</a>
@@ -334,6 +360,8 @@
 {# END CONTENT WRAPPER      #}
 
         </div>
+
+
 {% block body-data %}
 
 
@@ -344,6 +372,8 @@
 {#        END OF MAIN CONTENT         #}
 
     </main>
+{% block script-block %}
     <script src="{% static 'blog/js/landing.js' %}"></script>
+{% endblock %}
 </body>
 </html>

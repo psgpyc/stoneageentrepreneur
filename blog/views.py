@@ -122,10 +122,6 @@ class SearchView(View):
         return render(request, template_name='blog/index.html', context={})
 
 
-class Home(LoginRequiredMixin,TemplateView):
-    template_name = 'blog/home.html'
-
-
 class RegistrationView(View):
     template_name = 'blog/register.html'
     ctx = {
@@ -231,4 +227,11 @@ class AccountEmailActivate(FormMixin, View):
 class DataLiteracy(View):
 
     def get(self, request, *args, **kwargs):
-        return render(self.request, template_name='blog/data_literacy_project.html', context={'title': 'Data Literacy Project'})
+        if request.user.is_authenticated:
+            return render(self.request, template_name='datalab/log-index.html', context={'title': 'Get Started'})
+
+
+        else:
+            return render(self.request, template_name='blog/data_literacy_project.html', context={'title': 'Data Literacy Project'})
+
+

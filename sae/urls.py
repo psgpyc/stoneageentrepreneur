@@ -1,12 +1,12 @@
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.conf import settings
 from django.contrib.auth import views as auth_views
 
 
-from blog.views import HomePage, PostDetails, Categories, MiniCategories, Home, RegistrationView, UserLogoutView, \
+from blog.views import HomePage, PostDetails, Categories, MiniCategories, RegistrationView, UserLogoutView, \
     AccountEmailActivate, UserPasswordResetComplete, SearchView, DataLiteracy
 from accounts.forms import UserLoginForm, UserPasswordResetForm, UserPasswordResetConfirmForm
 
@@ -15,10 +15,11 @@ urlpatterns = [
     path('blog/', HomePage.as_view(), name='data-literacy-project'),
 
     path('', DataLiteracy.as_view(), name='home'),
+    path('home/', include('datalab.urls'), name='home-auth-redirect'),
+
     path('posts/<slug:post_slug>/', PostDetails.as_view(), name='post-details'),
     path('categories/<slug:post_slug>', Categories.as_view(), name='categories'),
     path('mini/<slug:post_slug>', MiniCategories.as_view(), name='mini-categories'),
-    path('home', Home.as_view(), name='home-auth'),
 
     path('ajax/search/', SearchView.as_view(), name='search-view'),
 

@@ -1086,6 +1086,10 @@ nav .search-cross-class{
 
 }
 
+.review-notes .pro-reviews .each-review{
+    margin: 100px 0;
+
+}
 
 
 
@@ -1173,6 +1177,104 @@ nav .search-cross-class{
     cursor: pointer;
 }
 
+/*  LOGGED-IN CSS                                                                           */
+
+.profile-wrap{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    width: 90%;
+    margin: 100px auto;
+}
+
+.profile-wrap .img-wrap{
+    height: 150px;
+    width: 150px;
+}
+
+.img-profile{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+
+ }
+
+.profile-details{
+    margin: 25px 0;
+    width: 80%;
+}
+
+.profile-name{
+    display: flex;
+
+}
+
+.mt-5{
+    margin: 5px 0;
+}
+
+.white-shade{
+    color: #616161;
+}
+
+.content-nav{
+    margin: 100px auto;
+    width: 90%;
+
+
+}
+
+.content-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-top: -100px;
+
+}
+
+.ml-20{
+    margin: 0 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  END OF LOGGED-IN CSS             */
 
 @media screen and (max-width: 1250px) {
 
@@ -1393,9 +1495,7 @@ nav .search-cross-class{
         text-align: center;
     }
 
-    .review-notes .pro-review .each-review{
-        margin-bottom: 100px;
-    }
+
 
     .d-each-post h3{
         font-size: 25px;
@@ -2050,6 +2150,8 @@ footer p{
 .user-name{
     font-weight: 500;
 }
+
+
 
 .post-content .title-post-content{
     width: 100%;

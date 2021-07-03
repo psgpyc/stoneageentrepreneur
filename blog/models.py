@@ -9,6 +9,7 @@ from blog.abstractModels import TimeStampModel
 from django.contrib.auth import get_user_model
 from django.utils.text import slugify
 
+
 User = get_user_model()
 
 DEFAULT_FEATURE_DAYS = getattr(settings, 'DEFAULT_FEATURE_DAYS', 7)
